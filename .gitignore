@@ -1,0 +1,23 @@
+*~
+*.pyc
+*.pyo
+*.tmp*
+*.mo
+*.egg
+*.EGG
+*.egg-info
+*.EGG-INFO
+*.kpf
+*.swp
+*.wpr
+.*.cfg
+.hg/
+.bzr/
+.svn/
+.project
+.pydevproject
+
+
+
+# OSX
+.DS_Store
