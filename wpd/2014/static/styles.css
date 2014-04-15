@@ -11,3 +11,133 @@ Email: jlvieitez@gmail.com
 	margin: 0;
 	padding: 0;
 }
+
+body {
+	font-family: "Rosario";
+	font-style: 1em;
+}
+
+	#wrap {
+		width: 100%;
+	}
+
+		.wrapper {
+			width: 100%;
+		}
+
+		.wnav {
+			background-color: #333;
+			border-bottom: 10px solid #ffa100;
+		}
+
+			.wnav nav {
+				margin: 0 auto;
+				width: 1000px;
+			}
+
+				.wnav nav ul {
+					margin: 0 auto;
+					list-style: none;
+					text-align: center;
+				}
+
+					.wnav nav ul li {
+						display: inline-block;
+					}
+
+						.wnav nav ul li a {
+							display: block;
+							padding: 10px;
+							color: #eee;
+							font-size: 1em;
+							font-weight: 700;
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+
+						.wnav nav ul li a:hover {
+							color: #aaa;
+						}
+
+		.wheader {
+			background-color: #2086bf;
+		}
+
+			.wheader header {
+				margin: 0 auto;
+				width: 1000px;
+				text-align: center;
+			}
+
+				.wheader header figure {
+					display: inline-block;
+					margin-top: 50px;
+					width: 100%;
+				}
+
+					.wheader header figure img {
+						width: auto;
+					}
+
+				.wheader header p {
+					display: inline-block;
+					margin: 50px 80px;
+					color: #eee;
+					font-size: 1.5em;
+					font-weight: 700;
+					text-shadow: 1px 1px 1px #555;
+					text-align: center;
+				}
+
+				.wheader header a.signup {
+					margin: 0;
+					padding: 10px 30px;
+					color: #333;
+					font-size: 1.7em;
+					text-decoration: none;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+					background: #f2be4a; /* Old browsers */
+					background: -moz-linear-gradient(top,  #f2be4a 0%, #ffa100 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2be4a), color-stop(100%,#ffa100)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top,  #f2be4a 0%,#ffa100 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top,  #f2be4a 0%,#ffa100 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top,  #f2be4a 0%,#ffa100 100%); /* IE10+ */
+					background: linear-gradient(to bottom,  #f2be4a 0%,#ffa100 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2be4a', endColorstr='#ffa100',GradientType=0 ); /* IE6-9 */
+				}
+
+				.wheader header a.signup:hover {
+					background: #f2be4a; /* Old browsers */
+					background: -moz-linear-gradient(top,  #f2be4a 0%, #ca7c00 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2be4a), color-stop(100%,#ca7c00)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top,  #f2be4a 0%,#ca7c00 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top,  #f2be4a 0%,#ca7c00 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top,  #f2be4a 0%,#ca7c00 100%); /* IE10+ */
+					background: linear-gradient(to bottom,  #f2be4a 0%,#ca7c00 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2be4a', endColorstr='#ca7c00',GradientType=0 ); /* IE6-9 */
+				}
+
+		.wcontent {
+			min-height: 300px;
+			background-color: #fff;
+		}
+
+			.wcontent section {
+				margin: 50px auto 0;
+				padding: 50px;
+				width: 1000px;
+				background-color: #eee;
+			}
+
+				.wcontent section h1 {
+					display: block;
+					margin-bottom: 40px;
+					color: #235588;
+					font-size: 2em;
+				}
+
+				.wcontent section p {
+					margin: 20px 0;
+				}
