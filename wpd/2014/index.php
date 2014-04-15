@@ -27,11 +27,11 @@
 
 			<nav>
 				<ul>
-					<li><a href="#">Sobre el evento</a></li>
-					<li><a href="#">Ubicación</a></li>
-					<li><a href="#">Ponentes</a></li>
-					<li><a href="#">Patrocinadores</a></li>
-					<li><a href="#">Organiza</a></li>
+					<li><a href="#about">Sobre el evento</a></li>
+					<li><a href="#location">Ubicación</a></li>
+					<li><a href="#speakers">Ponentes</a></li>
+					<li><a href="#sponsors">Patrocinadores</a></li>
+					<li><a href="#organizers">Organizadores</a></li>
 				</ul>
 			</nav>
 
@@ -77,8 +77,8 @@
 				<h1>Patrocinadores</h1>
 			</section>
 
-			<section id="organize">
-				<h1>Organiza</h1>
+			<section id="organizers">
+				<h1>Organizadores</h1>
 			</section>
 
 		</div>
