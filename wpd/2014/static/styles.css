@@ -27,6 +27,7 @@ body {
 
 		.wnav {
 			position: fixed;
+			z-index: 1000;
 			background-color: #333;
 			border-bottom: 10px solid #ffa100;
 		}
@@ -144,3 +145,94 @@ body {
 					margin: 20px 0;
 					color: #333;
 				}
+
+				.wcontent section iframe {
+					display: inline-table;
+					margin-right: 50px;
+					border: 5px solid #ddd !important;
+				}
+
+				.wcontent section address {
+					float: right;
+				}
+
+					.wcontent section address p {
+						font-size: 1.1em;
+					}
+
+						.wcontent section address p span {
+							color: #aaa;
+							font-size: 1.3em;
+						}
+
+				.wcontent section .speaker {
+					display: inline-table;
+					margin: 0 24px 50px;
+					padding: 30px;
+					width: 390px;
+					min-height: 100px;
+					background-color: #fff;
+					-webkit-box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.65);
+					-moz-box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.65);
+					box-shadow: 1px 1px 2px 0px rgba(100, 100, 100, 0.65);
+					opacity: .8;
+					-o-transition: .3s;
+					-ms-transition: .3s;
+					-moz-transition: .3s;
+					-webkit-transition: .3s;
+					transition: .3s;
+				}
+
+				.wcontent section .speaker:hover {
+					opacity: 1;
+				}
+
+					.wcontent section .speaker .speech {
+						display: inline-block;
+						margin-bottom: 20px;
+					}
+
+						.wcontent section .speaker .speech span {
+							margin: 0 15px 0 0;
+							padding: 5px 10px;
+							float: left;
+							color: #eee;
+							font-size: 1.5em;
+							font-weight: 700;
+							background-color: #235588;
+							-webkit-border-radius: 10px;
+							-moz-border-radius: 10px;
+							border-radius: 10px;
+						}
+
+						.wcontent section .speaker .speech h3 {
+							float: left;
+							width: 290px;
+							color: #333;
+							font-size: 1.3em;
+						}
+
+					.wcontent section .speaker h2 {
+						color: #777;
+						font-size: 1.2em;
+					}
+
+						.wcontent section .speaker h2 span {
+							color: #235588;
+						}
+
+					.wcontent section .speaker p {
+						color: #333;
+						font-size: .9em;
+					}
+
+						.wcontent section .speaker p img {
+							margin: 0 0 10px 10px;
+							float: right;
+							width: 120px;
+							height: 120px;
+							border: 5px solid #ddd;
+							-webkit-border-radius: 15px;
+							-moz-border-radius: 15px;
+							border-radius: 15px;
+						}
