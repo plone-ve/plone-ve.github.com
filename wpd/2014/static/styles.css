@@ -279,3 +279,21 @@ body {
 						padding: 10px;
 						background-color: #fff;
 					}
+
+		.wfooter {
+			background-color: #333;
+			border-top: 10px solid #235588;
+		}
+
+			.wfooter footer {
+				display: block;
+				margin: 0 auto;
+				width: 1000px;
+				text-align: center;
+			}
+
+				.wfooter footer p {
+					display: inline-block;
+					margin: 30px 0;
+					color: #eee;
+				}
