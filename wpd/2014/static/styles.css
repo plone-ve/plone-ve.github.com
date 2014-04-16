@@ -238,6 +238,13 @@ body {
 						font-size: .9em;
 					}
 
+						.wcontent section .speaker p a,
+						.wcontent section .speaker p a:visited,
+						.wcontent section .speaker p a:active,
+						.wcontent section .speaker p a:link {
+							color: #235588;
+						}
+
 						.wcontent section .speaker p img {
 							margin: 0 0 10px 10px;
 							float: right;
