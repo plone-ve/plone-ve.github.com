@@ -229,8 +229,17 @@ body {
 						font-size: 1.2em;
 					}
 
-						.wcontent section .speaker h2 span {
+						.wcontent section .speaker h2 span,
+						.wcontent section .speaker span a,
+						.wcontent section .speaker span a:link,
+						.wcontent section .speaker span a:visited,
+						.wcontent section .speaker span a:active {
 							color: #235588;
+							text-decoration: none;
+						}
+
+						.wcontent section .speaker span a:hover {
+							text-decoration: underline;
 						}
 
 					.wcontent section .speaker p {
