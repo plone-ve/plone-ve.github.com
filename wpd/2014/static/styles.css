@@ -33,6 +33,7 @@ body {
 		}
 
 			.wnav nav {
+				position: relative;
 				margin: 0 auto;
 				width: 1000px;
 			}
@@ -62,9 +63,9 @@ body {
 						}
 
 				.wnav nav ul.social {
-					position: fixed;
+					position: absolute;
 					top: 0;
-					width: 1000px;
+					right: 0;
 					text-align: right;
 					list-style: none;
 				}
