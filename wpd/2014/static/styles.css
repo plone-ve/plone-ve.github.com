@@ -161,6 +161,28 @@ body {
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2be4a', endColorstr='#ca7c00',GradientType=0 ); /* IE6-9 */
 				}
 
+				.wheader header .btnsocial {
+					display: block;
+					margin: 0 auto;
+					width: 205px;
+					height: 100px;
+					text-align: center;
+				}
+
+					.wheader header .btnsocial .twitterbtn,
+					.wheader header .btnsocial .facebookbtn {
+						float: left;
+						margin: 0 0 0 20px;
+					}
+
+					.wheader header .btnsocial .twitterbtn {
+						margin-top: 7px;
+					}
+
+					.wheader header .btnsocial .facebookbtn {
+						margin-top: 8px;
+					}
+
 		.wcontent {
 			min-height: 300px;
 			background-color: #fff;
