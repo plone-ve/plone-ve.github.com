@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="17. Views - Parte II: Una vista por defecto para la “charla”" href="views_2.html"/>
-        <link rel="prev" title="15. Zope Page Templates" href="zpt.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="15. Zope Page Templates" href="zpt.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,7 +273,7 @@
           <div role="main">
             
   <div class="section" id="customizing-existing-templates">
-<h1>16. Personalizar plantillas existentes<a class="headerlink" href="#customizing-existing-templates" title="Permalink to this headline">¶</a></h1>
+<h1>16. Personalizar plantillas existentes<a class="headerlink" href="#customizing-existing-templates" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
 <p>Obtén el código para este capítulo (<a class="reference internal" href="sneak.html"><em>Más información</em></a>) usando este comando en el directorio buildout:</p>
@@ -285,7 +283,7 @@
 </div>
 <p>Para profundizar más en los datos real de plone, nosotros ahora miraremos algunas plantillas existentes y las personalizaremos.</p>
 <div class="section" id="newsitem-pt">
-<h2>El archivo newsitem.pt<a class="headerlink" href="#newsitem-pt" title="Permalink to this headline">¶</a></h2>
+<h2>El archivo newsitem.pt<a class="headerlink" href="#newsitem-pt" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Queremos mostrar la fecha de una Noticia se publica. De esta manera la gente puede ver a simple vista que la está mirando las noticias de actualidad o viejo.</p>
 <p>Para ello vamos a personalizar las plantillas que se utilizan para representar una Noticia.</p>
 <p>Básicamente haremos lo mismo que cuando se utilizó en <code class="docutils literal"><span class="pre">portal_skins</span></code> (personalizamos el pie de página), pero ahora vamos a hacerlo todo a mano en nuestro paquete.</p>
@@ -339,7 +337,7 @@
 <p>Esa carpeta <code class="docutils literal"><span class="pre">plone_scripts</span></code> todavía tiene una gran cantidad de scripts útiles que son ampliamente utilizados. Pero todos ellos están obsoletos y que se espera retirar en Plone 5 y sean reemplazados por métodos Python adecuados en BrowserViews.</p>
 </div>
 <div class="section" id="summary-view-pt">
-<h2>El archivo summary_view.pt<a class="headerlink" href="#summary-view-pt" title="Permalink to this headline">¶</a></h2>
+<h2>El archivo summary_view.pt<a class="headerlink" href="#summary-view-pt" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Utilizamos la vista &#8220;Vista de resumen&#8221; a la lista de noticias publicadas. También deben tener la fecha. La plantilla asociada con esa vista es <code class="docutils literal"><span class="pre">summary_view.pt</span></code>.</p>
 <p>Echemos un vistazo a la plantilla folder_summary_view.pt:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">plone</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">contenttypes</span><span class="o">/</span><span class="n">browser</span><span class="o">/</span><span class="n">templates</span><span class="o">/</span><span class="n">summary_view</span><span class="o">.</span><span class="n">pt</span>
@@ -364,14 +362,14 @@
 <p>La fecha solamente es mostrada si la variable <code class="docutils literal"><span class="pre">item_type</span></code> (definida en la linea 42 de la vista <code class="docutils literal"><span class="pre">standard_view.pt</span></code>) sea <code class="docutils literal"><span class="pre">News</span> <span class="pre">Item</span></code>.</p>
 <p>Hay mucho más en <code class="docutils literal"><span class="pre">standard_view.pt</span></code> y <code class="docutils literal"><span class="pre">summary_view.pt</span></code> pero vamos a dejar las cosas así.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p>In default Plone without <code class="docutils literal"><span class="pre">plone.app.contenttypes</span></code> this would be <code class="docutils literal"><span class="pre">folder_summary_view.pt</span></code>, a skin-template for Archetypes that can be found in the folder <code class="docutils literal"><span class="pre">Products/CMFPlone/skins/plone_content/</span></code>. The customized template would be <code class="docutils literal"><span class="pre">Products.CMFPlone.skins.plone_content.folder_summary_view.pt</span></code>.</p>
 <p>La plantilla Archetypes de Noticia es <code class="docutils literal"><span class="pre">newsitems_view.pt</span></code> de la misma carpeta. La plantilla personalizada tendría que ser nombrada <code class="docutils literal"><span class="pre">Products.CMFPlone.skins.plone_content.folder_summary_view.pt</span></code>.</p>
 <p class="last">¡Tenga en cuenta que no sólo los nombres han cambiado, sino también el contenido!</p>
 </div>
 </div>
 <div class="section" id="finding-the-right-template">
-<h2>Buscando la correcta plantilla<a class="headerlink" href="#finding-the-right-template" title="Permalink to this headline">¶</a></h2>
+<h2>Buscando la correcta plantilla<a class="headerlink" href="#finding-the-right-template" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Hemos cambiado la pantalla de la lista de elementos de noticias en <a class="reference external" href="http://localhost:8080/Plone/news">http://localhost:8080/Plone/news</a>. Pero, ¿cómo sabemos que plantilla para personalizar?</p>
 <p>Si usted no sabe con qué plantilla utiliza la página que estás viendo, usted puede hacer una conjetura, iniciar una sesión de depuración o use el paquete <code class="docutils literal"><span class="pre">plone.app.debugtoolbar</span></code> par obtener una vista que ofrece información de depuración del actual contexto.</p>
 <ol class="arabic">
@@ -406,7 +404,7 @@
 </ol>
 </div>
 <div class="section" id="skin-templates">
-<h2>Plantillas skins<a class="headerlink" href="#skin-templates" title="Permalink to this headline">¶</a></h2>
+<h2>Plantillas skins<a class="headerlink" href="#skin-templates" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>¿Por qué no siempre sólo utilizamos plantillas? Porque lo que se quiere hacer es algo más complicado que obtener un atributo de formulario en el contexto y hacer su valor en alguna etiqueta HTML.</p>
 <p>Es una tecnología obsoleta llamada &#8216;skin-templates&#8217; que le permite añadir simplemente alguna página en la plantilla (por ejemplo, &#8216;old_style_template.pt&#8217;) a una carpeta determinada en el ZMI o su paquete egg) y se puede acceder a ella en el navegador mediante la dirección URL como esta <a class="reference external" href="http://localhost:8080/Plone/old_style_template">http://localhost:8080/Plone/old_style_template</a> y se mostrara. Pero nosotros no lo usamos y usted también no hay que a pesar de que estos de las skin-templates siguen siendo todo Plone.</p>
 <p>Desde que usamos <code class="docutils literal"><span class="pre">plone.app.contenttypes</span></code> no encontramos nunca más muchas plantillas skin cuando se trata de contenidos. Pero más a menudo que usted no tendrás que personalizar un sitio antiguo que aún utiliza la plantillas skin.</p>
@@ -441,7 +439,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

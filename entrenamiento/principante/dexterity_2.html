@@ -34,9 +34,7 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -273,7 +271,7 @@
           <div role="main">
             
   <div class="section" id="dexterity-types-ii-growing-up">
-<h1>Tipos Dexterity - Parte II: Creciendo<a class="headerlink" href="#dexterity-types-ii-growing-up" title="Permalink to this headline">¶</a></h1>
+<h1>Tipos Dexterity - Parte II: Creciendo<a class="headerlink" href="#dexterity-types-ii-growing-up" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
 <p>Obtén el código para este capitulo (<a class="reference internal" href="sneak.html"><em>Mas información</em></a>) usando este comando en el directorio buildout:</p>
@@ -294,9 +292,9 @@
 </li>
 </ul>
 <div class="section" id="add-a-marker-interface-to-the-talk-type">
-<h2>Agregar una interfaz de marcador para el tipo de contenido talk<a class="headerlink" href="#add-a-marker-interface-to-the-talk-type" title="Permalink to this headline">¶</a></h2>
+<h2>Agregar una interfaz de marcador para el tipo de contenido talk<a class="headerlink" href="#add-a-marker-interface-to-the-talk-type" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="marker-interfaces">
-<h3>Marcador de interfaces<a class="headerlink" href="#marker-interfaces" title="Permalink to this headline">¶</a></h3>
+<h3>Marcador de interfaces<a class="headerlink" href="#marker-interfaces" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El tipo de contenido <cite>Talk</cite> no es aun ciudadano de primera clase porque no implementa su propia interfaz. interfaces son como etiquetas de nombre, diciendo a otros elementos quien y que eres y que puedes hacer. un marcador de interfaz es como una etiqueta. Las Talks actualmente tienen un marcador de interfaz auto generado <code class="docutils literal"><span class="pre">plone.dexterity.schema.generated.Plone_0_talk</span></code>.</p>
 <p>El problema es que el nombre de la instancia <code class="docutils literal"><span class="pre">Plone</span></code> es parte del nombre de la interfaz. si tu ahora mueves estos tipos a un sitio con otro nombre, el código que usa en estas interfaces no podrán ser capaces de encontrar estos objetos.</p>
 <p>Para solventar esto agregamos un nuevo archivo <code class="docutils literal"><span class="pre">interfaces.py</span></code>:</p>
@@ -357,7 +355,7 @@
 </div>
 <p>Now the <code class="docutils literal"><span class="pre">/talkview</span></code> can only be used on objects that implement said interface. We can now also query the catalog for objects providing this interface <code class="docutils literal"><span class="pre">catalog(object_provides=&quot;ploneconf.site.interfaces.ITalk&quot;)</span></code>. The <cite>talklistview</cite> and the <cite>demoview</cite> do not get this constraint since they are not only used on talks.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p>Just for completeness sake, this is what would have to happen for the first option:</p>
 <ul class="last">
 <li><p class="first">Create a new class that inherits from <code class="docutils literal"><span class="pre">plone.dexterity.content.Container</span></code> and implements the marker interface.</p>
@@ -390,7 +388,7 @@
 </div>
 </div>
 <div class="section" id="upgrade-steps">
-<h2>Pasos de actualización<a class="headerlink" href="#upgrade-steps" title="Permalink to this headline">¶</a></h2>
+<h2>Pasos de actualización<a class="headerlink" href="#upgrade-steps" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>When projects evolve you&#8217;ll sometimes have to modify various things while the site is already up and brimming with content and users. Upgrade steps are pieces of code that run when upgrading from one version of a addon to a newer one. They can do just about anything.</p>
 <p>Nosotros crearemos un paso de actualización que</p>
 <ul class="simple">
@@ -541,17 +539,17 @@
 </li>
 </ul>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p class="last"><a class="reference external" href="http://docs.plone.org/develop/addons/components/genericsetup.html#id1">http://docs.plone.org/develop/addons/components/genericsetup.html#id1</a></p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p>Upgrading from an older version of Plone to a newer one also runs upgrade steps from the package <code class="docutils literal"><span class="pre">plone.app.upgrade</span></code>. You should be able to upgrade a clean site from 2.5 to 5.0a2 with a click.</p>
 <p class="last">Para un ejemplo ver el paso de actualización para Plone 5.0a1 <a class="reference external" href="https://github.com/plone/plone.app.upgrade/blob/master/plone/app/upgrade/v50/alphas.py#L23">https://github.com/plone/plone.app.upgrade/blob/master/plone/app/upgrade/v50/alphas.py#L23</a></p>
 </div>
 </div>
 <div class="section" id="add-a-browserlayer">
-<h2>Agregar una browserlayer<a class="headerlink" href="#add-a-browserlayer" title="Permalink to this headline">¶</a></h2>
+<h2>Agregar una browserlayer<a class="headerlink" href="#add-a-browserlayer" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>A browserlayer is another such marker-interface. Browserlayers allow us to easily enable and disable views and other site functionality based on installed add-ons and themes.</p>
 <p>Since we want the features we write only to be available when ploneconf.site actually is installed we can bind them to a browserlayer.</p>
 <p>En el archivo <code class="docutils literal"><span class="pre">interfaces.py</span></code> nosotros agregamos:</p>
@@ -581,11 +579,11 @@
 </div>
 <p>Note the relative python-path <code class="docutils literal"><span class="pre">..interfaces.IPloneconfSiteLayer</span></code>. It is equivalent to the absolute path <code class="docutils literal"><span class="pre">ploneconf.site.interfaces.IPloneconfSiteLayer</span></code>.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p class="last"><a class="reference external" href="http://docs.plone.org/develop/plone/views/layers.html">http://docs.plone.org/develop/plone/views/layers.html</a></p>
 </div>
 <div class="section" id="exercise">
-<h3>Ejercicio<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<h3>Ejercicio<a class="headerlink" href="#exercise" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Do you need to bind the social-viewlet from chapter 20 to this new browser-layer?</p>
 <div class="toggle admonition">
 <p class="first admonition-title">Solución</p>
@@ -594,7 +592,7 @@
 </div>
 </div>
 <div class="section" id="add-catalog-indexes">
-<h2>Add catalog-indexes<a class="headerlink" href="#add-catalog-indexes" title="Permalink to this headline">¶</a></h2>
+<h2>Add catalog-indexes<a class="headerlink" href="#add-catalog-indexes" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>In the <cite>talklistview</cite> we had to wake up all objects to access some of their attributes. That is ok if we don&#8217;t have many objects and they are light dexterity-objects. If we had thousands of objects this might not be a good idea.</p>
 <p>Instead of loading them all into memory we will use catalog-indexes to get the data we want to display.</p>
 <p>Agregar un nuevo archivo <code class="docutils literal"><span class="pre">profiles/default/catalog.xml</span></code></p>
@@ -634,7 +632,7 @@
 <p>This adds new indexes for the three fields we want to show in the listing. Not that <em>audience</em> is a <code class="docutils literal"><span class="pre">KeywordIndex</span></code> because the field is multi-valued, but we want a separate index-entry for every value in on an object.</p>
 <p>The <code class="docutils literal"><span class="pre">column</span> <span class="pre">..</span></code> entry allows us to display these values of these indexes in the tableview of collections.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p>Until Plone 4.3.2 adding indexes in catalog.xml was harmful because reinstalling the addon purged the indexes! See <a class="reference external" href="http://www.starzel.de/blog/a-reminder-about-catalog-indexes">http://www.starzel.de/blog/a-reminder-about-catalog-indexes</a>.</p>
 <p class="last">To run additional custom code on (re-)installing an addon you should use a <a class="reference external" href="http://docs.plone.org/develop/addons/components/genericsetup.html#custom-installer-code-setuphandlers-py">setuphandler.py</a>.</p>
 </div>
@@ -645,12 +643,12 @@
 </li>
 </ul>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p class="last"><a class="reference external" href="http://docs.plone.org/develop/plone/searching_and_indexing/indexing.html">http://docs.plone.org/develop/plone/searching_and_indexing/indexing.html</a></p>
 </div>
 </div>
 <div class="section" id="query-for-custom-indexes">
-<h2>Query for custom indexes<a class="headerlink" href="#query-for-custom-indexes" title="Permalink to this headline">¶</a></h2>
+<h2>Query for custom indexes<a class="headerlink" href="#query-for-custom-indexes" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>The new indexes behave like the ones that plone has built in:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">Products.CMFCore.utils</span> <span class="kn">import</span> <span class="n">getToolByName</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">Pdb</span><span class="p">)</span> <span class="n">catalog</span> <span class="o">=</span> <span class="n">getToolByName</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span> <span class="s">&#39;portal_catalog&#39;</span><span class="p">)</span>
@@ -712,7 +710,7 @@
 <p>The template does not need to be changed and the result did not change as well.</p>
 </div>
 <div class="section" id="add-collection-criteria">
-<h2>Add collection criteria<a class="headerlink" href="#add-collection-criteria" title="Permalink to this headline">¶</a></h2>
+<h2>Add collection criteria<a class="headerlink" href="#add-collection-criteria" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>To be able to search content in collections using the new indexes we would have to register them as criteria for the querystring-widget that collections use.</p>
 <p>Agregar un nuevo archivo <code class="docutils literal"><span class="pre">profiles/default/registry.xml</span></code></p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -765,12 +763,12 @@
 </pre></div>
 </td></tr></table></div>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p class="last"><a class="reference external" href="http://docs.plone.org/develop/plone/functionality/collections.html#add-new-collection-criteria-new-style-plone-app-collection-installed">http://docs.plone.org/develop/plone/functionality/collections.html#add-new-collection-criteria-new-style-plone-app-collection-installed</a></p>
 </div>
 </div>
 <div class="section" id="add-more-features-through-generic-setup">
-<h2>Add more features through generic-setup<a class="headerlink" href="#add-more-features-through-generic-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Add more features through generic-setup<a class="headerlink" href="#add-more-features-through-generic-setup" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Enable versioning and a diff-view for talks through GenericSetup.</p>
 <p>Agregar nuevo archivo <code class="docutils literal"><span class="pre">profiles/default/repositorytool.xml</span></code></p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -823,7 +821,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

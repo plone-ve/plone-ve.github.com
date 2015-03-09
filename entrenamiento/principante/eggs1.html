@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="14. Views - Parte I" href="views_1.html"/>
-        <link rel="prev" title="12. Buildout - Parte I" href="buildout_1.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="12. Buildout - Parte I" href="buildout_1.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,7 +273,7 @@
           <div role="main">
             
   <div class="section" id="creating-addons-to-customize-plone">
-<h1>13. Creando complementos para personalizar Plone<a class="headerlink" href="#creating-addons-to-customize-plone" title="Permalink to this headline">¶</a></h1>
+<h1>13. Creando complementos para personalizar Plone<a class="headerlink" href="#creating-addons-to-customize-plone" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
 <p>Obtén el código para este capítulo (<a class="reference internal" href="sneak.html"><em>Más información</em></a>) usando este comando en el directorio buildout:</p>
@@ -284,10 +282,10 @@
 </div>
 </div>
 <div class="section" id="using-zopeskel-to-create-an-egg">
-<h2>Usando zopeskel para crear un paquete egg<a class="headerlink" href="#using-zopeskel-to-create-an-egg" title="Permalink to this headline">¶</a></h2>
+<h2>Usando zopeskel para crear un paquete egg<a class="headerlink" href="#using-zopeskel-to-create-an-egg" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Nuestro propio código tiene que ser organizado como un paquete egg. Un paquete egg es un archivo zip o un directorio que sigue ciertas convenciones. Vamos a utilizar <a class="reference external" href="https://pypi.python.org/pypi/ZopeSkel">ZopeSkel</a> para crear un proyecto de esqueleto. Tan sólo hay que responder a las preguntas del generador, las cuales crearán archivos necesarios para trabajar.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">En el entrenamiento utilizamos ZopeSkel 2.21.2 para crear paquetes eggs. Nosotros lo hacemos por que viene incluido en el instalador unificado de Plone. En el futuro y en nuestro proyectos utilizamos <a class="reference external" href="https://pypi.python.org/pypi/bobtemplates.plone">bobtemplates.plone</a> para crear paquetes egg. Esto sera también el estándar usado en Plone 5.</p>
 </div>
 <p>Nosotros accedemos al directorio <code class="docutils literal"><span class="pre">src</span></code> y ejecutamos un script llamado <code class="docutils literal"><span class="pre">zopeskel</span></code> ubicado en nuestros directorio <code class="docutils literal"><span class="pre">bin</span></code> de los proyectos.</p>
@@ -312,7 +310,7 @@
 <p>Si este es su primer paquete egg, éste es un momento muy especial. Vamos a crear el paquete egg con un script que genera una gran cantidad de archivos necesarios. Todos ellos son necesarios, pero a veces de una manera sutil. Se toma un tiempo entiendo su significado pleno. Sólo el año pasado he aprendido y entendido por qué debería tener un archivo <code class="docutils literal"><span class="pre">manifest.in</span></code>. Usted puede vivir sin uno, pero confía en mí, te llevas mejor con un archivo de manifiesto adecuada.</p>
 </div>
 <div class="section" id="inspecting-the-package">
-<h2>Inspeccione el paquete<a class="headerlink" href="#inspecting-the-package" title="Permalink to this headline">¶</a></h2>
+<h2>Inspeccione el paquete<a class="headerlink" href="#inspecting-the-package" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Vamos a echar un vistazo a algunos de sus archivos.</p>
 <dl class="docutils">
 <dt>bootstrap.py, buildout.cfg, plone.cfg</dt>
@@ -347,7 +345,7 @@
 <p>También hay algunos archivos que se pueden eliminar, ya que utilizan métodos obsoletos para las pruebas: <code class="docutils literal"><span class="pre">ploneconf/site/tests.py</span></code> y <code class="docutils literal"><span class="pre">ploneconf/site/INTEGRATION.txt</span></code>.</p>
 </div>
 <div class="section" id="including-the-egg-in-plone">
-<h2>Incluyendo el paquete egg en Plone<a class="headerlink" href="#including-the-egg-in-plone" title="Permalink to this headline">¶</a></h2>
+<h2>Incluyendo el paquete egg en Plone<a class="headerlink" href="#including-the-egg-in-plone" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Antes de poder utilizar nuestro nuevo complemento tenemos que indicarle de la existencia de este a Plone. Entonces edite el archivo <code class="docutils literal"><span class="pre">buildout.cfg</span></code> y descomente <code class="docutils literal"><span class="pre">ploneconf.site</span></code> en las secciones <cite>eggs</cite> y <cite>sources</cite>:</p>
 <div class="highlight-cfg"><div class="highlight"><pre>eggs =
     Plone
@@ -372,7 +370,7 @@ collective.behavior.banner = git https://github.com/collective/collective.behavi
 <p>No vamos a instalarlo ahora, ya que no añadimos aun nada de nuestro propio código fuente o configuración todavía. Vamos a hacer eso.</p>
 </div>
 <div class="section" id="return-to-dexterity-moving-content-types-into-code">
-<h2>Volver Dexterity: para mover tipos de contenidos a código fuente<a class="headerlink" href="#return-to-dexterity-moving-content-types-into-code" title="Permalink to this headline">¶</a></h2>
+<h2>Volver Dexterity: para mover tipos de contenidos a código fuente<a class="headerlink" href="#return-to-dexterity-moving-content-types-into-code" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>¿Recuerda el tipo de contenido <em>Talk</em> que hemos creado a través de la Web con Dexterity? Vamos a pasar ese nuevo tipo de contenido a dentro de nuestro paquete egg para que pueda ser instalado en otros sitios sin manipulación a través de la Web.</p>
 <p>Pasos:</p>
 <ul class="simple">
@@ -615,7 +613,7 @@ collective.behavior.banner = git https://github.com/collective/collective.behavi
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="7. Configurando y personalizando Plone a través de la Web" href="configuring_customizing.html"/>
-        <link rel="prev" title="5. El caso de estudio" href="case.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="5. El caso de estudio" href="case.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,11 +273,11 @@
           <div role="main">
             
   <div class="section" id="the-features-of-plone">
-<h1>6. Las características de Plone<a class="headerlink" href="#the-features-of-plone" title="Permalink to this headline">¶</a></h1>
+<h1>6. Las características de Plone<a class="headerlink" href="#the-features-of-plone" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En profundidad el Manual de usuario (en idioma Español): <a class="reference external" href="https://plone.org/countries/ve/publicaciones/plone-para-usuarios-principiantes">https://plone.org/countries/ve/publicaciones/plone-para-usuarios-principiantes</a></p>
 <p>Ver también la versión original del manual (en idioma Ingles) en las siguientes direcciones URL: <a class="reference external" href="http://plone.org/documentation/manual/plone-4-user-manual">http://plone.org/documentation/manual/plone-4-user-manual</a> y <a class="reference external" href="http://docs.plone.org/working-with-content/index.html">http://docs.plone.org/working-with-content/index.html</a></p>
 <div class="section" id="starting-and-stopping-plone">
-<h2>Iniciando y Deteniendo Plone<a class="headerlink" href="#starting-and-stopping-plone" title="Permalink to this headline">¶</a></h2>
+<h2>Iniciando y Deteniendo Plone<a class="headerlink" href="#starting-and-stopping-plone" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Tenemos el control de Plone con un pequeño script llamado &#8220;instance&#8221;:</p>
 <div class="highlight-python"><div class="highlight"><pre>$ ./bin/instance fg
 </pre></div>
@@ -302,12 +300,12 @@ $ ./bin/instance -O Plone run myscript.py
 <p>Ahora tiene la opción de seleccionar algunos complementos antes de crear el sitio. Dado que vamos a utilizar Dexterity desde el principio seleccionamos el complemento <code class="docutils literal"><span class="pre">Dexterity-based</span> <span class="pre">Plone</span> <span class="pre">Default</span> <span class="pre">Types</span></code>. De esta manera, incluso el contenido inicial en nuestra página será construido con dexterity por lo complemento plone.app.contenttypes que será el predeterminado en Plone 5.</p>
 <p>Usted será automáticamente redirigido al sitio nuevo.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Plone tiene muchos mensajes. Contienen información importante. ¡Léalos y asegúrese de entender su contenido!</p>
 </div>
 </div>
 <div class="section" id="users">
-<h2>Usuarios<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<h2>Usuarios<a class="headerlink" href="#users" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Vamos a crear nuestros primeros usuarios en Plone. Hasta ahora hemos utilizado el usuario administrador (admin:admin) configurado en el buildout. Este usuario es a menudo se le llama &#8220;el administrador de Zope&#8221; y con este usuario no se gestiona en Plone mas sólo es usado para la gestión de Zope. Por lo tanto el usuario le faltan algunas características como el correo electrónico y el nombre completo y no va a ser capaz de utilizar algunas de las características de Plone. Sin embargo, el usuario tiene todos los permisos posibles.  Al igual que con el usuario root de un servidor, que es una mala práctica hacer uso innecesario del raíz de Zope. Se usa para crear sitios Plone y sus usuarios iniciales, pero no mucho más.</p>
 <p>También puede agregar los usuarios zope a través del terminal ejecutando el siguiente comando:</p>
 <div class="highlight-python"><div class="highlight"><pre>$ ./bin/instance adduser &lt;someusername&gt; &lt;supersecretpassword&gt;
@@ -331,7 +329,7 @@ $ ./bin/instance -O Plone run myscript.py
 </div></blockquote>
 </div>
 <div class="section" id="configure-a-mailserver">
-<h2>Configurar un servidor de correo<a class="headerlink" href="#configure-a-mailserver" title="Permalink to this headline">¶</a></h2>
+<h2>Configurar un servidor de correo<a class="headerlink" href="#configure-a-mailserver" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Tenemos que configurar un servidor de correo desde temprano vamos a crear algunas acciones de contenido que envían mensajes de correo electrónico cuando el nuevo contenido se pone en nuestro sitio.</p>
 <ul class="simple">
 <li><p class="first">Servidor: <code class="samp docutils literal"><span class="pre">mail.gocept.net</span></code></p>
@@ -344,7 +342,7 @@ $ ./bin/instance -O Plone run myscript.py
 <p>Por favor, no abuses de esto. Vamos a deshabilitar esta cuenta después de la capacitación.</p>
 </div>
 <div class="section" id="walkthrough-of-the-ui">
-<h2>Tutorial de la interfaz de usuario<a class="headerlink" href="#walkthrough-of-the-ui" title="Permalink to this headline">¶</a></h2>
+<h2>Tutorial de la interfaz de usuario<a class="headerlink" href="#walkthrough-of-the-ui" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Vamos a ver lo que está ahí...</p>
 <ul class="simple">
 <li><em class="guilabel">portal-top</em>:<ul>
@@ -394,7 +392,7 @@ $ ./bin/instance -O Plone run myscript.py
 <p>Algunas opciones de la barra de edición sólo muestran cuando proceda; por ejemplo, la carpeta <code class="docutils literal"><span class="pre">Contenidos</span></code> y <code class="docutils literal"><span class="pre">Agregar</span> <span class="pre">nuevo...</span></code> sólo se muestran para carpetas. Las opción <code class="docutils literal"><span class="pre">Reglas</span></code> esta actualmente invisible porque no tenemos reglas de contenido disponible.</p>
 </div>
 <div class="section" id="content-types">
-<h2>Tipos de Contenidos<a class="headerlink" href="#content-types" title="Permalink to this headline">¶</a></h2>
+<h2>Tipos de Contenidos<a class="headerlink" href="#content-types" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Editar una página:</p>
 <ul class="simple">
 <li><p class="first"><em class="guilabel">Edite el documento front-page</em></p>
@@ -451,12 +449,12 @@ $ ./bin/instance -O Plone run myscript.py
 </li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Por favor, tenga en cuenta que usamos <a class="reference external" href="http://docs.plone.org/external/plone.app.contenttypes/docs/README.html">plone.app.contenttypes</a> para la formación. Por lo tanto, los tipos se basan en Dexterity y un poco diferente de los tipos que se encuentran en un sitio Plone 4.3.x por defecto.</p>
 </div>
 </div>
 <div class="section" id="folders">
-<h2>Carpetas<a class="headerlink" href="#folders" title="Permalink to this headline">¶</a></h2>
+<h2>Carpetas<a class="headerlink" href="#folders" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p class="first">Ir a &#8216;el-evento&#8217;</p>
 </li>
@@ -478,7 +476,7 @@ $ ./bin/instance -O Plone run myscript.py
 </ul>
 </div>
 <div class="section" id="collections">
-<h2>Colecciones<a class="headerlink" href="#collections" title="Permalink to this headline">¶</a></h2>
+<h2>Colecciones<a class="headerlink" href="#collections" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p class="first">agregar nueva colección: &#8220;todos los contenidos que este pendiente por revisión&#8221;.</p>
 </li>
@@ -495,7 +493,7 @@ $ ./bin/instance -O Plone run myscript.py
 </ul>
 </div>
 <div class="section" id="content-rules">
-<h2>Reglas de Contenido<a class="headerlink" href="#content-rules" title="Permalink to this headline">¶</a></h2>
+<h2>Reglas de Contenido<a class="headerlink" href="#content-rules" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p class="first">¡Crear una nueva regla &#8220;una nueva charla está presente&#8221;!</p>
 </li>
@@ -504,11 +502,11 @@ $ ./bin/instance -O Plone run myscript.py
 </ul>
 </div>
 <div class="section" id="history">
-<h2>Histórico<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
+<h2>Histórico<a class="headerlink" href="#history" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Mostrar y explicar; el control de versiones y su relación con los tipos.</p>
 </div>
 <div class="section" id="manage-members-and-groups">
-<h2>Administrar usuarios y grupos<a class="headerlink" href="#manage-members-and-groups" title="Permalink to this headline">¶</a></h2>
+<h2>Administrar usuarios y grupos<a class="headerlink" href="#manage-members-and-groups" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p class="first">agregar / editar / eliminar Usuarios</p>
 </li>
@@ -526,7 +524,7 @@ $ ./bin/instance -O Plone run myscript.py
 </ul>
 </div>
 <div class="section" id="workflows">
-<h2>Flujos de trabajos<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h2>
+<h2>Flujos de trabajos<a class="headerlink" href="#workflows" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Echa un vistazo al menú desplegable <code class="docutils literal"><span class="pre">Estado</span></code> en la barra de edición en la página principal. Ahora, vaya a una de las carpetas que acaba de añadir. La página principal tiene el estado <code class="docutils literal"><span class="pre">Publicado</span></code> y el nuevo contenido es <code class="docutils literal"><span class="pre">Privado</span></code>.</p>
 <p>Echemos un vistazo a las transiciones de estado disponibles para cada tipo. Podemos hacer un artículo publicado en privado y un artículo privado se pueda publicar. También podemos enviar un artículo para su revisión.</p>
 <p>Cada uno de esos estados conecta los roles a permisos.</p>
@@ -539,28 +537,28 @@ $ ./bin/instance -O Plone run myscript.py
 <p>Un estado de flujo de trabajo es una asociación entre un rol y uno o más permisos. Pasar de un estado a otro es una <code class="docutils literal"><span class="pre">transición</span></code>. Las transiciones (como <code class="docutils literal"><span class="pre">Enviar</span> <span class="pre">a</span> <span class="pre">revisión</span></code>) pueden tener acciones - como la ejecución de una regla de contenido o un script - asociado a ellos.</p>
 <p>Un conjunto completo de estados de flujo de trabajo y las transiciones constituyen una <code class="docutils literal"><span class="pre">flujo</span> <span class="pre">de</span> <span class="pre">trabajo</span></code>. Plone le permite seleccionar entre varios flujos de trabajo preconfigurados que son apropiados para los diferentes tipos de sitios. Tipos de contenido individuales pueden tener su propio flujo de trabajo. O, lo que es particularmente interesante, sin flujo de trabajo. En ese caso, que se aplica inicialmente a presentar y la subida de imágenes, el objeto de contenido hereda el flujo de trabajo de su contenedor.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Una rareza en el todo de los flujos de trabajo estándar de Plone: un elemento de contenido puede ser visible incluso si su contenedor no es. Haciendo un contenedor privado <strong>no</strong> hacen automáticamente su contenido privado.</p>
 </div>
 <p>Lea mas en: <a class="reference external" href="http://docs.plone.org/working-with-content/collaboration-and-workflow/index.html">http://docs.plone.org/working-with-content/collaboration-and-workflow/index.html</a></p>
 </div>
 <div class="section" id="working-copy">
-<h2>Copia de trabajo<a class="headerlink" href="#working-copy" title="Permalink to this headline">¶</a></h2>
+<h2>Copia de trabajo<a class="headerlink" href="#working-copy" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El contenido publicado, incluso en un entorno de Intranet, puede plantear un problema especial para la edición. Puede ser necesario revisar antes de que los cambios se hacen disponible. De hecho, el autor original puede incluso podría no tener permiso para cambiar el documento sin revisión. O bien, puede que tenga que hacer una edición parcial. En cualquiera de los casos, puede ser deseable para que los cambios sean visibles inmediatamente.</p>
 <p>El producto <em>Soporte de Copia de Trabajo</em> resuelve este problema mediante la adición una acción para <em>Retirar revisión</em> o <em>Guardar nueva revisión</em> de cambios para el contenido - disponible en el menú de acciones. Un elemento de contenido puede <em>guardar nueva revisión</em>, trabajado en una copia del elemento y después se <em>guardar nueva revisión</em> de nuevo. O <em>Cancelar retirada de revisión</em> si los cambios no eran aceptables. Hasta no guardar una nueva revisión de los cambios, el contenido anterior sera visible.</p>
 <p>Mientras este complemento viene incorporado en Plone, el soporte de copia de trabajo no es una necesidad común. Así que, si usted lo necesita, usted necesita para activarlo a través de la página de configuración de Complementos. A menos que se active este complemento, las opciones de <em>Retirar revisión</em> / <em>Guardar nueva revisión</em> no son visibles.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Soporte de Copia de Trabajo no está disponible para los tipos de contenido creados a través de Dexterity. Esto está en el camino (es un trabajo en proceso).</p>
 </div>
 </div>
 <div class="section" id="placeful-workflows">
-<h2>Flujos de trabajo Placeful<a class="headerlink" href="#placeful-workflows" title="Permalink to this headline">¶</a></h2>
+<h2>Flujos de trabajo Placeful<a class="headerlink" href="#placeful-workflows" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Usted puede necesitar tener diferentes flujos de trabajo en diferentes partes de un sitio. Por ejemplo, creamos una carpeta intranet. Dado que este es para uso de nuestros organizadores de la conferencia - pero no para el público - el sencillo flujo de trabajo que deseamos utilizar para que el resto del sitio no será deseable aquí.</p>
 <p>El paquete <code class="docutils literal"><span class="pre">Soporte</span> <span class="pre">de</span> <span class="pre">Copia</span> <span class="pre">de</span> <span class="pre">Trabajo</span></code> te da la posibilidad de configurar diferentes flujos de trabajo en las diferentes secciones de un sitio. Normalmente, se utiliza para configurar un flujo de trabajo especial en una carpeta que regirá todo bajo esa carpeta. Ya que tiene efecto en un &#8220;lugar&#8221; en un sitio, este mecanismo es a menudo llamado &#8220;flujo de trabajo Placeful&#8221;.</p>
 <p>Tanto como el Soporte de Copia de Trabajo, como el Soporte de Política de Flujo de trabajo Placeful viene incorporados en Plone, pero tiene que ser activadas a través de la página de configuración de Complementos. Una vez se ha añadido, una opción <code class="docutils literal"><span class="pre">Política...</span></code> aparecerá en el menú de Estado para permitir el establecimiento de una política de flujo de trabajo Placeful.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Soporte de Copia de Trabajo aún no está disponible para los tipos de contenido Carpeta creados a través de Dexterity. Esto está en el camino (es un trabajo en proceso).</p>
 </div>
 </div>
@@ -585,7 +583,7 @@ $ ./bin/instance -O Plone run myscript.py
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="9. Extiende Plone con paquetes Complementos" href="addons.html"/>
-        <link rel="prev" title="7. Configurando y personalizando Plone a través de la Web" href="configuring_customizing.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="7. Configurando y personalizando Plone a través de la Web" href="configuring_customizing.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,13 +273,13 @@
           <div role="main">
             
   <div class="section" id="extending-plone">
-<h1>8. Extendiendo Plone<a class="headerlink" href="#extending-plone" title="Permalink to this headline">¶</a></h1>
+<h1>8. Extendiendo Plone<a class="headerlink" href="#extending-plone" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Zope es extensible y también lo es Plone.</p>
 <p>Si desea instalar un complemento, se va a instalar un paquete Egg - una forma de paquete Python. Los paquetes Eggs consisten en archivos Python junto con otros ficheros necesarios como plantillas de páginas y similares, y un poco de metadatos, que se incluye en un solo archivo.</p>
 <p>Hay una gran variedad de paquetes compatibles con Plone disponibles. La mayor parte se enumeran en el <a class="reference external" href="https://pypi.python.org/pypi">Python Package Index</a>. Una lista más navegable está disponible en la <a class="reference external" href="https://plone.org/products/">lista complemento de Plone.org</a>. El repositorio de código fuente para muchos Plone complementos públicos esta en la organización <a class="reference external" href="https://github.com/collective">Collective de GitHub</a>. También puede crear sus propios paquetes o mantener repositorios personalizados.</p>
 <p>Los paquetes Eggs son menores &#8220;en edad&#8221; que Zope. Zope necesitaba algo como los paquetes eggs antes no había eggs, y los desarrolladores Zope escribieron su propio sistema. En la antigüedad los sistemas obsoletos Plone contenían una gran cantidad de código fuente no incluidos en un paquete egg. El código fuente antiguo no tenía metadatos para registrar las cosas, en vez que necesitaba un método de configuración especial. No necesitamos este método, pero podríamos verlo en otro código fuente. Normalmente se utiliza para registrar el código Archetypes. Los Archetypes es el viejo sistema de tipo de contenido. Ahora utilizamos el nuevo sistema de tipo de contenido Dexterity.</p>
 <div class="section" id="extension-technologies">
-<h2>Tecnologías de extensión<a class="headerlink" href="#extension-technologies" title="Permalink to this headline">¶</a></h2>
+<h2>Tecnologías de extensión<a class="headerlink" href="#extension-technologies" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>¿Cómo extender Plone?</p>
 <p>Esto depende de que tipo de extensión usted quiere crear.</p>
 <ul class="simple">
@@ -291,7 +289,7 @@
 </li>
 </ul>
 <div class="section" id="skin-folders">
-<h3>skin_folders<a class="headerlink" href="#skin-folders" title="Permalink to this headline">¶</a></h3>
+<h3>skin_folders<a class="headerlink" href="#skin-folders" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>¿Te acuerdas del concepto Adquisición? Las Skin Folders se extiende los conceptos de Adquisición. Su sitio Plone tiene una carpeta denominada <code class="docutils literal"><span class="pre">portal_skins</span></code>. Esta carpeta tiene una serie de sub-carpetas. La carpeta <code class="docutils literal"><span class="pre">portal_skins</span></code> tiene una propiedad que define el orden en que las búsquedas de Plone para atributos u objetos en cada sub-carpeta.</p>
 <p>El logo de Plone está en una carpeta skin.</p>
 <p>Por defecto, su sitio tiene una carpeta <code class="docutils literal"><span class="pre">custom</span></code>, y los elementos son primero buscados en esa carpeta.</p>
@@ -299,7 +297,7 @@
 <p>La personalización del estilo de la carpeta Skins se puede lograr a través de la Web usando la ZMI, o con paquetes de complementos. Muchos paquetes de estilo antiguo crean su propia carpeta de skin y la agregan a la capa de skin para Plone cuando se instala.</p>
 </div>
 <div class="section" id="genericsetup">
-<h3>GenericSetup<a class="headerlink" href="#genericsetup" title="Permalink to this headline">¶</a></h3>
+<h3>GenericSetup<a class="headerlink" href="#genericsetup" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El siguiente paso es <em>GenericSetup</em>. Como su nombre lo indica claramente, <em>GenericSetup</em> es parte de CMF.</p>
 <p>Me temo que GenericSetup es difícil de dominar.</p>
 <p><em>GenericSetup</em> le permite definir la configuración persistente en archivos XML. <em>GenericSetup</em> analiza los archivos XML y actualiza la configuración persistente según la configuración. ¡Este es un paso que tiene que correr por su cuenta!</p>
@@ -308,7 +306,7 @@
 <p>Los perfiles GenericSetup también pueden ser construidos en los paquetes de Python. Cada paquete que aparece en la lista de paquetes de complemento dentro de una instalación Plone tiene un perfil de GS que detalla cómo encaja en Plone. Los paquetes que forman parte de la propia Plone pueden tener perfiles GS, pero están excluidos de la lista activa / inactiva.</p>
 </div>
 <div class="section" id="component-architecture">
-<h3>Arquitectura Componente<a class="headerlink" href="#component-architecture" title="Permalink to this headline">¶</a></h3>
+<h3>Arquitectura Componente<a class="headerlink" href="#component-architecture" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La última manera de extender Plone es a través de los <em>Componentes</em>.</p>
 <p>Un poco de historia está a la orden.</p>
 <p>Cuando comenzó Zope, el Diseño orientado a objetos fue la <strong>bala de plata</strong>, es decir, una solución rápida a un problema difícil.</p>
@@ -322,7 +320,7 @@
 </div>
 </div>
 <div class="section" id="what-are-components-what-is-zcml">
-<h2>¿Cuáles son los componentes?, ¿Que es el ZCML?<a class="headerlink" href="#what-are-components-what-is-zcml" title="Permalink to this headline">¶</a></h2>
+<h2>¿Cuáles son los componentes?, ¿Que es el ZCML?<a class="headerlink" href="#what-are-components-what-is-zcml" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>¿Cuál es la manera más simple absoluta para ampliar la funcionalidad?</p>
 <p>Monkey Patching.</p>
 <p>Eso significa que usted puedo cambiar el código en otros archivos mientras mi archivo se carga.</p>
@@ -360,7 +358,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

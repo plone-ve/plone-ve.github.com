@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="Registro de cambios" href="CHANGES.html"/>
-        <link rel="prev" title="17. Views - Parte II: Una vista por defecto para la “charla”" href="views_2.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="17. Views - Parte II: Una vista por defecto para la “charla”" href="views_2.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,7 +273,7 @@
           <div role="main">
             
   <div class="section" id="views-iii-a-talk-list">
-<h1>18. Views - Parte III: Una lista de Charlas<a class="headerlink" href="#views-iii-a-talk-list" title="Permalink to this headline">¶</a></h1>
+<h1>18. Views - Parte III: Una lista de Charlas<a class="headerlink" href="#views-iii-a-talk-list" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
 <p>Obtén el código para este capítulo (<a class="reference internal" href="sneak.html"><em>Más información</em></a>) usando este comando en el directorio buildout:</p>
@@ -285,7 +283,7 @@
 </div>
 <p>Ahora no queremos proporcionar información sobre un elemento específico, sino en varios elementos. ¿Y ahora qué? No podemos mirar a varios elementos al mismo tiempo que el contexto.</p>
 <div class="section" id="using-portal-catalog">
-<h2>Usando portal_catalog<a class="headerlink" href="#using-portal-catalog" title="Permalink to this headline">¶</a></h2>
+<h2>Usando portal_catalog<a class="headerlink" href="#using-portal-catalog" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Digamos que queremos mostrar una lista de todas las charlas que se presentaron durante la conferencia. Sólo podemos ir a la carpeta y seleccione un método de visualización que nos convenga. Pero ninguno lo hace porque queremos para mostrar al público objetivo en nuestro listado.</p>
 <p>Así que tenemos que conseguir todas las charlas. Para ello utilizamos la vista de la clase Python para consultar en el catálogo las charlas.</p>
 <p>El catálogo es como un motor de búsqueda por el contenido de nuestro sitio. Contiene información sobre todos los objetos, así como algunos de sus atributos como título, descripción, desde estado de flujo de trabajo, palabras clave que fueron etiquetadas, autor, tipo de contenido, su ruta en el sitio, etc. Sin embargo, no se mantiene el contenido de campos &#8220;pesado&#8221; como imágenes o archivos, campos texto enriquecidos y el campo que acabamos de definir nosotros mismos.</p>
@@ -396,7 +394,7 @@
 <p>Creamos un diccionario que contiene toda la información que queremos mostrar en la plantilla. De esta manera no tiene que poner ninguna lógica compleja en la plantilla.</p>
 </div>
 <div class="section" id="brains-and-objects">
-<h2>Cerebros y objetos<a class="headerlink" href="#brains-and-objects" title="Permalink to this headline">¶</a></h2>
+<h2>Cerebros y objetos<a class="headerlink" href="#brains-and-objects" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Los objetos normalmente no se cargan en la memoria, pero permanecen latentes en el base de datos ZODB. Despertar objetos hasta puede ser lento, especialmente si usted está despertando una gran cantidad de objetos. Afortunadamente nuestros tipos de contenidos no son especialmente pesados, ya que son:</p>
 <ul class="simple">
 <li><p class="first">objetos dexterity que son más ligeros que sus hermanos archetypes</p>
@@ -413,7 +411,7 @@
 </li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p>El código para agregar este índice se vería como el siguiente:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">plone.indexer.decorator</span> <span class="kn">import</span> <span class="n">indexer</span>
 <span class="kn">from</span> <span class="nn">ploneconf.site.talk</span> <span class="kn">import</span> <span class="n">ITalk</span>
@@ -446,7 +444,7 @@
 </div>
 <p>¿Quién puede adivinar lo que <code class="docutils literal"><span class="pre">brain.title</span></code> volverán ya que el cerebro no tiene ese atributo?</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Respuesta: La Adquisición obtendrá el atributo de servidor principal más cercano. <code class="docutils literal"><span class="pre">brain.__parent__</span></code>  es <code class="docutils literal"><span class="pre">&lt;CatalogTool</span> <span class="pre">at</span> <span class="pre">/Plone/portal_catalog&gt;</span></code>. El atributo <code class="docutils literal"><span class="pre">title</span></code> del <code class="docutils literal"><span class="pre">portal_catalog</span></code> es &#8216;Indexado en todo el contenido en el sitio&#8217;.</p>
 </div>
 <p>La Adquisición puede ser nocivo. Los cerebros no tienen el atributo &#8216;getLayout&#8217; <code class="docutils literal"><span class="pre">brain.getLayout()</span></code>:</p>
@@ -471,7 +469,7 @@
 </div>
 </div>
 <div class="section" id="querying-the-catalog">
-<h2>Consultando el catálogo<a class="headerlink" href="#querying-the-catalog" title="Permalink to this headline">¶</a></h2>
+<h2>Consultando el catálogo<a class="headerlink" href="#querying-the-catalog" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Hay muchos <a class="reference external" href="http://docs.plone.org/develop/plone/searching_and_indexing/indexing.html">índices de catálogo</a> para consultar. He aquí algunos ejemplos:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">getToolByName</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span> <span class="s">&#39;portal_catalog&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span><span class="p">(</span><span class="n">Subject</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;cats&#39;</span><span class="p">,</span> <span class="s">&#39;dogs&#39;</span><span class="p">))</span>
@@ -486,15 +484,15 @@
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p class="last"><a class="reference external" href="http://docs.plone.org/develop/plone/searching_and_indexing/query.html">http://docs.plone.org/develop/plone/searching_and_indexing/query.html</a></p>
 </div>
 </div>
 <div class="section" id="exercises">
-<h2>Ejercicios<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<h2>Ejercicios<a class="headerlink" href="#exercises" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Ya que ahora saben cómo consultar el catálogo es el momento para un poco de ejercicio.</p>
 <div class="section" id="exercise-1">
-<h3>Ejercicio 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<h3>Ejercicio 1<a class="headerlink" href="#exercise-1" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Agregue un método <code class="docutils literal"><span class="pre">get_news</span></code> a <code class="docutils literal"><span class="pre">TalkListView</span></code> que devuelve una lista de los cerebros de todos los elementos de Noticias que se publican y ordenarlos en el orden de su publicación fecha.</p>
 <div class="toggle admonition">
 <p class="first admonition-title">Solución</p>
@@ -518,7 +516,7 @@
 </div>
 </div>
 <div class="section" id="exercise-2">
-<h3>Ejercicio 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<h3>Ejercicio 2<a class="headerlink" href="#exercise-2" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Agregar un método que regresa todas las keynotes publicadas como objetos.</p>
 <div class="toggle admonition">
 <p class="first admonition-title">Solución</p>
@@ -555,7 +553,7 @@
 </div>
 </div>
 <div class="section" id="the-template-for-the-listing">
-<h2>La plantilla para la lista<a class="headerlink" href="#the-template-for-the-listing" title="Permalink to this headline">¶</a></h2>
+<h2>La plantilla para la lista<a class="headerlink" href="#the-template-for-the-listing" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>A continuación, crear una plantilla en la usa los resultados del método de las &#8216;charlas&#8217;.</p>
 <p>Trate de mantener la lógica mayormente en Python. Esto es por dos razones:</p>
 <dl class="docutils">
@@ -732,7 +730,7 @@
 </dd>
 </dl>
 <div class="section" id="exercise">
-<h3>Ejercicio<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<h3>Ejercicio<a class="headerlink" href="#exercise" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Modificar la vista para solamente expresiones Python.</p>
 <div class="toggle admonition">
 <p class="first admonition-title">Solución</p>
@@ -818,7 +816,7 @@
 </div>
 </div>
 <div class="section" id="setting-a-custom-view-as-default-view-on-an-object">
-<h2>Configuración de una vista personalizada como vista por defecto en un objeto<a class="headerlink" href="#setting-a-custom-view-as-default-view-on-an-object" title="Permalink to this headline">¶</a></h2>
+<h2>Configuración de una vista personalizada como vista por defecto en un objeto<a class="headerlink" href="#setting-a-custom-view-as-default-view-on-an-object" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>No queremos tener siempre que a anexar /&#64;&#64;talklistview a nuestra carpeta para obtener la vista. Hay una manera muy fácil de configurar la vista de la carpeta con el ZMI.</p>
 <p>Si agregamos <code class="docutils literal"><span class="pre">/manage_propertiesForm</span></code> podemos establecer la propiedad &#8220;layout&#8221; para la vista <code class="docutils literal"><span class="pre">talklistview</span></code>.</p>
 <p>Para hacer vistas configurables para que los editores pueden elegir entonces tenemos que registrar la vista para el tipo de contenido que nos ocupa, en que es FTI. Para activar si todas las carpetas tiene esta vista se añade un nuevo archivo <code class="docutils literal"><span class="pre">profiles/default/types/Folder.xml</span></code></p>
@@ -841,7 +839,7 @@
 <p>La opción <code class="docutils literal"><span class="pre">purge=&quot;False&quot;</span></code> anexa a la vista de los ya existentes en lugar de reemplazarlos.</p>
 </div>
 <div class="section" id="adding-some-javascript-collective-js-datatables">
-<h2>Agregando un poco de Javascript (collective.js.datatables)<a class="headerlink" href="#adding-some-javascript-collective-js-datatables" title="Permalink to this headline">¶</a></h2>
+<h2>Agregando un poco de Javascript (collective.js.datatables)<a class="headerlink" href="#adding-some-javascript-collective-js-datatables" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Aquí se utiliza una de las muchas agradables característica construida en Plone. La class=&#8221;listing&#8221; da la tabla un buen estilo y hace que la tabla se puede ordenar con un poco de Javascript.</p>
 <p>Pero podríamos mejorar esa tabla aún más mediante el uso de una buena biblioteca Javascript llamada &#8220;datatables&#8221;. Incluso podría llegar a ser parte del core de Plone en algún momento.</p>
 <p>Al igual que para muchas bibliotecas Javascript ya hacen esto y hay un paquete que sin embargo la integración con Plone para nosotros es: <code class="docutils literal"><span class="pre">collective.js.datatables</span></code>. Al igual que todos los paquetes Python usted lo puede encontrar en PYPI: <a class="reference external" href="http://pypi.python.org/pypi/collective.js.datatables">http://pypi.python.org/pypi/collective.js.datatables</a></p>
@@ -974,12 +972,12 @@
 <p>Utilizamos METAL de nuevo pero esta vez para llenar un slot diferente. El &#8220;javascript_head_slot&#8221; es parte de área &lt;head&gt; del HTML en Plone y se puede ampliar de esta manera. También podríamos simplemente poner el código fuente en línea, pero con HTML muy bien ordenado es una buena práctica.</p>
 <p>Hagamos una prueba con la siguiente dirección URL: <a class="reference external" href="http://localhost:8080/Plone/talklistview">http://localhost:8080/Plone/talklistview</a></p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Añadimos el archivo <code class="docutils literal"><span class="pre">jquery.datatables.js</span></code> directamente a la ranura HEAD del HTML sin utilizar un registro en la herramienta Plone JavaScript registry (portal_javascript). Al utilizar el registro podría permitir la fusión de los archivos js y almacenamiento en caché avanzado. Un perfil GenericSetup está incluido en el paquete collective.js.datatables.</p>
 </div>
 </div>
 <div class="section" id="summary">
-<h2>Resumen<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Resumen<a class="headerlink" href="#summary" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Hemos creado un bonito listado, que se puede llamar en cualquier lugar en el sitio web.</p>
 </div>
 </div>
@@ -1003,7 +1001,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

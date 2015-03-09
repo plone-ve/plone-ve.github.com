@@ -34,9 +34,7 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -273,20 +271,20 @@
           <div role="main">
             
   <div class="section" id="more-complex-behaviors">
-<h1>Más comportamientos complejos<a class="headerlink" href="#more-complex-behaviors" title="Permalink to this headline">¶</a></h1>
+<h1>Más comportamientos complejos<a class="headerlink" href="#more-complex-behaviors" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="using-annotations">
-<h2>Usando Anotaciones<a class="headerlink" href="#using-annotations" title="Permalink to this headline">¶</a></h2>
+<h2>Usando Anotaciones<a class="headerlink" href="#using-annotations" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>We are going to store the information in an annotation. Not because it is needed but because you will find code that uses annotations and need to understand the implications.</p>
 <p><a class="reference external" href="https://pypi.python.org/pypi/zope.annotation/4.2.0">Annotations</a> in Zope/Plone mean that data won&#8217;t be stored directly on an object but in an indirect way and with namespaces so that multiple packages can store information under the same attribute, without colliding.</p>
 <p>So using annotations avoids namespace conflicts. The cost is an indirection. The dictionary is persistent so it has to be stored separately. Also, one could give attributes a name containing a namespace prefix to avoid naming collisions.</p>
 </div>
 <div class="section" id="using-schema">
-<h2>Usando Esquema<a class="headerlink" href="#using-schema" title="Permalink to this headline">¶</a></h2>
+<h2>Usando Esquema<a class="headerlink" href="#using-schema" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>The attribute where we store our data will be declared as a schema field. We mark the field as a ommitted field, because we are not going to create z3c.form widgets for displaying them. We do provide a schema, because many other packages use the schema information to get knowledge of the relevant fields.</p>
 <p>For example, when files have been migrated to blobs, new objects had to be created and every schema field was copied. The code can&#8217;t know about our field, except if we provide schema information.</p>
 </div>
 <div class="section" id="writing-code">
-<h2>Escribiendo código<a class="headerlink" href="#writing-code" title="Permalink to this headline">¶</a></h2>
+<h2>Escribiendo código<a class="headerlink" href="#writing-code" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Para iniciar, creamos un directorio <code class="file docutils literal"><span class="pre">behavior</span></code> con un archivo vació <code class="file docutils literal"><span class="pre">behavior/__init__.py</span></code>.</p>
 <p>Luego debemos, como siempre, registrar nuestro zcml.</p>
 <p>Primero, agrega la información de que existe otro archivo zcml en <code class="file docutils literal"><span class="pre">configure.zcml</span></code></p>
@@ -556,7 +554,7 @@ We look for data with a specific key.</p>
 <p>By declaring a static name, we won&#8217;t run into problems if we restructure the code.</p>
 <p>You can see, that we initialize the data if it doesn&#8217;t exist. We work with PersistentDict and PersistentList. To understand why we do this, it is important to understand how the ZODB works.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p>The ZODB can store objects. It has a special root object that you will never touch. Whatever you store where, will be part of the root object, except if it is an object sublclassing <code class="samp docutils literal"><span class="pre">persistent.Persistent</span></code> Then it will be stored independently.</p>
 <p>Zope/ZODB Persistent objects note when you change an attribute on it and mark itself as changed. Changed objects will be saved to the database. This happens automatically. Each request begins a transaction and after our code ran and the Zope Server is preparing to send back the response we generated, the transaction will be committed and everything we changed will be saved.</p>
 <p>Now, if have a normal dictionary on a persistent object, and you will only change the dictionary, the persistent object has no way to know, if the dictionary has been changed. This <a class="reference external" href="https://github.com/plone/Products.CMFEditions/commit/5c07c72bc8701cf28c9cc68ad940186b9e296ddf">happens</a> from time to time.</p>
@@ -668,7 +666,7 @@ We look for data with a specific key.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="16. Personalizar plantillas existentes" href="zpt_2.html"/>
-        <link rel="prev" title="14. Views - Parte I" href="views_1.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="14. Views - Parte I" href="views_1.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,7 +273,7 @@
           <div role="main">
             
   <div class="section" id="zope-page-templates">
-<h1>15. Zope Page Templates<a class="headerlink" href="#zope-page-templates" title="Permalink to this headline">¶</a></h1>
+<h1>15. Zope Page Templates<a class="headerlink" href="#zope-page-templates" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
 <p>Obtén el código para este capítulo (<a class="reference internal" href="sneak.html"><em>Más información</em></a>) usando este comando en el directorio buildout:</p>
@@ -332,7 +330,7 @@
 </pre></div>
 </div>
 <div class="section" id="tal-and-tales">
-<h2>TAL y TALES<a class="headerlink" href="#tal-and-tales" title="Permalink to this headline">¶</a></h2>
+<h2>TAL y TALES<a class="headerlink" href="#tal-and-tales" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Vamos a añadir un poco de magia y modificar la etiqueta &lt;p&gt;:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">tal:content=</span><span class="s">&quot;string:blue&quot;</span><span class="nt">&gt;</span>red<span class="nt">&lt;/p&gt;</span>
 </pre></div>
@@ -385,7 +383,7 @@
 </dd>
 </dl>
 <div class="section" id="python-expressions">
-<h3>Expresiones Python<a class="headerlink" href="#python-expressions" title="Permalink to this headline">¶</a></h3>
+<h3>Expresiones Python<a class="headerlink" href="#python-expressions" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Hasta ahora sólo utilizamos una expresión TALES (el bit <code class="docutils literal"><span class="pre">string:</span></code>). Usemos una expresión TALES diferente ahora. Con <code class="docutils literal"><span class="pre">python:</span></code> podemos usar código Python. A continuación un ejemplo sencillo:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">tal:define=</span><span class="s">&quot;title context/title&quot;</span>
    <span class="na">tal:content=</span><span class="s">&quot;python:title.upper()&quot;</span><span class="nt">&gt;</span>
@@ -412,7 +410,7 @@
 </ul>
 </div>
 <div class="section" id="tal-condition">
-<h3>tal:condition<a class="headerlink" href="#tal-condition" title="Permalink to this headline">¶</a></h3>
+<h3>tal:condition<a class="headerlink" href="#tal-condition" title="Enlazar permanentemente con este título">¶</a></h3>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">tal:condition</span></code></dt>
 <dd><p class="first last">pruebas, si la expresión es verdadera o falsa.</p>
@@ -440,7 +438,7 @@
 </div>
 </div>
 <div class="section" id="tal-repeat">
-<h3>tal:repeat<a class="headerlink" href="#tal-repeat" title="Permalink to this headline">¶</a></h3>
+<h3>tal:repeat<a class="headerlink" href="#tal-repeat" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Probemos otra sentencia:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">tal:define=</span><span class="s">&quot;talks python:[&#39;Dexterity for the win!&#39;,</span>
 <span class="s">                             &#39;Deco is the future&#39;,</span>
@@ -474,7 +472,7 @@
 </div>
 </div>
 <div class="section" id="path-expressions">
-<h3>Expresiones de rutas<a class="headerlink" href="#path-expressions" title="Permalink to this headline">¶</a></h3>
+<h3>Expresiones de rutas<a class="headerlink" href="#path-expressions" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En cuanto TALES hasta ahora hemos utilizado la <code class="docutils literal"><span class="pre">string:</span></code> o <code class="docutils literal"><span class="pre">python:</span></code> o sólo las variables. La expresión siguiente y más comunes son las expresiones de rutas (path-expressions). Opcionalmente se puede iniciar expresión de ruta con el atributo <code class="docutils literal"><span class="pre">path:</span></code></p>
 <p>Cada expresión de ruta comienza con un nombre de variable. Puede ser tanto un objeto como <code class="docutils literal"><span class="pre">context</span></code>, <code class="docutils literal"><span class="pre">view</span></code>, <code class="docutils literal"><span class="pre">template</span></code> o una variable definida anteriormente como <code class="docutils literal"><span class="pre">talk</span></code>.</p>
 <p>Después de la variable se añade una barra <code class="docutils literal"><span class="pre">/</span></code> y el nombre de un sub-objeto, atributo o método llamable. El &#8216;/&#8217; se utiliza para terminar el nombre de un objeto y el inicio del nombre de la propiedad. Las mismas propiedades pueden ser objetos que a su vez tienen propiedades.</p>
@@ -516,7 +514,7 @@
 <p>Muy útil para depuración :-)</p>
 </div>
 <div class="section" id="pure-tal-blocks">
-<h3>Puro bloques TAL<a class="headerlink" href="#pure-tal-blocks" title="Permalink to this headline">¶</a></h3>
+<h3>Puro bloques TAL<a class="headerlink" href="#pure-tal-blocks" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Podemos utilizar atributos TAL sin marcas HTML. Esto es útil cuando no es necesario añadir las etiquetas para el marcado</p>
 <p>Sintaxis:</p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;tal:block</span> <span class="na">attribute=</span><span class="s">&quot;expression&quot;</span><span class="nt">&gt;</span>some content<span class="nt">&lt;/tal:block&gt;</span>
@@ -536,7 +534,7 @@
 </div>
 </div>
 <div class="section" id="handling-complex-data-in-templates">
-<h3>Manejo de datos complejos en plantillas<a class="headerlink" href="#handling-complex-data-in-templates" title="Permalink to this headline">¶</a></h3>
+<h3>Manejo de datos complejos en plantillas<a class="headerlink" href="#handling-complex-data-in-templates" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Let&#8217;s move on to a little more complex data. And to another TAL-attribute:</p>
 <dl class="docutils">
 <dt>tal:replace</dt>
@@ -633,7 +631,7 @@
 </div>
 </div>
 <div class="section" id="metal-and-macros">
-<h2>METAL y macros<a class="headerlink" href="#metal-and-macros" title="Permalink to this headline">¶</a></h2>
+<h2>METAL y macros<a class="headerlink" href="#metal-and-macros" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>¿Por qué nuestra vista es tan feo?, ¿Cómo conseguimos nuestro HTML para representar en la interfaz de usuario de Plone?</p>
 <p>Utilizamos METAL (Macro Extension to TAL) para definir ranuras que podemos llenar y macros que podemos reutilizar.</p>
 <p>Agregamos a la etiqueta <code class="docutils literal"><span class="pre">&lt;html&gt;</span></code>:</p>
@@ -720,7 +718,7 @@
 </pre></div>
 </td></tr></table></div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p>Desde la vista demoview solamente es utilizada el contenido de la plantilla, no por el contexto que le toca no tiene mucho sentido tener la barra de edición. Entonces lo ocultamos estableciendo la variable correspondiente en el actual request con el python a 1: <code class="docutils literal"><span class="pre">request.set('disable_border',</span> <span class="pre">1)</span></code>.</p>
 <p>La manera más fácil de hacer esto es definir una variable dummy. Dummy porque nunca se usa, salvo que nos permita ejecutar algún código.</p>
 <div class="last highlight-xml"><div class="highlight"><pre><span class="nt">&lt;metal:block</span> <span class="na">fill-slot=</span><span class="s">&quot;top_slot&quot;</span>
@@ -729,7 +727,7 @@
 </div>
 </div>
 <div class="section" id="macros-in-browser-views">
-<h3>Macros en browser-views<a class="headerlink" href="#macros-in-browser-views" title="Permalink to this headline">¶</a></h3>
+<h3>Macros en browser-views<a class="headerlink" href="#macros-in-browser-views" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Define un macro en un nuevo archivo <code class="docutils literal"><span class="pre">macros.pt</span></code></p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">metal:define-macro=</span><span class="s">&quot;my_macro&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;</span>I can be reused<span class="nt">&lt;/p&gt;</span>
@@ -754,7 +752,7 @@
 </div>
 </div>
 <div class="section" id="accessing-plone-from-the-template">
-<h2>Accediendo a Plone desde la plantilla<a class="headerlink" href="#accessing-plone-from-the-template" title="Permalink to this headline">¶</a></h2>
+<h2>Accediendo a Plone desde la plantilla<a class="headerlink" href="#accessing-plone-from-the-template" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En nuestra plantilla tenemos acceso al contexto del objeto en el que la vista se llamada, la propia browser-views (es decir, todos los métodos de Python vamos a colocarlos en la vista más adelante), los objetos request y response y con esos podemos conseguir casi cualquier cosa.</p>
 <p>En las plantillas también podemos acceder a otras browser-views. Algunos de los que existen para facilitar el acceso a los métodos que a menudo necesitamos:</p>
 <div class="highlight-python"><div class="highlight"><pre>tal:define=&quot;context_state context/@@plone_context_state;
@@ -776,7 +774,7 @@
 <p>Estos son muy utilizados y hay muchos más.</p>
 </div>
 <div class="section" id="what-we-missed">
-<h2>Lo que echamos de menos<a class="headerlink" href="#what-we-missed" title="Permalink to this headline">¶</a></h2>
+<h2>Lo que echamos de menos<a class="headerlink" href="#what-we-missed" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Hay algunas cosas que no nos cubrimos hasta el momento:</p>
 <dl class="docutils">
 <dt><code class="docutils literal"><span class="pre">tal:condition=&quot;exists:expression&quot;</span></code></dt>
@@ -794,7 +792,7 @@
 </dl>
 <p>Hay mucho más acerca de TAL, TALES y METAL que no hemos cubierto. Usted solamente aprenderá si sigues leyendo, escribiendo y personalización de plantillas.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <ul class="last simple">
 <li><a class="reference external" href="http://docs.plone.org/adapt-and-extend/theming/templates_css/template_basics.html">http://docs.plone.org/adapt-and-extend/theming/templates_css/template_basics.html</a></li>
 <li><p class="first">Usando Zope Page Templates: <a class="reference external" href="http://docs.zope.org/zope2/zope2book/ZPT.html">http://docs.zope.org/zope2/zope2book/ZPT.html</a></p>
@@ -805,7 +803,7 @@
 </div>
 </div>
 <div class="section" id="chameleon">
-<h2>Chameleon<a class="headerlink" href="#chameleon" title="Permalink to this headline">¶</a></h2>
+<h2>Chameleon<a class="headerlink" href="#chameleon" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Chameleon es el sucesor de TAL y serán incorporado en Plone 5.</p>
 <ul class="simple">
 <li><p class="first">Plip para Chameleon: <a class="reference external" href="https://dev.plone.org/ticket/12198">https://dev.plone.org/ticket/12198</a></p>
@@ -838,7 +836,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

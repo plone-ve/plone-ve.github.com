@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="13. Creando complementos para personalizar Plone" href="eggs1.html"/>
-        <link rel="prev" title="11. Dexterity - Parte I: A través de la Web" href="dexterity.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="11. Dexterity - Parte I: A través de la Web" href="dexterity.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,20 +273,20 @@
           <div role="main">
             
   <div class="section" id="buildout-i">
-<h1>12. Buildout - Parte I<a class="headerlink" href="#buildout-i" title="Permalink to this headline">¶</a></h1>
+<h1>12. Buildout - Parte I<a class="headerlink" href="#buildout-i" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><a class="reference external" href="https://pypi.python.org/pypi/zc.buildout">Buildout</a> compone su aplicación por usted, de acuerdo a sus reglas.</p>
 <p>Para componer su aplicación es necesario definir los paquetes eggs que usted necesita, ¿qué versión?, ¿qué archivos de configuración Buildout tiene que generar para usted?, para descargar y compilar, así sucesivamente. Buildout descarga los paquetes eggs requeridos y resuelve todas las dependencias. Es posible que necesite cinco paquetes eggs diferentes, pero al final, Buildout tiene que instalar 300 paquetes eggs, todos con la versión correcta.</p>
 <p>Buildout hace esto sin tocar el sistema Python o afectar a ningún otro paquete. Los comando creados por buildout traer todos los paquetes requeridos en el entorno Python. Cada comando que crea mis diferentes bibliotecas o incluso diferentes versiones de la misma biblioteca.</p>
 <p>Plone necesita carpetas para los archivos de registro, bases de datos y archivos de configuración. Buildout ensambla todo esto para usted.</p>
 <p>Usted necesitará una gran cantidad de funcionalidades que Buildout no proporciona fuera de la caja, así usted necesitará varias extensiones. Algunas extensiones proporcionan una funcionalidad totalmente nueva, como mr.developer, la mejor manera de manejar sus repositorios de código fuente.</p>
 <div class="section" id="syntax">
-<h2>Sintaxis<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<h2>Sintaxis<a class="headerlink" href="#syntax" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La sintaxis de los archivos de configuración de despliegue es similar a los archivos clásicos ini. Usted escribe un nombre de parámetro, un signo igual y el valor. Si introduce otro valor en la siguiente línea y indentada, Buildout entiende que ambos valores pertenecen al nombre del parámetro y el parámetro almacena todos los valores en forma de lista.</p>
 <p>Un Buildout consta de múltiples secciones. Las secciones comienzan con el nombre de la sección entre corchetes. Cada sección declara una parte diferente de su aplicación. Como analogía aproximada, su archivo Buildout es un libro de cocina con múltiples recetas.</p>
 <p>Hay una sección especial, llamada <cite>[buildout]</cite>. En esta sección se puede cambiar el comportamiento de la propia Buildout. Las variables <code class="samp docutils literal"><span class="pre">parts</span></code> define, cuál de las secciones existentes deben ser efectivamente utilizado.</p>
 </div>
 <div class="section" id="recipes">
-<h2>Recetas<a class="headerlink" href="#recipes" title="Permalink to this headline">¶</a></h2>
+<h2>Recetas<a class="headerlink" href="#recipes" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Buildout por si mismo no tiene idea de como instalar Zope. Buildout es un sistema basado en plugin, este viene con un pequeño conjunto de plugins para crear archivos de configuración y descargar paquetes eggs con sus dependencias y su versión apropiada. Para instalar un sitio Zope, necesitas un plugin de terceros. El plugin provee nuevas recetas que tu tienes que declarar y configurar en una sección.</p>
 <p>Un ejemplo es esta sección.</p>
 <div class="highlight-ini"><div class="highlight"><pre><span class="k">[instance]</span>
@@ -298,12 +296,12 @@
 </div>
 <p>Esto usa el paquete de python <a class="reference external" href="http://pypi.python.org/pypi/plone.recipe.zope2instance">plone.recipe.zope2instance</a>  para crear y configurar la instancia Zope 2 la cual usamos para ejecutar Plone. Todas las lineas después de <code class="docutils literal"><span class="pre">recipe</span> <span class="pre">=</span> <span class="pre">xyz</span></code> son la configuración de la receta usada.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p class="last"><a class="reference external" href="http://www.buildout.org/en/latest/docs/recipelist.html">http://www.buildout.org/en/latest/docs/recipelist.html</a></p>
 </div>
 </div>
 <div class="section" id="references">
-<h2>Referencias<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>Referencias<a class="headerlink" href="#references" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Buildout le permite usar referencias en la configuración. Una declaración de variable no sólo puede mantener el valor de variable, pero también una referencia al lugar donde buscar el valor de la variable.</p>
 <p>Si usted tiene una gran instalación con muchos sitios Plone con pequeños cambios entre cada configuración, se puede generar una plantilla de configuración, y cada sitio hace referencia a todo, desde la plantilla y sobrescribe justo en lo que necesita ser cambiado.</p>
 <p>Incluso en los buildouts más pequeños esta es una característica útil. Estamos utilizando <a class="reference external" href="https://pypi.python.org/pypi/collective.recipe.omelette">collective.recipe.omelette</a>. Una receta muy práctica el cual crea un directorio virtual para facilitar la navegación al código fuente de cada paquete egg.</p>
@@ -312,7 +310,7 @@
 <p>La configuración de sistemas complejos siempre implica una gran cantidad de duplicación de la información. El uso de referencias en la configuración buildout le permite minimizar estas duplicaciones.</p>
 </div>
 <div class="section" id="a-real-life-example">
-<h2>Un ejemplo de la vida real<a class="headerlink" href="#a-real-life-example" title="Permalink to this headline">¶</a></h2>
+<h2>Un ejemplo de la vida real<a class="headerlink" href="#a-real-life-example" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Examinemos el archivo <code class="docutils literal"><span class="pre">buildout.cfg</span></code> para el entrenamiento y miremos algunas de las variables más importantes:</p>
 <div class="highlight-ini"><div class="highlight"><pre>[buildout]
 parts =
@@ -440,17 +438,17 @@ plone.app.debugtoolbar = 1.0a3
 <p>Esta es otra sección especial. Se ha convertido en una sección especial de declaración. En nuestra sección <code class="samp docutils literal"><span class="pre">[buildout]</span></code> establecemos una variable <code class="samp docutils literal"><span class="pre">versions</span> <span class="pre">=</span> <span class="pre">versions</span></code>. Esto le dice a buildout, existe una sección denominada versions, conteniendo información de las versiones a usar. Cuando Buildout instala paquetes eggs se utilizará la versión definida en esta sección.</p>
 </div>
 <div class="section" id="hello-mr-developer">
-<h2>¡Hola mr.developer!<a class="headerlink" href="#hello-mr-developer" title="Permalink to this headline">¶</a></h2>
+<h2>¡Hola mr.developer!<a class="headerlink" href="#hello-mr-developer" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Hay muchas cosas más importantes que debe saber, y no podemos pasar por ellos en todos los detalles, pero quiero centrarme en una característica específica: <strong>mr.developer</strong></p>
 <p>Con mr.developer puede declarar los paquetes que desee comprobar desde o hacia un sistema de control de versiones y de cual dirección URL del repositorio. Usted puede comprobar código fuente desde diversos CVS como git, subversion, bzr, hg y quizá más. También, se puede indicar a Buildout algún código fuente se encuentran en el sistema de archivos local sin aplicar control de versiones.</p>
 <p><code class="docutils literal"><span class="pre">mr.developer</span></code> viene con un comando, <code class="docutils literal"><span class="pre">./bin/develop</span></code>. Se puede utilizar para actualizar su código fuente, para comprobar los nuevos cambios y así sucesivamente. Usted puede activar y desactivar sus checkouts desde el origen. Si usted desarrolla sus extensiones en los paquetes eggs con checkouts separadas, lo cual es una buena práctica, usted puede planear publicaciones por tener todas los checkouts desactivados, y sólo activarlos, al escribir los cambios que requieren una nueva versión. Usted puede activar y desactivar los paquetes eggs a través del comando <code class="docutils literal"><span class="pre">develop</span></code> o la configuración Buildout. Siempre debe usar la forma Buildout. Su commit sirve como documentación.</p>
 </div>
 <div class="section" id="extensible">
-<h2>Extensible<a class="headerlink" href="#extensible" title="Permalink to this headline">¶</a></h2>
+<h2>Extensible<a class="headerlink" href="#extensible" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Usted puede haber notado que la mayoría, si no toda la funcionalidad sólo está disponible a través de plugins. Una de las cosas que sobresale en Buildout sin ningún plugin, es la resolución de dependencias. Usted puede ayudar a Plone en la resolución de dependencias, al declarar exactamente cual versión de un paquete egg usted desea. Esto es sólo un caso de uso. Otra es mucho más importante: Si usted quiere tener un Buildout repetible, el cual funcione de dos meses a partir de ahora también, se <em>debe</em> declarar todas sus versiones de paquete egg. De otro modo Buildout podría instalar las nuevas versiones.</p>
 </div>
 <div class="section" id="be-mcguyver">
-<h2>Sea un McGuyver<a class="headerlink" href="#be-mcguyver" title="Permalink to this headline">¶</a></h2>
+<h2>Sea un McGuyver<a class="headerlink" href="#be-mcguyver" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Como puede ver, usted puede construir sistemas muy complejos con Buildout. Es hora de algunas advertencias. Sea selectivo en sus recetas. Supervisor es un programa para gestionar servidores en ejecución, es bastante bueno. No hay una receta para ello.</p>
 <p>¡La configuración para esta receta es más complicada que la propia configuración del Supervisor en si! Mediante el uso de esta receta, se fuerza a los demás a comprender la sintaxis de configuración específica recetas y la sintaxis Supervisor. Para tales casos, <a class="reference external" href="https://pypi.python.org/pypi/collective.recipe.template">collective.recipe.template</a> presenta una mejor coincidencia.</p>
 <p>Otro problema es el manejo de errores. ¿Buildout intenta instalar una rara dependencia que en realidad no quiere? Buildout no le dirá, lo que está viniendo.</p>
@@ -463,7 +461,7 @@ plone.app.debugtoolbar = 1.0a3
 <p>Verifique siempre el orden de su configuraciones extendidas, utilice siempre el comando <code class="samp docutils literal"><span class="pre">annotate</span></code> de Buildout para ver si se interpreta la configuración diferente a la que usted definió. Restringirse a los archivos de despliegue simples. Puede hacer referencia a variables de otras secciones, incluso se puede utilizar toda una sección como plantilla. Hemos aprendido que esto no funciona bien con jerarquías complejas y se tuvo que abandonar esa característica.</p>
 <p>En el capítulo <a class="reference internal" href="deployment_sites.html"><em>Buildout - Parte II: Cómo prepararse para el despliegue</em></a> veremos una configuración de despliegue lista para entornos de producción de Plone que tiene muchas características útiles.</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <dl class="last docutils">
 <dt>Documentación de Buildout</dt>
 <dd><ul class="first last simple">
@@ -508,7 +506,7 @@ plone.app.debugtoolbar = 1.0a3
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

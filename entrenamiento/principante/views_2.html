@@ -34,11 +34,9 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
         <link rel="next" title="18. Views - Parte III: Una lista de Charlas" href="views_3.html"/>
-        <link rel="prev" title="16. Personalizar plantillas existentes" href="zpt_2.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+        <link rel="prev" title="16. Personalizar plantillas existentes" href="zpt_2.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -275,7 +273,7 @@
           <div role="main">
             
   <div class="section" id="views-ii-a-default-view-for-talk">
-<h1>17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;<a class="headerlink" href="#views-ii-a-default-view-for-talk" title="Permalink to this headline">¶</a></h1>
+<h1>17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;<a class="headerlink" href="#views-ii-a-default-view-for-talk" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
 <p>Obtén el código para este capítulo (<a class="reference internal" href="sneak.html"><em>Más información</em></a>) usando este comando en el directorio buildout:</p>
@@ -284,7 +282,7 @@
 </div>
 </div>
 <div class="section" id="view-classes">
-<h2>Vista de clases<a class="headerlink" href="#view-classes" title="Permalink to this headline">¶</a></h2>
+<h2>Vista de clases<a class="headerlink" href="#view-classes" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Anteriormente hemos escrito una vista de demostración que también utilizamos para experimentar con las plantillas de página. Vamos a echar un vistazo a la ZCML y la Page Template de nuevo. Yo he ampliado el código sólo un poco.</p>
 <p>El archivo <code class="docutils literal"><span class="pre">browser/configure.zcml</span></code></p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -377,7 +375,7 @@
 <p>Desde un punto de vista práctico, considere el método call en su método init, la mayor diferencia es que este método debe retornar el HTML listo. Deje a su clase base manejar la generación de HTML.</p>
 </div>
 <div class="section" id="the-default-view">
-<h2>La vista por defecto<a class="headerlink" href="#the-default-view" title="Permalink to this headline">¶</a></h2>
+<h2>La vista por defecto<a class="headerlink" href="#the-default-view" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Ahora nosotros finalmente agregamos la vista por defecto para las charlas en views.py</p>
 <p>El archivo <code class="docutils literal"><span class="pre">browser/configure.zcml</span></code></p>
 <div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;browser:page</span>
@@ -414,7 +412,7 @@
 </li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">La vista <code class="docutils literal"><span class="pre">plone.dexterity.browser.view.DefaultView</span></code> tiene las mismas características que el equivalente Grok <code class="docutils literal"><span class="pre">plone.directives.dexterity.DisplayForm</span></code>.</p>
 </div>
 <p>La plantilla <code class="docutils literal"><span class="pre">templates/talkview.pt</span></code> usa el patrón <code class="docutils literal"><span class="pre">view/w/&lt;fieldname&gt;/render</span></code> para hacer algunos widgets.</p>
@@ -457,7 +455,7 @@
 <p>Debemos decirle a Plone, que la vista talkview debe ser utilizado como la vista predeterminada para las charlas en lugar de la vista incorporada.</p>
 <p>Esta es una configuración que puede cambiar en tiempo de ejecución y se almacena en la base de datos, como tal, también es gestionado por perfiles GenericSetup.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">Para cambiarlo a través de la Web valla a la ZMI (<a class="reference external" href="http://localhost:8080/Plone/manage">http://localhost:8080/Plone/manage</a>), luego vaya a la herramienta <code class="docutils literal"><span class="pre">portal_types</span></code> y seleccione el tipo para el cual el nuevo tipo de contenido debe ser seleccionable (<em>talk</em>). Ahora agregue <code class="docutils literal"><span class="pre">talkview</span></code> a la lista <em>Available view methods</em>. Ahora la nueva vista está disponible en el menú <em>Mostrar</em>. Para que sea la vista predeterminada ingrese esta vista en la sección <code class="docutils literal"><span class="pre">Default</span> <span class="pre">view</span> <span class="pre">method</span></code>.</p>
 </div>
 <p>Abra el archivo <code class="docutils literal"><span class="pre">profiles/default/types/talk.xml</span></code>:</p>
@@ -561,7 +559,7 @@
 </td></tr></table></div>
 </div>
 <div class="section" id="exercise">
-<h2>Ejercicio<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+<h2>Ejercicio<a class="headerlink" href="#exercise" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Agregar el nuevo campo &#8220;room&#8221; con el tipo de contenido Talk (a través de la Web) y mostrarlo debajo del campo Audience en la browser view, debe contener los siguientes datos:</p>
 <ul class="simple">
 <li><p class="first">Título: Room</p>
@@ -586,7 +584,7 @@
 </div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
+<p class="first admonition-title">Ver también</p>
 <p class="last"><a class="reference external" href="http://docs.plone.org/develop/plone/views/browserviews.html">http://docs.plone.org/develop/plone/views/browserviews.html</a></p>
 </div>
 </div>
@@ -611,7 +609,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 

@@ -34,9 +34,7 @@
   
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
-<script type="text/javascript" src="https://raw.githubusercontent.com/plone-ve/plone-ve.github.com/master/entrenamiento/principante/_static/plone.js"></script>
-
+    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -273,7 +271,7 @@
           <div role="main">
             
   <div class="section" id="user-generated-content">
-<h1>Usar contenido generado<a class="headerlink" href="#user-generated-content" title="Permalink to this headline">¶</a></h1>
+<h1>Usar contenido generado<a class="headerlink" href="#user-generated-content" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
 <p>Obtén el código para este capitulo (<a class="reference internal" href="sneak.html"><em>More info</em></a>) usando este comando en el directorio buildout:</p>
@@ -290,27 +288,27 @@
 <li>create a custom workflow for talks</li>
 </ul>
 <div class="section" id="self-registration">
-<h2>Self-registration<a class="headerlink" href="#self-registration" title="Permalink to this headline">¶</a></h2>
+<h2>Self-registration<a class="headerlink" href="#self-registration" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li>Go to the Security-controlpanel at <a class="reference external" href="http://localhost:8080/Plone/&#64;&#64;security-controlpanel">http://localhost:8080/Plone/&#64;&#64;security-controlpanel</a> and Enable self-registration</li>
 <li>Leave &#8220;Enable User Folders&#8221; off unless you want a community-site.</li>
 </ul>
 </div>
 <div class="section" id="constrain-types">
-<h2>Constrain types<a class="headerlink" href="#constrain-types" title="Permalink to this headline">¶</a></h2>
+<h2>Constrain types<a class="headerlink" href="#constrain-types" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li>On the talk-folder select <a class="reference external" href="http://localhost:8080/Plone/the-event/talks/folder_constraintypes_form">Restrictions…</a> from the <em>Add new</em> menu. Only allow to add talks.</li>
 </ul>
 </div>
 <div class="section" id="grant-local-roles">
-<h2>Grant local roles<a class="headerlink" href="#grant-local-roles" title="Permalink to this headline">¶</a></h2>
+<h2>Grant local roles<a class="headerlink" href="#grant-local-roles" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li>Go to <em>Sharing</em> and grant the role <em>Can add</em> to the group logged-in users. Now every user can add content in this folder (and only this folder).</li>
 </ul>
 <p>Now all logged-in users can create and submit talks in this folder with the permission of the default-workflow.</p>
 </div>
 <div class="section" id="a-custom-workflow-for-talks">
-<h2>A custom workflow for talks<a class="headerlink" href="#a-custom-workflow-for-talks" title="Permalink to this headline">¶</a></h2>
+<h2>A custom workflow for talks<a class="headerlink" href="#a-custom-workflow-for-talks" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>We still need to fix a problem: Authenticated users can see all talks, even the ones of other users in the private state. Since we don&#8217;t want this we will create a modified workflow for talks. The new workflow will only let them see and edit talks they created themselves and not the ones of other users.</p>
 <ul class="simple">
 <li>Go to the ZMI &gt; portal_workflow</li>
@@ -324,16 +322,16 @@
 <li>Go back to <em>portal_workflow</em> and set the new workflow <code class="docutils literal"><span class="pre">talks_workflow</span></code> for talks. Click <em>Change</em> and then <em>Update security settings</em>.</li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="first admonition-title">Nota</p>
 <p class="last">The addon <a class="reference external" href="https://pypi.python.org/pypi/plone.app.workflowmanager">plone.app.workflowmanager</a> provides a much nicer user-interface for this. The problem is you need a big screen for it and it can be pretty confusing as well.</p>
 </div>
 <p>Done.</p>
 </div>
 <div class="section" id="move-the-changes-to-the-file-system">
-<h2>Move the changes to the file-system<a class="headerlink" href="#move-the-changes-to-the-file-system" title="Permalink to this headline">¶</a></h2>
+<h2>Move the changes to the file-system<a class="headerlink" href="#move-the-changes-to-the-file-system" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>We don&#8217;t want to do these steps for every new conference by hand so we move the changes into our package.</p>
 <div class="section" id="workflow">
-<h3>Flujo de trabajo<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
+<h3>Flujo de trabajo<a class="headerlink" href="#workflow" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
 <li>export the GenericSetup step <em>Workflow Tool</em> in <a class="reference external" href="http://localhost:8080/Plone/portal_setup/manage_exportSteps">http://localhost:8080/Plone/portal_setup/manage_exportSteps</a>.</li>
 <li>drop the file <code class="docutils literal"><span class="pre">workflows.xml</span></code> into <code class="docutils literal"><span class="pre">profiles/default</span></code>.</li>
@@ -341,7 +339,7 @@
 </ul>
 </div>
 <div class="section" id="id1">
-<h3>Self-registration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Self-registration<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>This has to happen in python in a custom <a class="reference external" href="http://docs.plone.org/develop/addons/components/genericsetup.html#custom-installer-code-setuphandlers-py">setuphandler.py</a> since there is not yet a exportable setting for this.</p>
 <p>Register a import-step in <code class="docutils literal"><span class="pre">configure.zcml</span></code>. It will be automatically run when (re-)installing the addon.</p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -422,7 +420,7 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h3>Grant local roles<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Grant local roles<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Since this applies only to a certain folder in the site we would normally not write code for it.</p>
 <p>But we can easily add a method to the setuphandler that creates the folder and sets up some setting for it.</p>
 <p>Here is an example:</p>
@@ -545,7 +543,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 08 de March de 2015.
+      Actualizado por última vez en 09 de Marzo de 2015.
     </p>
   </div>
 
