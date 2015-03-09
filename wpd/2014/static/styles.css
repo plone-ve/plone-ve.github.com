@@ -33,21 +33,22 @@ body {
 		}
 
 			.wnav nav {
+				position: relative;
 				margin: 0 auto;
 				width: 1000px;
 			}
 
-				.wnav nav ul {
+				.wnav nav ul.menu {
 					margin: 0 auto;
 					list-style: none;
 					text-align: center;
 				}
 
-					.wnav nav ul li {
+					.wnav nav ul.menu li {
 						display: inline-block;
 					}
 
-						.wnav nav ul li a {
+						.wnav nav ul.menu li a {
 							display: block;
 							padding: 10px;
 							color: #eee;
@@ -57,8 +58,47 @@ body {
 							text-transform: uppercase;
 						}
 
-						.wnav nav ul li a:hover {
+						.wnav nav ul.menu li a:hover {
 							color: #aaa;
+						}
+
+				.wnav nav ul.social {
+					position: absolute;
+					top: 0;
+					right: 0;
+					text-align: right;
+					list-style: none;
+				}
+
+					.wnav nav ul.social li {
+						float: right;
+						list-style: none;
+					}
+
+						.wnav nav ul.social li a {
+							padding: 10px 5px 10px 5px;
+							float: left;
+							-o-transition: .3s;
+							-ms-transition: .3s;
+							-moz-transition: .3s;
+							-webkit-transition: .3s;
+							transition: .3s;
+						}
+
+						.wnav nav ul.social li a:hover {
+							padding: 15px 5px 10px 5px;
+						}
+
+						.wnav nav ul.social li a.github {
+							background-color: #fff
+						}
+
+						.wnav nav ul.social li a.twitter {
+							background-color: #57ADDE
+						}
+
+						.wnav nav ul.social li a.facebook {
+							background-color: #375798;
 						}
 
 		.wheader {
@@ -122,16 +162,41 @@ body {
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2be4a', endColorstr='#ca7c00',GradientType=0 ); /* IE6-9 */
 				}
 
+				.wheader header .btnsocial {
+					display: block;
+					margin: 0 auto;
+					width: 205px;
+					height: 100px;
+					text-align: center;
+				}
+
+					.wheader header .btnsocial .twitterbtn,
+					.wheader header .btnsocial .facebookbtn {
+						float: left;
+						margin: 0 0 0 20px;
+					}
+
+					.wheader header .btnsocial .twitterbtn {
+						margin-top: 7px;
+					}
+
+					.wheader header .btnsocial .facebookbtn {
+						margin-top: 8px;
+					}
+
 		.wcontent {
 			min-height: 300px;
 			background-color: #fff;
+			text-align: center;
 		}
 
 			.wcontent section {
+				display: inline-block;
 				margin: 50px auto 0;
 				padding: 50px;
 				width: 1000px;
 				background-color: #eee;
+				text-align: left;
 			}
 
 				.wcontent section h1 {
@@ -147,13 +212,13 @@ body {
 				}
 
 				.wcontent section iframe {
-					display: inline-table;
+					display: block;
 					margin-right: 50px;
 					border: 5px solid #ddd !important;
 				}
 
 				.wcontent section address {
-					float: right;
+					display: block;
 				}
 
 					.wcontent section address p {
@@ -166,9 +231,9 @@ body {
 						}
 
 				.wcontent section .speaker {
-					display: inline-table;
 					margin: 0 24px 50px;
 					padding: 30px;
+					float: left;
 					width: 390px;
 					min-height: 100px;
 					background-color: #fff;
@@ -187,6 +252,10 @@ body {
 					-moz-transition: .3s;
 					-webkit-transition: .3s;
 					transition: .3s;
+				}
+
+				.wcontent section .clear-both {
+					clear: both;
 				}
 
 				.wcontent section .speaker:hover {
