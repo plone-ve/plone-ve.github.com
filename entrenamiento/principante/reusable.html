@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Haciendo nuestro paquete reusable &mdash; Maestría en Plone, un entrenamiento para principiantes - 1.2.5a</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+        <link rel="author" title="Sobre este documento"
+              href="about.html"/>
+    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+<script type="text/javascript" src="_static/plone.js"></script>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> Maestría en Plone</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Sobre &#8220;Maestría en Plone&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#upcoming-trainings">Próximos entrenamientos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#previous-trainings">Entrenamientos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#trainers">Entrenadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#using-the-documentation-for-a-training">Usando la documentación para un entrenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#contributing">Contribuyendo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#license">Licencia</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#who-are-you">¿Quien eres tu?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-do">¿Qué haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-not-do">¿Qué no haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-to-expect">¿Qué esperar?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#documentation">Documentación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#further-reading">Lecturas recomendadas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Instalación y configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-plone">Instalando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hosting-plone">Alojando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#production-deployment">Despliegue en ambientes de producción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plone_training_config/instructions.html">3. Instalando Plone para el entrenamiento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#installing-plone-without-vagrant">Instalando Plone sin Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-virtualbox">Instalar VirtualBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-and-configure-vagrant">Instalar y configurar Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#what-vagrant-does">¿Qué hace Vagrant?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="anatomy.html">4. La Anatomía de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope2">Zope2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#content-management-framework">Content Management Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-toolkit-zope3">Zope Toolkit / Zope3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-component-architecture-zca">Zope Component Architecture (ZCA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#pyramid">Pyramid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">5. El caso de estudio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="case.html#background">Detalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case.html#requirements">Requerimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">6. Las características de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features.html#starting-and-stopping-plone">Iniciando y Deteniendo Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#users">Usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#configure-a-mailserver">Configurar un servidor de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#walkthrough-of-the-ui">Tutorial de la interfaz de usuario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-types">Tipos de Contenidos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#folders">Carpetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#collections">Colecciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-rules">Reglas de Contenido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#history">Histórico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#manage-members-and-groups">Administrar usuarios y grupos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#workflows">Flujos de trabajos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#working-copy">Copia de trabajo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#placeful-workflows">Flujos de trabajo Placeful</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuring_customizing.html">7. Configurando y personalizando Plone a través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#the-control-panel">El panel de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#portlets">Portlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#viewlets">Viewlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#zmi">ZMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">8. Extendiendo Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#extension-technologies">Tecnologías de extensión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#what-are-components-what-is-zcml">¿Cuáles son los componentes?, ¿Que es el ZCML?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="addons.html">9. Extiende Plone con paquetes Complementos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#how-to-find-add-ons">¿Como buscar complementos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#some-notable-add-ons">Algunos complementos notables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#installing-add-ons">Instalando complementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#ploneformgen">PloneFormGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#add-photogallery-with-collective-plonetruegallery">Agregar Galerías de fotos con collective.plonetruegallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#internationalization">Internacionalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">10. Temas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#diazo-example">ejemplo Diazo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#templating-example">ejemplo de Plantila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#choosing-the-right-tool">Seleccionando la herramienta adecuada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#want-to-really-learn-theming">¿Quieres aprender realmente tematización?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dexterity.html">11. Dexterity - Parte I: A través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#what-is-a-content-type">¿Qué es un tipo de contenido?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#the-makings-of-a-plone-content-type">Los elementos de un tipo de contenido Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#dexterity-and-archetypes-a-comparison">Dexterity y Archetypes - Una comparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#installation">Instalación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#modifying-existing-types">Modificando tipos existentes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#creating-content-types-ttw">Creando tipos de contenidos a través de la Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#moving-content-types-into-code">Moviendo el tipo de contenido dentro del código fuente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#exercises">Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buildout_1.html">12. Buildout - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#syntax">Sintaxis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#recipes">Recetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#references">Referencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#a-real-life-example">Un ejemplo de la vida real</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#hello-mr-developer">¡Hola mr.developer!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#extensible">Extensible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#be-mcguyver">Sea un McGuyver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eggs1.html">13. Creando complementos para personalizar Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#using-zopeskel-to-create-an-egg">Usando zopeskel para crear un paquete egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#inspecting-the-package">Inspeccione el paquete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#including-the-egg-in-plone">Incluyendo el paquete egg en Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#return-to-dexterity-moving-content-types-into-code">Volver Dexterity: para mover tipos de contenidos a código fuente</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_1.html">14. Views - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_1.html#a-simple-browser-view">Una simple browser view</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt.html">15. Zope Page Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#tal-and-tales">TAL y TALES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#metal-and-macros">METAL y macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#accessing-plone-from-the-template">Accediendo a Plone desde la plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#what-we-missed">Lo que echamos de menos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#chameleon">Chameleon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt_2.html">16. Personalizar plantillas existentes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#newsitem-pt">El archivo newsitem.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#summary-view-pt">El archivo summary_view.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#finding-the-right-template">Buscando la correcta plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#skin-templates">Plantillas skins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_2.html">17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#view-classes">Vista de clases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#the-default-view">La vista por defecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#exercise">Ejercicio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_3.html">18. Views - Parte III: Una lista de Charlas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#using-portal-catalog">Usando portal_catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#brains-and-objects">Cerebros y objetos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#querying-the-catalog">Consultando el catálogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#exercises">Ejercicios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#the-template-for-the-listing">La plantilla para la lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#setting-a-custom-view-as-default-view-on-an-object">Configuración de una vista personalizada como vista por defecto en un objeto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#adding-some-javascript-collective-js-datatables">Agregando un poco de Javascript (collective.js.datatables)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#summary">Resumen</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Registro de cambios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#unreleased">1.2.5 (unreleased)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id1">1.2.4 (2014-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id2">1.2.3 (2014-07-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id3">1.2.2 (2014-06-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id4">1.2.1 (2014-05-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id5">1.2 (2014-05-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2013">1.1 (October 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2012">1.0 (October, 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2011">0.2 October 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2009">0.1 (October 2009)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Mapa de ruta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#id1">1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#todo">Todo</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Maestría en Plone</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Haciendo nuestro paquete reusable</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="making-our-package-reusable">
+<h1>Haciendo nuestro paquete reusable<a class="headerlink" href="#making-our-package-reusable" title="Permalink to this headline">¶</a></h1>
+<p>Esta paquete contiene algunos problemas.</p>
+<ul class="simple">
+<li>No permission settings, Users can&#8217;t customize who and when users can vote</li>
+<li>We do things, but don&#8217;t trigger events. Events allow others to react.</li>
+</ul>
+<div class="section" id="adding-permissions">
+<h2>Agregando permisos<a class="headerlink" href="#adding-permissions" title="Permalink to this headline">¶</a></h2>
+<p>Permissions have a long history, there are two types of permissions.</p>
+<p>En Zope2, un permiso era sólo una cadena.</p>
+<p>En ZTK, un permiso es un objeto que se obtiene registrado como una Utilidad.</p>
+<p>We must support both, in some cases we have to reference the permission by their Zope2 version, in some by their ZTK Version.</p>
+<p>Luckily, there is a zcml statement to register a permission both ways in one step.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>The configuration registry wanted to solve a problem, but we will now stumble over a problem that did not get resolved properly.</p>
+<p>Our permission is an utility. Our browser views declare this permission as a requirement for viewing them.</p>
+<p class="last">When our browser views get registered, the permissions must exist already. If you try to register the permissions after the views, Zope won&#8217;t start because it doesn&#8217;t know about the permissions.</p>
+</div>
+<p>Lets modify the file <code class="file docutils literal"><span class="pre">configure.zcml</span></code></p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre>&lt;configure
+  ...&gt;
+
+  &lt;includeDependencies package=&quot;.&quot; /&gt;
+
+  &lt;permission
+      id=&quot;starzel.votable_behavior.view_vote&quot;
+      title=&quot;starzel.votable_behavior: View Vote&quot;
+      /&gt;
+
+  &lt;permission
+      id=&quot;starzel.votable_behavior.do_vote&quot;
+      title=&quot;starzel.votable_behavior: Do Vote&quot;
+      /&gt;
+
+<span class="hll">  &lt;include package=&quot;.browser&quot; /&gt;
+</span>
+  ...
+
+&lt;/configure&gt;
+</pre></div>
+</td></tr></table></div>
+<p>In some places we have to reference the Zope 2 permission strings. It is best practice to provide a static variable for this.</p>
+<p>We provide this in <code class="file docutils literal"><span class="pre">__init__.py</span></code></p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span class="o">...</span>
+<span class="n">DoVote</span> <span class="o">=</span> <span class="s">&#39;starzel.votable_behavior: Do Vote&#39;</span>
+<span class="n">ViewVote</span> <span class="o">=</span> <span class="s">&#39;starzel.votable_behavior: View Vote&#39;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="using-our-permissions">
+<h2>Using our permissions<a class="headerlink" href="#using-our-permissions" title="Permalink to this headline">¶</a></h2>
+<p>As you can see, we created two permissions, one for voting, one for viewing the votes.</p>
+<p>If one may not see the votings, he does not need access to the vote viewlet.</p>
+<p>While we are at it, if one can&#8217;t vote, he needs no access to the helper view to actually submit a vote.</p>
+<p>We can add this restriction to <code class="file docutils literal"><span class="pre">browser/configure.zcml</span></code></p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;configure</span>
+  <span class="na">xmlns=</span><span class="s">&quot;http://namespaces.zope.org/zope&quot;</span>
+  <span class="na">xmlns:browser=</span><span class="s">&quot;http://namespaces.zope.org/browser&quot;</span>
+  <span class="na">i18n_domain=</span><span class="s">&quot;starzel.votable_behavior&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;browser:viewlet</span>
+    <span class="na">name=</span><span class="s">&quot;voting&quot;</span>
+    <span class="na">for=</span><span class="s">&quot;starzel.votable_behavior.interfaces.IVotable&quot;</span>
+    <span class="na">manager=</span><span class="s">&quot;plone.app.layout.viewlets.interfaces.IBelowContentTitle&quot;</span>
+    <span class="na">template=</span><span class="s">&quot;templates/voting_viewlet.pt&quot;</span>
+    <span class="na">layer=</span><span class="s">&quot;..interfaces.IVotableLayer&quot;</span>
+    <span class="na">class=</span><span class="s">&quot;.viewlets.Vote&quot;</span>
+<span class="hll">    <span class="na">permission=</span><span class="s">&quot;starzel.votable_behavior.view_vote&quot;</span>
+</span>    <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;browser:page</span>
+    <span class="na">name=</span><span class="s">&quot;vote&quot;</span>
+    <span class="na">for=</span><span class="s">&quot;starzel.votable_behavior.interfaces.IVotable&quot;</span>
+    <span class="na">layer=</span><span class="s">&quot;..interfaces.IVotableLayer&quot;</span>
+    <span class="na">class=</span><span class="s">&quot;.vote.Vote&quot;</span>
+<span class="hll">    <span class="na">permission=</span><span class="s">&quot;starzel.votable_behavior.do_vote&quot;</span>
+</span>    <span class="nt">/&gt;</span>
+
+  ...
+
+<span class="nt">&lt;/configure&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>We are configuring components, so we use the component name of the permission, which is the <code class="samp docutils literal"><span class="pre">id</span></code> part of the declaration we added earlier.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>So, what happens, if we do not protect the browser view to vote?</p>
+<p>The person could still vote, by handcrafting the URL. Browser Views run code without any restriction, it is your job to take care of security.</p>
+<p>But... if a person has no access to the object at all, maybe because the site is configured that Anonymous users cannot access private objects, the unauthorized users will not be able to submit a vote.</p>
+<p class="last">That is, because Zope checks security permissions when trying to find the right object. If it can&#8217;t find the object due to security constraints not met, no view ill ever be called, because that would have been the next step.</p>
+</div>
+<p>We now protect our views and viewlets. We still show the option to vote though.</p>
+<p>We must add a condition in our page template, and we must provide the condition information in our viewlet class.</p>
+<p>Lets move on to <code class="file docutils literal"><span class="pre">browser/viewlets.py</span></code></p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span class="o">...</span>
+
+<span class="kn">from</span> <span class="nn">starzel.votable_behavior</span> <span class="kn">import</span> <span class="n">DoVote</span>
+
+
+<span class="k">class</span> <span class="nc">Vote</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">ViewletBase</span><span class="p">):</span>
+
+     <span class="o">...</span>
+<span class="hll">     <span class="n">can_vote</span> <span class="o">=</span> <span class="bp">None</span>
+</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="o">...</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_manager</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">membership_tool</span> <span class="o">=</span> <span class="n">getToolByName</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span> <span class="s">&#39;portal_membership&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_manager</span> <span class="o">=</span> <span class="n">membership_tool</span><span class="o">.</span><span class="n">checkPermission</span><span class="p">(</span>
+                <span class="n">ViewManagementScreens</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+<span class="hll">            <span class="bp">self</span><span class="o">.</span><span class="n">can_vote</span> <span class="o">=</span> <span class="n">membership_tool</span><span class="o">.</span><span class="n">checkPermission</span><span class="p">(</span>
+</span><span class="hll">                <span class="n">DoVote</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+</span>
+<span class="o">...</span>
+</pre></div>
+</td></tr></table></div>
+<p>And the template in <code class="file docutils literal"><span class="pre">browser/templates/voting_viewlet.pt</span></code></p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;tal:snippet</span> <span class="na">omit-tag=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;voting&quot;</span><span class="nt">&gt;</span>
+
+    ...
+
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;notyetvoted&quot;</span> <span class="na">class=</span><span class="s">&quot;voting_option&quot;</span>
+<span class="hll">            <span class="na">tal:condition=</span><span class="s">&quot;view/can_vote&quot;</span><span class="nt">&gt;</span>
+</span>      What do you think of this talk?
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;votes&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">id=</span><span class="s">&quot;voting_plus&quot;</span><span class="nt">&gt;</span>+1<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">&quot;voting_neutral&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">&quot;voting_negative&quot;</span><span class="nt">&gt;</span>-1<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;no_ratings&quot;</span> <span class="na">tal:condition=</span><span class="s">&quot;not: view/has_votes&quot;</span><span class="nt">&gt;</span>
+<span class="hll">      This talk has not been voted yet.<span class="nt">&lt;span</span> <span class="na">tal:omit-tag=</span><span class="s">&quot;&quot;</span> <span class="na">tal:condition=</span><span class="s">&quot;view/can_vote&quot;</span><span class="nt">&gt;</span> Be the first!<span class="nt">&lt;/span&gt;</span>
+</span>    <span class="nt">&lt;/div&gt;</span>
+
+  ...
+
+  <span class="nt">&lt;/div&gt;</span>
+
+...
+
+<span class="nt">&lt;/tal:snippet&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>Sometimes subtle bugs come up because of changes, in this case, I noticed that I should only animate people to vote, if they are allowed to vote!</p>
+</div>
+<div class="section" id="provide-defaults">
+<h2>Provide defaults<a class="headerlink" href="#provide-defaults" title="Permalink to this headline">¶</a></h2>
+<p>Are we done yet? Who may vote now?</p>
+<p>We have to tell that someone.</p>
+<p>Who has which permissions is managed in Zope, it is persistent, persistent configuration goes to GenericSetup.</p>
+<p>The persistent configuration is managed in another file: <code class="file docutils literal"><span class="pre">profiles/default/rolemap.xml</span></code></p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="nt">&lt;rolemap&gt;</span>
+  <span class="nt">&lt;permissions&gt;</span>
+    <span class="nt">&lt;permission</span> <span class="na">name=</span><span class="s">&quot;starzel.votable_behavior: View Vote&quot;</span> <span class="na">acquire=</span><span class="s">&quot;True&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;role</span> <span class="na">name=</span><span class="s">&quot;Anonymous&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/permission&gt;</span>
+    <span class="nt">&lt;permission</span> <span class="na">name=</span><span class="s">&quot;starzel.votable_behavior: Do Vote&quot;</span> <span class="na">acquire=</span><span class="s">&quot;True&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;role</span> <span class="na">name=</span><span class="s">&quot;Anonymous&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/permission&gt;</span>
+  <span class="nt">&lt;/permissions&gt;</span>
+<span class="nt">&lt;/rolemap&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
+      Actualizado por última vez en 08 de March de 2015.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.2.5a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

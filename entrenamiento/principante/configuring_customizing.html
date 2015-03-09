@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Configurando y personalizando Plone a través de la Web &mdash; Maestría en Plone, un entrenamiento para principiantes - 1.2.5a</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+        <link rel="author" title="Sobre este documento"
+              href="about.html"/>
+    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+        <link rel="next" title="8. Extendiendo Plone" href="extending.html"/>
+        <link rel="prev" title="6. Las características de Plone" href="features.html"/>
+<script type="text/javascript" src="_static/plone.js"></script>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> Maestría en Plone</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Sobre &#8220;Maestría en Plone&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#upcoming-trainings">Próximos entrenamientos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#previous-trainings">Entrenamientos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#trainers">Entrenadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#using-the-documentation-for-a-training">Usando la documentación para un entrenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#contributing">Contribuyendo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#license">Licencia</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#who-are-you">¿Quien eres tu?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-do">¿Qué haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-not-do">¿Qué no haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-to-expect">¿Qué esperar?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#documentation">Documentación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#further-reading">Lecturas recomendadas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Instalación y configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-plone">Instalando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hosting-plone">Alojando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#production-deployment">Despliegue en ambientes de producción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plone_training_config/instructions.html">3. Instalando Plone para el entrenamiento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#installing-plone-without-vagrant">Instalando Plone sin Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-virtualbox">Instalar VirtualBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-and-configure-vagrant">Instalar y configurar Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#what-vagrant-does">¿Qué hace Vagrant?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="anatomy.html">4. La Anatomía de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope2">Zope2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#content-management-framework">Content Management Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-toolkit-zope3">Zope Toolkit / Zope3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-component-architecture-zca">Zope Component Architecture (ZCA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#pyramid">Pyramid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">5. El caso de estudio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="case.html#background">Detalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case.html#requirements">Requerimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">6. Las características de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features.html#starting-and-stopping-plone">Iniciando y Deteniendo Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#users">Usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#configure-a-mailserver">Configurar un servidor de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#walkthrough-of-the-ui">Tutorial de la interfaz de usuario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-types">Tipos de Contenidos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#folders">Carpetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#collections">Colecciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-rules">Reglas de Contenido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#history">Histórico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#manage-members-and-groups">Administrar usuarios y grupos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#workflows">Flujos de trabajos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#working-copy">Copia de trabajo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#placeful-workflows">Flujos de trabajo Placeful</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">7. Configurando y personalizando Plone a través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-control-panel">El panel de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#portlets">Portlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewlets">Viewlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zmi">ZMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">8. Extendiendo Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#extension-technologies">Tecnologías de extensión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#what-are-components-what-is-zcml">¿Cuáles son los componentes?, ¿Que es el ZCML?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="addons.html">9. Extiende Plone con paquetes Complementos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#how-to-find-add-ons">¿Como buscar complementos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#some-notable-add-ons">Algunos complementos notables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#installing-add-ons">Instalando complementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#ploneformgen">PloneFormGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#add-photogallery-with-collective-plonetruegallery">Agregar Galerías de fotos con collective.plonetruegallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#internationalization">Internacionalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">10. Temas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#diazo-example">ejemplo Diazo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#templating-example">ejemplo de Plantila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#choosing-the-right-tool">Seleccionando la herramienta adecuada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#want-to-really-learn-theming">¿Quieres aprender realmente tematización?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dexterity.html">11. Dexterity - Parte I: A través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#what-is-a-content-type">¿Qué es un tipo de contenido?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#the-makings-of-a-plone-content-type">Los elementos de un tipo de contenido Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#dexterity-and-archetypes-a-comparison">Dexterity y Archetypes - Una comparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#installation">Instalación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#modifying-existing-types">Modificando tipos existentes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#creating-content-types-ttw">Creando tipos de contenidos a través de la Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#moving-content-types-into-code">Moviendo el tipo de contenido dentro del código fuente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#exercises">Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buildout_1.html">12. Buildout - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#syntax">Sintaxis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#recipes">Recetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#references">Referencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#a-real-life-example">Un ejemplo de la vida real</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#hello-mr-developer">¡Hola mr.developer!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#extensible">Extensible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#be-mcguyver">Sea un McGuyver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eggs1.html">13. Creando complementos para personalizar Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#using-zopeskel-to-create-an-egg">Usando zopeskel para crear un paquete egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#inspecting-the-package">Inspeccione el paquete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#including-the-egg-in-plone">Incluyendo el paquete egg en Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#return-to-dexterity-moving-content-types-into-code">Volver Dexterity: para mover tipos de contenidos a código fuente</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_1.html">14. Views - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_1.html#a-simple-browser-view">Una simple browser view</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt.html">15. Zope Page Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#tal-and-tales">TAL y TALES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#metal-and-macros">METAL y macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#accessing-plone-from-the-template">Accediendo a Plone desde la plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#what-we-missed">Lo que echamos de menos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#chameleon">Chameleon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt_2.html">16. Personalizar plantillas existentes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#newsitem-pt">El archivo newsitem.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#summary-view-pt">El archivo summary_view.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#finding-the-right-template">Buscando la correcta plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#skin-templates">Plantillas skins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_2.html">17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#view-classes">Vista de clases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#the-default-view">La vista por defecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#exercise">Ejercicio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_3.html">18. Views - Parte III: Una lista de Charlas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#using-portal-catalog">Usando portal_catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#brains-and-objects">Cerebros y objetos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#querying-the-catalog">Consultando el catálogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#exercises">Ejercicios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#the-template-for-the-listing">La plantilla para la lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#setting-a-custom-view-as-default-view-on-an-object">Configuración de una vista personalizada como vista por defecto en un objeto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#adding-some-javascript-collective-js-datatables">Agregando un poco de Javascript (collective.js.datatables)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#summary">Resumen</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Registro de cambios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#unreleased">1.2.5 (unreleased)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id1">1.2.4 (2014-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id2">1.2.3 (2014-07-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id3">1.2.2 (2014-06-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id4">1.2.1 (2014-05-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id5">1.2 (2014-05-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2013">1.1 (October 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2012">1.0 (October, 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2011">0.2 October 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2009">0.1 (October 2009)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Mapa de ruta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#id1">1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#todo">Todo</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Maestría en Plone</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>7. Configurando y personalizando Plone a través de la Web</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="configuring-and-customizing-plone-through-the-web">
+<h1>7. Configurando y personalizando Plone a través de la Web<a class="headerlink" href="#configuring-and-customizing-plone-through-the-web" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-control-panel">
+<h2>El panel de control<a class="headerlink" href="#the-control-panel" title="Permalink to this headline">¶</a></h2>
+<p>Las partes más importantes de Plone pueden ser configuradas en el panel de control.</p>
+<ul class="simple">
+<li><p class="first">Haga clic en el nombre de usuario, en la esquina superior derecha de su pantalla</p>
+</li>
+<li><p class="first">Haga clic en &#8220;Configuración del Sitio&#8221;</p>
+</li>
+</ul>
+<p>Nosotros explicaremos cada página y mencionaremos algunas cosas que puedes hacer aquí.</p>
+<ol class="arabic simple">
+<li><p class="first">Complementos (después)</p>
+</li>
+<li><p class="first">Calendario</p>
+</li>
+<li><p class="first">Registro de Configuración</p>
+</li>
+<li><p class="first">Reglas de contenido (Ya lo sabemos)</p>
+</li>
+<li><p class="first">Discusión</p>
+</li>
+<li><p class="first">Edición</p>
+</li>
+<li><p class="first">Errores</p>
+</li>
+<li><p class="first">Filtrado HTML</p>
+</li>
+<li><p class="first">Manejo de Imágenes</p>
+</li>
+<li><p class="first">Idioma</p>
+</li>
+<li><p class="first">Correo</p>
+</li>
+<li><p class="first">Mantenimiento</p>
+</li>
+<li><p class="first">Etiquetado</p>
+</li>
+<li><p class="first">Navegación</p>
+</li>
+<li><p class="first">Búsqueda</p>
+</li>
+<li><p class="first">Seguridad</p>
+</li>
+<li><p class="first">Sitio</p>
+</li>
+<li><p class="first">Sindicación</p>
+</li>
+<li><p class="first">Temas</p>
+</li>
+<li><p class="first">Editor visual TinyMCE</p>
+</li>
+<li><p class="first">Tipos</p>
+</li>
+<li><p class="first">Usuarios y Grupos</p>
+</li>
+<li><p class="first">Interfaz de administración de Zope (He aquí dragones)</p>
+</li>
+</ol>
+<p>Por debajo en los enlaces encontraras información de las versiones en tu Plone, Zope y Python y un indicador de cualquier cosa que usted está funcionando en el modo de producción o desarrollo.</p>
+</div>
+<div class="section" id="portlets">
+<h2>Portlets<a class="headerlink" href="#portlets" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;&#64;manage-portlets</span></code></li>
+<li><p class="first">Interfaz de usuarios para editores inteligentes de contenido</p>
+</li>
+<li><p class="first">Varios tipos</p>
+</li>
+<li><p class="first">La configuración de Portlets es heredada</p>
+</li>
+<li><p class="first">son administrados</p>
+</li>
+<li><p class="first">Ordenando / ponderación</p>
+</li>
+<li><p class="first">En el futuro: será reemplazado por tiles</p>
+</li>
+</ul>
+<p>Ejemplo:</p>
+<ul class="simple">
+<li><p class="first">Valla a la dirección URL <a class="reference external" href="http://localhost:8080/Plone/&#64;&#64;manage-portlets">http://localhost:8080/Plone/&#64;&#64;manage-portlets</a></p>
+</li>
+<li><p class="first">Agregue un portlet &#8220;Patrocinadores&#8221; en el lado derecho.</p>
+</li>
+<li><p class="first">Remueve los nuevos portlets y agrega uno nuevo en el lado izquierdo.</p>
+</li>
+<li><p class="first">Ve a la carpeta de training: <a class="reference external" href="http://localhost:8080/Plone/training">http://localhost:8080/Plone/training</a> y has clic <code class="docutils literal"><span class="pre">Administrar</span> <span class="pre">portlets</span></code></p>
+</li>
+<li><p class="first">Agregue un portlet estático. &#8220;Entrenamiento destacada: Conviértete en un Rockstar de Plone en la ¡Maestría en Plone!&#8221;</p>
+</li>
+</ul>
+</div>
+<div class="section" id="viewlets">
+<h2>Viewlets<a class="headerlink" href="#viewlets" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;&#64;manage-viewlets</span></code></li>
+<li><p class="first">Viewlet no poseen Interfaz de usuario</p>
+</li>
+<li><p class="first">No recomendado para editores de contenido</p>
+</li>
+<li><p class="first">No es localmente agregable, no posee herencia configurable.</p>
+</li>
+<li><p class="first">Usado globalmente (depende del código)</p>
+</li>
+<li><p class="first">¿Sera reemplazado por los tiles?</p>
+</li>
+<li><p class="first">El código es mucho mas simple (crearemos uno mañana)</p>
+</li>
+<li><p class="first">En tiempo real en la herramienta administradores de viewlet, pueden ser anidadas (agregando un viewlet que contenga un administrador de viewlet)</p>
+</li>
+<li><p class="first">El reordenamiento a través de la Web solo puede ser dentro de su mismo administrador de viewlet</p>
+</li>
+<li><p class="first">el código decide cuando, dónde y que muestra</p>
+</li>
+</ul>
+<p>Portlets guarda datos, los Viewlets usualmente no lo hacen, los Viewlets a veces son usados para elementos de Interfaz de usuario.</p>
+<p>Ejemplo:</p>
+<ul class="simple">
+<li><p class="first">Valla a la dirección URL <a class="reference external" href="http://localhost:8080/Plone/&#64;&#64;manage-viewlets">http://localhost:8080/Plone/&#64;&#64;manage-viewlets</a></p>
+</li>
+<li><p class="first">Ocultar Colofón (Ocultar pie de pagina)</p>
+</li>
+</ul>
+</div>
+<div class="section" id="zmi">
+<h2>ZMI<a class="headerlink" href="#zmi" title="Permalink to this headline">¶</a></h2>
+<p>Valla a dirección URL <a class="reference external" href="http://localhost:8080/Plone/manage">http://localhost:8080/Plone/manage</a></p>
+<p>Zope es la base de Plone. Aquí puedes acceder igualmente al funcionamiento interno de Zope y Plone.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Aquí fácilmente se puede romper su sitio así que usted debe saber lo que está haciendo.</p>
+</div>
+<p>Nosotros sólo cubrimos las tres partes de la personalización en el ZMI ahora. Más tarde, cuando agreguemos nuestro propio código fuente vamos a volver a la ZMI y lo buscaremos.</p>
+<p>En algún momento tendrá que aprender, sobre todos los objetos que hay allí. Pero no hoy.</p>
+<div class="section" id="actions-portal-actions">
+<h3>Acciones (portal_actions)<a class="headerlink" href="#actions-portal-actions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p class="first">Las acciones son principalmente enlaces. Pero enlaces <strong>realmente flexibles</strong>.</p>
+</li>
+<li><p class="first">Las acciones son configurable a través de la Web y a través de código fuente.</p>
+</li>
+<li><p class="first">Estas acciones son usualmente iteradas sobre viewlets y mostradas.</p>
+</li>
+</ul>
+<p>Ejemplos:</p>
+<ul class="simple">
+<li><p class="first">Enlaces en el pie de pagina (site_actions)</p>
+</li>
+<li><p class="first">Acciones desplegables (folder_buttons)</p>
+</li>
+</ul>
+<p>Las acciones tienen propiedades como:</p>
+<ul class="simple">
+<li><p class="first">descripción</p>
+</li>
+<li>url</li>
+<li>i18n-domain</li>
+<li>condition</li>
+<li>permissions</li>
+</ul>
+<div class="section" id="site-actions">
+<h4>site_actions<a class="headerlink" href="#site-actions" title="Permalink to this headline">¶</a></h4>
+<p>Estos son los enlaces al fondo de la pagina:</p>
+<ul class="simple">
+<li><p class="first">Mapa del Sitio</p>
+</li>
+<li><p class="first">Accesibilidad</p>
+</li>
+<li><p class="first">Contacto</p>
+</li>
+<li><p class="first">Configuración del Sitio</p>
+</li>
+</ul>
+<p>Queremos un nuevo enlace a la información legal, llamado &#8220;Aviso Legal&#8221;.</p>
+<ul class="simple">
+<li><p class="first">Ir a <code class="docutils literal"><span class="pre">site_actions</span></code> (lo sabemos porque lo chequeamos en <code class="docutils literal"><span class="pre">&#64;&#64;manage-viewlets</span></code>)</p>
+</li>
+<li><p class="first">Agregar un CMF Action, haciendo clic en el menú desplegable ubicado en la esquina superior derecha, seleccione <code class="docutils literal"><span class="pre">CMF</span> <span class="pre">Action</span></code> y luego hace clic en el botón <code class="docutils literal"><span class="pre">Add</span></code> y defina el ID como <code class="docutils literal"><span class="pre">Aviso</span> <span class="pre">legal</span></code></p>
+</li>
+<li><p class="first">Asigna dirección URL a <code class="docutils literal"><span class="pre">string:${portal_url}/imprint</span></code></p>
+</li>
+<li><p class="first">Deje <em>condition</em> en blanco</p>
+</li>
+<li><p class="first">Asigne el permiso a <code class="docutils literal"><span class="pre">View</span></code></p>
+</li>
+<li><p class="first">Guardar</p>
+</li>
+</ul>
+<p>Explicar</p>
+<ul class="simple">
+<li><p class="first">Verifique si el enlace de esta en la página funciona</p>
+</li>
+<li><p class="first">Cree un nuevo Documento llamado <cite>Aviso legal</cite> y publíquelo</p>
+</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://docs.plone.org/develop/plone/functionality/actions.html">http://docs.plone.org/develop/plone/functionality/actions.html</a></p>
+</div>
+</div>
+<div class="section" id="global-navigation">
+<h4>Navegación global<a class="headerlink" href="#global-navigation" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p class="first">La navegación horizontal es llamada <code class="docutils literal"><span class="pre">portal_tabs</span></code></p>
+</li>
+<li><p class="first">Ir a <code class="docutils literal"><span class="pre">portal_actions</span></code> &gt; <code class="docutils literal"><span class="pre">portal_tabs</span></code> aquí esta el <a class="reference external" href="http://localhost:8080/Plone/portal_actions/portal_tabs/manage_main">enlace</a></p>
+</li>
+<li><p class="first">Edite <code class="docutils literal"><span class="pre">index_html</span></code></p>
+</li>
+</ul>
+<p>¿Donde esta la navegación?</p>
+<p>La navegación muestra objetos de contenido, los cuales están en el raíz del directorio de Plone, además de las acciones en <code class="docutils literal"><span class="pre">portal_tabs</span></code></p>
+<p>Edite y explique <code class="docutils literal"><span class="pre">index_html</span></code></p>
+<p>Configurando la navegación por si mismo es hecho en cualquier parte: <a class="reference external" href="http://localhost:8080/Plone/&#64;&#64;navigation-controlpanel">http://localhost:8080/Plone/&#64;&#64;navigation-controlpanel</a></p>
+<p>Si hay tiempo explique:</p>
+<ul class="simple">
+<li><p class="first">user &gt; undo (¡chevere!)</p>
+</li>
+<li>user &gt; login/logout</li>
+</ul>
+</div>
+</div>
+<div class="section" id="skins-portal-skins">
+<h3>Skins (portal_skins)<a class="headerlink" href="#skins-portal-skins" title="Permalink to this headline">¶</a></h3>
+<p>En portal_skins podemos cambiar ciertas imágenes, archivos css y plantillas.</p>
+<ul class="simple">
+<li><p class="first">portal_skins es una tecnología depreciada</p>
+</li>
+<li><p class="first">Haremos únicamente algunos mínimos cambios aquí.</p>
+</li>
+</ul>
+<p>Plone 5 tendrá una gran cantidad de funcionalidades que aún vive en portal_skins.</p>
+<p>Antes solíamos usar como parte del entrenamiento el complemento <a class="reference external" href="https://pypi.python.org/pypi/plone.app.themeeditor">plone.app.themeeditor</a> que tiene una interfaz de usuario mucho más agradable que la ZMI pero también tiene dependencias que no son compatibles con ZopeSkel y no es muy utilizada.</p>
+<div class="section" id="change-some-css">
+<h4>Cambie algunos archivos css<a class="headerlink" href="#change-some-css" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p class="first">Ir a ZMI</p>
+</li>
+<li><p class="first">Ir a portal_skins</p>
+</li>
+<li><p class="first">Ir a plone_styles</p>
+</li>
+<li><p class="first">Ir a <code class="docutils literal"><span class="pre">ploneCustom.css</span></code></p>
+</li>
+<li><p class="first">Haga clic en <code class="docutils literal"><span class="pre">customize</span></code></p>
+</li>
+</ul>
+<p>Ingrese el siguiente css:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="nf">#visual-portal-wrapper</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">1024px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Haga clic en <code class="docutils literal"><span class="pre">Save</span></code> y verifique los resultados en otra pestaña del navegador. ¿Cómo sucedió eso?</p>
+<p>La interfaz de usuario deja mucho que desear. En un contexto profesional esto es inútil (sin control de versiones, no resaltado de sintaxis, etc pp). Pero todo el mundo usa la herramienta portal_skins, para hacer arreglos rápidos a los sitios que ya están en línea.</p>
+<p>Vamos a añadir un poco más estilos CSS para hacer nuestro sitio un poco responsive:</p>
+<div class="highlight-css"><div class="highlight"><pre><span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">980px</span><span class="o">)</span> <span class="p">{</span>
+   <span class="nf">#visual-portal-wrapper</span> <span class="p">{</span>
+       <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+       <span class="k">width</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+   <span class="nf">#portal-columns</span> <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+       <span class="k">width</span><span class="o">:</span> <span class="m">97.75%</span><span class="p">;</span>
+       <span class="k">margin-left</span><span class="o">:</span> <span class="m">-98.875%</span><span class="p">;</span>
+       <span class="k">clear</span><span class="o">:</span> <span class="k">both</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="nc">.searchButton</span><span class="o">,</span>
+   <span class="nc">.searchSection</span> <span class="p">{</span>
+       <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-the-logo">
+<h4>Cambia el logotipo<a class="headerlink" href="#change-the-logo" title="Permalink to this headline">¶</a></h4>
+<p>Cambiemos el Logotipo.</p>
+<ul class="simple">
+<li><p class="first">Baje un logotipo de la ploneconf: <a class="reference external" href="http://www.starzel.de/plone-tutorial/ploneconf-logo-2014/image">http://www.starzel.de/plone-tutorial/ploneconf-logo-2014/image</a></p>
+</li>
+<li><p class="first">Ir a <code class="docutils literal"><span class="pre">portal_skins</span></code> / <code class="docutils literal"><span class="pre">plone_images</span></code></p>
+</li>
+<li><p class="first">Haga clic en <code class="docutils literal"><span class="pre">logo.png</span></code>, luego haga clic en <code class="docutils literal"><span class="pre">Customize</span></code> y suba el Logotipo.</p>
+</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://docs.plone.org/adapt-and-extend/change-the-logo.html">http://docs.plone.org/adapt-and-extend/change-the-logo.html</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="portal-view-customizations">
+<h3>portal_view_customizations<a class="headerlink" href="#portal-view-customizations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="change-the-footer">
+<h4>Cambiar el pie de pagina<a class="headerlink" href="#change-the-footer" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">Ir a <code class="docutils literal"><span class="pre">portal_view_customizations</span></code></p>
+</li>
+<li><p class="first">Busque <code class="docutils literal"><span class="pre">plone.footer</span></code>, haga clic y personalice</p>
+</li>
+<li><p class="first">Reemplace el contenido con lo siguiente</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">i18n:domain=</span><span class="s">&quot;plone&quot;</span>
+     <span class="na">id=</span><span class="s">&quot;portal-footer&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;p&gt;</span><span class="ni">&amp;copy;</span> 2014 by me! |
+     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;mailto:info@ploneconf.org&quot;</span><span class="nt">&gt;</span>
+      Contact us
+     <span class="nt">&lt;/a&gt;</span>
+   <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://docs.plone.org/adapt-and-extend/theming/templates_css/skin_layers.html">http://docs.plone.org/adapt-and-extend/theming/templates_css/skin_layers.html</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="css-registry-portal-css">
+<h3>Registro de CSS (portal_css)<a class="headerlink" href="#css-registry-portal-css" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p class="first">Ir a ZMI &gt; <code class="docutils literal"><span class="pre">portal_css</span></code></p>
+</li>
+<li><p class="first">En el fondo esta el archivo <code class="docutils literal"><span class="pre">ploneCustom.css</span></code></p>
+</li>
+<li><p class="first">Deshabilite <code class="docutils literal"><span class="pre">Development</span> <span class="pre">mode</span></code>: Los archivos CSS serán mezclados y teniendo un cache-key.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">El JavaScripts Registry (portal_javascripts) es muy similar.</p>
+</div>
+<p>La función de la mezcla resuelve un gran problema: nos gustaría desarrollar nuestros recursos CSS y JS de una forma granular, pero también nos gustaría reducir al mínimo su tamaño en las peticiones HTTP.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Al final de un proceso de desarrollo, un poco de reordenamiento para minimizar solicitudes pueden tener un efecto muy agradable. A menudo es posible reducir las solicitudes a un número muy pequeño para los visitantes anónimos.</p>
+</div>
+</div>
+<div class="section" id="further-tools-in-the-zmi">
+<h3>Más herramientas en el ZMI<a class="headerlink" href="#further-tools-in-the-zmi" title="Permalink to this headline">¶</a></h3>
+<p>Hay muchos más elementos notables en el ZMI, los visitaremos más tarde.</p>
+<ul class="simple">
+<li>acl_users</li>
+<li>error_log</li>
+<li>portal_properties</li>
+<li>portal_setup</li>
+<li>portal_workflow</li>
+<li>portal_catalog</li>
+</ul>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Resumen<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Puedes configurar y personalizar muchas cosas en Plone a través de la Web. Las opciones más importantes son accesibles en el <a class="reference external" href="http://localhost:8080/Plone/&#64;&#64;overview-controlpanel">panel de control de Plone</a> pero aun más están escondidas en la <a class="reference external" href="http://localhost:8080/Plone/manage">ZMI</a>. La cantidad y presentación de la información es abrumadora, pero usted conseguirá la caída de ella a través de mucha práctica.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="extending.html" class="btn btn-neutral float-right" title="8. Extendiendo Plone"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="features.html" class="btn btn-neutral" title="6. Las características de Plone"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
+      Actualizado por última vez en 08 de March de 2015.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.2.5a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

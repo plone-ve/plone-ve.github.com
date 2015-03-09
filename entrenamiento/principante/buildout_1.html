@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>12. Buildout - Parte I &mdash; Maestría en Plone, un entrenamiento para principiantes - 1.2.5a</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+        <link rel="author" title="Sobre este documento"
+              href="about.html"/>
+    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+        <link rel="next" title="13. Creando complementos para personalizar Plone" href="eggs1.html"/>
+        <link rel="prev" title="11. Dexterity - Parte I: A través de la Web" href="dexterity.html"/>
+<script type="text/javascript" src="_static/plone.js"></script>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> Maestría en Plone</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Sobre &#8220;Maestría en Plone&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#upcoming-trainings">Próximos entrenamientos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#previous-trainings">Entrenamientos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#trainers">Entrenadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#using-the-documentation-for-a-training">Usando la documentación para un entrenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#contributing">Contribuyendo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#license">Licencia</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#who-are-you">¿Quien eres tu?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-do">¿Qué haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-not-do">¿Qué no haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-to-expect">¿Qué esperar?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#documentation">Documentación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#further-reading">Lecturas recomendadas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Instalación y configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-plone">Instalando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hosting-plone">Alojando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#production-deployment">Despliegue en ambientes de producción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plone_training_config/instructions.html">3. Instalando Plone para el entrenamiento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#installing-plone-without-vagrant">Instalando Plone sin Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-virtualbox">Instalar VirtualBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-and-configure-vagrant">Instalar y configurar Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#what-vagrant-does">¿Qué hace Vagrant?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="anatomy.html">4. La Anatomía de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope2">Zope2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#content-management-framework">Content Management Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-toolkit-zope3">Zope Toolkit / Zope3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-component-architecture-zca">Zope Component Architecture (ZCA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anatomy.html#pyramid">Pyramid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">5. El caso de estudio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="case.html#background">Detalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case.html#requirements">Requerimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">6. Las características de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features.html#starting-and-stopping-plone">Iniciando y Deteniendo Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#users">Usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#configure-a-mailserver">Configurar un servidor de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#walkthrough-of-the-ui">Tutorial de la interfaz de usuario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-types">Tipos de Contenidos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#folders">Carpetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#collections">Colecciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-rules">Reglas de Contenido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#history">Histórico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#manage-members-and-groups">Administrar usuarios y grupos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#workflows">Flujos de trabajos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#working-copy">Copia de trabajo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#placeful-workflows">Flujos de trabajo Placeful</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuring_customizing.html">7. Configurando y personalizando Plone a través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#the-control-panel">El panel de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#portlets">Portlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#viewlets">Viewlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#zmi">ZMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">8. Extendiendo Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#extension-technologies">Tecnologías de extensión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#what-are-components-what-is-zcml">¿Cuáles son los componentes?, ¿Que es el ZCML?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="addons.html">9. Extiende Plone con paquetes Complementos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#how-to-find-add-ons">¿Como buscar complementos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#some-notable-add-ons">Algunos complementos notables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#installing-add-ons">Instalando complementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#ploneformgen">PloneFormGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#add-photogallery-with-collective-plonetruegallery">Agregar Galerías de fotos con collective.plonetruegallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#internationalization">Internacionalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">10. Temas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#diazo-example">ejemplo Diazo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#templating-example">ejemplo de Plantila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#choosing-the-right-tool">Seleccionando la herramienta adecuada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#want-to-really-learn-theming">¿Quieres aprender realmente tematización?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dexterity.html">11. Dexterity - Parte I: A través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#what-is-a-content-type">¿Qué es un tipo de contenido?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#the-makings-of-a-plone-content-type">Los elementos de un tipo de contenido Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#dexterity-and-archetypes-a-comparison">Dexterity y Archetypes - Una comparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#installation">Instalación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#modifying-existing-types">Modificando tipos existentes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#creating-content-types-ttw">Creando tipos de contenidos a través de la Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#moving-content-types-into-code">Moviendo el tipo de contenido dentro del código fuente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#exercises">Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">12. Buildout - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#syntax">Sintaxis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recipes">Recetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#references">Referencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-real-life-example">Un ejemplo de la vida real</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello-mr-developer">¡Hola mr.developer!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extensible">Extensible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#be-mcguyver">Sea un McGuyver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eggs1.html">13. Creando complementos para personalizar Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#using-zopeskel-to-create-an-egg">Usando zopeskel para crear un paquete egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#inspecting-the-package">Inspeccione el paquete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#including-the-egg-in-plone">Incluyendo el paquete egg en Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#return-to-dexterity-moving-content-types-into-code">Volver Dexterity: para mover tipos de contenidos a código fuente</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_1.html">14. Views - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_1.html#a-simple-browser-view">Una simple browser view</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt.html">15. Zope Page Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#tal-and-tales">TAL y TALES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#metal-and-macros">METAL y macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#accessing-plone-from-the-template">Accediendo a Plone desde la plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#what-we-missed">Lo que echamos de menos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#chameleon">Chameleon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt_2.html">16. Personalizar plantillas existentes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#newsitem-pt">El archivo newsitem.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#summary-view-pt">El archivo summary_view.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#finding-the-right-template">Buscando la correcta plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#skin-templates">Plantillas skins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_2.html">17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#view-classes">Vista de clases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#the-default-view">La vista por defecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#exercise">Ejercicio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_3.html">18. Views - Parte III: Una lista de Charlas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#using-portal-catalog">Usando portal_catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#brains-and-objects">Cerebros y objetos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#querying-the-catalog">Consultando el catálogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#exercises">Ejercicios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#the-template-for-the-listing">La plantilla para la lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#setting-a-custom-view-as-default-view-on-an-object">Configuración de una vista personalizada como vista por defecto en un objeto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#adding-some-javascript-collective-js-datatables">Agregando un poco de Javascript (collective.js.datatables)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#summary">Resumen</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Registro de cambios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#unreleased">1.2.5 (unreleased)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id1">1.2.4 (2014-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id2">1.2.3 (2014-07-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id3">1.2.2 (2014-06-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id4">1.2.1 (2014-05-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id5">1.2 (2014-05-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2013">1.1 (October 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2012">1.0 (October, 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2011">0.2 October 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2009">0.1 (October 2009)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Mapa de ruta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#id1">1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#todo">Todo</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Maestría en Plone</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>12. Buildout - Parte I</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="buildout-i">
+<h1>12. Buildout - Parte I<a class="headerlink" href="#buildout-i" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://pypi.python.org/pypi/zc.buildout">Buildout</a> compone su aplicación por usted, de acuerdo a sus reglas.</p>
+<p>Para componer su aplicación es necesario definir los paquetes eggs que usted necesita, ¿qué versión?, ¿qué archivos de configuración Buildout tiene que generar para usted?, para descargar y compilar, así sucesivamente. Buildout descarga los paquetes eggs requeridos y resuelve todas las dependencias. Es posible que necesite cinco paquetes eggs diferentes, pero al final, Buildout tiene que instalar 300 paquetes eggs, todos con la versión correcta.</p>
+<p>Buildout hace esto sin tocar el sistema Python o afectar a ningún otro paquete. Los comando creados por buildout traer todos los paquetes requeridos en el entorno Python. Cada comando que crea mis diferentes bibliotecas o incluso diferentes versiones de la misma biblioteca.</p>
+<p>Plone necesita carpetas para los archivos de registro, bases de datos y archivos de configuración. Buildout ensambla todo esto para usted.</p>
+<p>Usted necesitará una gran cantidad de funcionalidades que Buildout no proporciona fuera de la caja, así usted necesitará varias extensiones. Algunas extensiones proporcionan una funcionalidad totalmente nueva, como mr.developer, la mejor manera de manejar sus repositorios de código fuente.</p>
+<div class="section" id="syntax">
+<h2>Sintaxis<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>La sintaxis de los archivos de configuración de despliegue es similar a los archivos clásicos ini. Usted escribe un nombre de parámetro, un signo igual y el valor. Si introduce otro valor en la siguiente línea y indentada, Buildout entiende que ambos valores pertenecen al nombre del parámetro y el parámetro almacena todos los valores en forma de lista.</p>
+<p>Un Buildout consta de múltiples secciones. Las secciones comienzan con el nombre de la sección entre corchetes. Cada sección declara una parte diferente de su aplicación. Como analogía aproximada, su archivo Buildout es un libro de cocina con múltiples recetas.</p>
+<p>Hay una sección especial, llamada <cite>[buildout]</cite>. En esta sección se puede cambiar el comportamiento de la propia Buildout. Las variables <code class="samp docutils literal"><span class="pre">parts</span></code> define, cuál de las secciones existentes deben ser efectivamente utilizado.</p>
+</div>
+<div class="section" id="recipes">
+<h2>Recetas<a class="headerlink" href="#recipes" title="Permalink to this headline">¶</a></h2>
+<p>Buildout por si mismo no tiene idea de como instalar Zope. Buildout es un sistema basado en plugin, este viene con un pequeño conjunto de plugins para crear archivos de configuración y descargar paquetes eggs con sus dependencias y su versión apropiada. Para instalar un sitio Zope, necesitas un plugin de terceros. El plugin provee nuevas recetas que tu tienes que declarar y configurar en una sección.</p>
+<p>Un ejemplo es esta sección.</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[instance]</span>
+<span class="na">recipe</span> <span class="o">=</span> <span class="s">plone.recipe.zope2instance</span>
+<span class="na">user</span> <span class="o">=</span> <span class="s">admin:admin</span>
+</pre></div>
+</div>
+<p>Esto usa el paquete de python <a class="reference external" href="http://pypi.python.org/pypi/plone.recipe.zope2instance">plone.recipe.zope2instance</a>  para crear y configurar la instancia Zope 2 la cual usamos para ejecutar Plone. Todas las lineas después de <code class="docutils literal"><span class="pre">recipe</span> <span class="pre">=</span> <span class="pre">xyz</span></code> son la configuración de la receta usada.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://www.buildout.org/en/latest/docs/recipelist.html">http://www.buildout.org/en/latest/docs/recipelist.html</a></p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>Referencias<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Buildout le permite usar referencias en la configuración. Una declaración de variable no sólo puede mantener el valor de variable, pero también una referencia al lugar donde buscar el valor de la variable.</p>
+<p>Si usted tiene una gran instalación con muchos sitios Plone con pequeños cambios entre cada configuración, se puede generar una plantilla de configuración, y cada sitio hace referencia a todo, desde la plantilla y sobrescribe justo en lo que necesita ser cambiado.</p>
+<p>Incluso en los buildouts más pequeños esta es una característica útil. Estamos utilizando <a class="reference external" href="https://pypi.python.org/pypi/collective.recipe.omelette">collective.recipe.omelette</a>. Una receta muy práctica el cual crea un directorio virtual para facilitar la navegación al código fuente de cada paquete egg.</p>
+<p>La receta omelette tiene que saber cuales son los paquetes eggs para hacer referencia. Queremos los mismos paquetes eggs, utiliza nuestro ejemplo, por lo que nos referimos a los paquetes eggs de la instancia en lugar de repetir toda la lista.</p>
+<p>Otro ejemplo: Digamos usted crea archivos de configuración para un servidor Web como Nginx, puede definir el puerto de destino para el Proxy inverso al mirar hacia arriba a partir de la receta zope2instance.</p>
+<p>La configuración de sistemas complejos siempre implica una gran cantidad de duplicación de la información. El uso de referencias en la configuración buildout le permite minimizar estas duplicaciones.</p>
+</div>
+<div class="section" id="a-real-life-example">
+<h2>Un ejemplo de la vida real<a class="headerlink" href="#a-real-life-example" title="Permalink to this headline">¶</a></h2>
+<p>Examinemos el archivo <code class="docutils literal"><span class="pre">buildout.cfg</span></code> para el entrenamiento y miremos algunas de las variables más importantes:</p>
+<div class="highlight-ini"><div class="highlight"><pre>[buildout]
+parts =
+    instance
+    packages
+    codeintel
+    zopeskel
+
+extends =
+    http://dist.plone.org/release/4.3.3/versions.cfg
+    versions.cfg
+
+find-links = http://dist.plone.org
+extensions = mr.developer
+sources = sources
+auto-checkout = *
+
+versions = versions
+
+# If you do _not_ use vagrant please add a &#39;#&#39; at the beginning of the
+# following line and uncomment the line after.
+# This will set the location of three directories:
+# file-storage: set in [instance] defines where the ZODB is stored
+# blob-storage: set in [instance] defines where Binary Files are stored
+# packages-dir: set in [packages] defines a location for symlinks to all eggs
+buildout_dir = /home/vagrant
+#buildout_dir = ${buildout:directory}
+
+eggs =
+    Plone
+    Pillow
+# development tools
+    z3c.jbot
+    plone.api
+    plone.reload
+    Products.PDBDebugMode
+    plone.app.debugtoolbar
+    Paste
+# 3rd party addons
+    Products.PloneFormGen
+    collective.plonetruegallery
+    collective.js.datatables
+    eea.facetednavigation
+    collective.behavior.banner
+# dexterity default types
+    plone.app.contenttypes
+# our addons
+#    ploneconf.site
+#    starzel.votable_behavior
+
+[instance]
+recipe = plone.recipe.zope2instance
+user = admin:admin
+eggs = ${buildout:eggs}
+http-address = 8080
+file-storage = ${buildout:buildout_dir}/var/filestorage/Data.fs
+blob-storage = ${buildout:buildout_dir}/var/blobstorage
+
+[packages]
+recipe = collective.recipe.omelette
+eggs = ${buildout:eggs}
+location = ${buildout:buildout_dir}/packages
+
+[codeintel]
+recipe = corneti.recipes.codeintel
+eggs = ${buildout:eggs}
+
+[zopeskel]
+recipe = zc.recipe.egg
+eggs =
+    ZopeSkel
+    Paste
+    PasteDeploy
+    PasteScript
+    zopeskel.diazotheme
+    zopeskel.dexterity
+    zest.releaser
+    ${buildout:eggs}
+
+[sources]
+# ploneconf.site = fs ploneconf.site full-path=${buildout:directory}/src/ploneconf.site
+collective.behavior.banner = git https://github.com/collective/collective.behavior.banner.git pushurl=git@github.com:collective/collective.behavior.banner.git rev=af2dc1f21b23270e4b8583cf04eb8e962ade4c4d
+starzel.votable_behavior = git git://github.com/collective/starzel.votable_behavior.git
+</pre></div>
+</div>
+<p>Cuando usted ejecuta el comando <code class="docutils literal"><span class="pre">./bin/buildout</span></code> sin argumentos, Buildout buscara por este archivo:</p>
+<p>Echemos un vistazo más de cerca a algunas variables.</p>
+<div class="highlight-cfg"><div class="highlight"><pre><span class="na">extends</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    http://dist.plone.org/release/4.3.3/versions.cfg</span>
+<span class="s">    versions.cfg</span>
+</pre></div>
+</div>
+<p>Esta línea le dice al Buildout lea más archivos de configuración. Puede hacer referencia a los archivos de configuración locales en el equipo o los archivos de configuración en Internet, accesible a través de protocolo HTTP. Puede utilizar varios archivos de configuración para compartir entre múltiples configuraciones Buildouts, o para separar los diferentes aspectos de su configuración en archivos diferentes. Ejemplos típicos son especificaciones de la versión o la configuración que difieren entre los diferentes entornos de instalación como desarrollo, calidad, producción.</p>
+<div class="highlight-cfg"><div class="highlight"><pre><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
+<span class="s">    Plone</span>
+<span class="s">    Pillow</span>
+<span class="s">    z3c.jbot</span>
+<span class="s">    plone.api</span>
+<span class="s">    plone.reload</span>
+<span class="s">    Products.PDBDebugMode</span>
+<span class="s">    plone.app.debugtoolbar</span>
+<span class="s">    Paste</span>
+<span class="s">    Products.PloneFormGen</span>
+<span class="s">    collective.plonetruegallery</span>
+<span class="s">    collective.js.datatables</span>
+<span class="s">    eea.facetednavigation</span>
+<span class="s">    collective.behavior.banner</span>
+<span class="s">    plone.app.contenttypes</span>
+<span class="c1">#    ploneconf.site</span>
+<span class="c1">#    starzel.votable_behavior</span>
+</pre></div>
+</div>
+<p>Esta es la lista de los paquetes eggs que nosotros configuramos a estar disponible para Zope. Estos paquetes eggs se ponen en el PYTHONPATH del script <code class="docutils literal"><span class="pre">bin/instance</span></code> con el cual se iniciara y detendrá con Plone.</p>
+<p>El paquete egg <code class="docutils literal"><span class="pre">Plone</span></code> es una envoltura sin código fuente. Entre sus dependencias esta <code class="docutils literal"><span class="pre">Products.CMFPlone</span></code> que es el paquete egg en el cual esta propiamente de Plone.</p>
+<p>El resto son complementos que ya hemos usado o usará más tarde. Los últimos paquetes eggs están comentadas por lo que no se instalarán por Buildout.</p>
+<p>El archivo <code class="docutils literal"><span class="pre">versions.cfg</span></code> se incluye por la declaración <code class="docutils literal"><span class="pre">extends</span> <span class="pre">=</span> <span class="pre">...</span></code> contiene las versiones que definimos:</p>
+<div class="highlight-cfg"><div class="highlight"><pre>[versions]
+# dev tools
+z3c.jbot = 0.7.2
+plone.api = 1.1.0
+plone.app.debugtoolbar = 1.0a3
+...
+</pre></div>
+</div>
+<p>Esta es otra sección especial. Se ha convertido en una sección especial de declaración. En nuestra sección <code class="samp docutils literal"><span class="pre">[buildout]</span></code> establecemos una variable <code class="samp docutils literal"><span class="pre">versions</span> <span class="pre">=</span> <span class="pre">versions</span></code>. Esto le dice a buildout, existe una sección denominada versions, conteniendo información de las versiones a usar. Cuando Buildout instala paquetes eggs se utilizará la versión definida en esta sección.</p>
+</div>
+<div class="section" id="hello-mr-developer">
+<h2>¡Hola mr.developer!<a class="headerlink" href="#hello-mr-developer" title="Permalink to this headline">¶</a></h2>
+<p>Hay muchas cosas más importantes que debe saber, y no podemos pasar por ellos en todos los detalles, pero quiero centrarme en una característica específica: <strong>mr.developer</strong></p>
+<p>Con mr.developer puede declarar los paquetes que desee comprobar desde o hacia un sistema de control de versiones y de cual dirección URL del repositorio. Usted puede comprobar código fuente desde diversos CVS como git, subversion, bzr, hg y quizá más. También, se puede indicar a Buildout algún código fuente se encuentran en el sistema de archivos local sin aplicar control de versiones.</p>
+<p><code class="docutils literal"><span class="pre">mr.developer</span></code> viene con un comando, <code class="docutils literal"><span class="pre">./bin/develop</span></code>. Se puede utilizar para actualizar su código fuente, para comprobar los nuevos cambios y así sucesivamente. Usted puede activar y desactivar sus checkouts desde el origen. Si usted desarrolla sus extensiones en los paquetes eggs con checkouts separadas, lo cual es una buena práctica, usted puede planear publicaciones por tener todas los checkouts desactivados, y sólo activarlos, al escribir los cambios que requieren una nueva versión. Usted puede activar y desactivar los paquetes eggs a través del comando <code class="docutils literal"><span class="pre">develop</span></code> o la configuración Buildout. Siempre debe usar la forma Buildout. Su commit sirve como documentación.</p>
+</div>
+<div class="section" id="extensible">
+<h2>Extensible<a class="headerlink" href="#extensible" title="Permalink to this headline">¶</a></h2>
+<p>Usted puede haber notado que la mayoría, si no toda la funcionalidad sólo está disponible a través de plugins. Una de las cosas que sobresale en Buildout sin ningún plugin, es la resolución de dependencias. Usted puede ayudar a Plone en la resolución de dependencias, al declarar exactamente cual versión de un paquete egg usted desea. Esto es sólo un caso de uso. Otra es mucho más importante: Si usted quiere tener un Buildout repetible, el cual funcione de dos meses a partir de ahora también, se <em>debe</em> declarar todas sus versiones de paquete egg. De otro modo Buildout podría instalar las nuevas versiones.</p>
+</div>
+<div class="section" id="be-mcguyver">
+<h2>Sea un McGuyver<a class="headerlink" href="#be-mcguyver" title="Permalink to this headline">¶</a></h2>
+<p>Como puede ver, usted puede construir sistemas muy complejos con Buildout. Es hora de algunas advertencias. Sea selectivo en sus recetas. Supervisor es un programa para gestionar servidores en ejecución, es bastante bueno. No hay una receta para ello.</p>
+<p>¡La configuración para esta receta es más complicada que la propia configuración del Supervisor en si! Mediante el uso de esta receta, se fuerza a los demás a comprender la sintaxis de configuración específica recetas y la sintaxis Supervisor. Para tales casos, <a class="reference external" href="https://pypi.python.org/pypi/collective.recipe.template">collective.recipe.template</a> presenta una mejor coincidencia.</p>
+<p>Otro problema es el manejo de errores. ¿Buildout intenta instalar una rara dependencia que en realidad no quiere? Buildout no le dirá, lo que está viniendo.</p>
+<p>Si hay un problema, siempre se puede ejecutar Buildout con la opción <code class="docutils literal"><span class="pre">-v</span></code>, para obtener una salida más detallada, a veces ayuda.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>./bin/buildout -v
+</pre></div>
+</div>
+<p>Si se solicitan las versiones de paquetes eggs extraños, verifique la declaración de las dependencias de los paquetes eggs y su versión definida.</p>
+<p>Algunas partes de Buildout interpretan nombres de paquete egg entre mayúsculas y minúsculas, otros no. Esto puede dar lugar a problemas de divertidos.</p>
+<p>Verifique siempre el orden de su configuraciones extendidas, utilice siempre el comando <code class="samp docutils literal"><span class="pre">annotate</span></code> de Buildout para ver si se interpreta la configuración diferente a la que usted definió. Restringirse a los archivos de despliegue simples. Puede hacer referencia a variables de otras secciones, incluso se puede utilizar toda una sección como plantilla. Hemos aprendido que esto no funciona bien con jerarquías complejas y se tuvo que abandonar esa característica.</p>
+<p>En el capítulo <a class="reference internal" href="deployment_sites.html"><em>Buildout - Parte II: Cómo prepararse para el despliegue</em></a> veremos una configuración de despliegue lista para entornos de producción de Plone que tiene muchas características útiles.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt>Documentación de Buildout</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://docs.plone.org/old-reference-manuals/buildout/index.html">http://docs.plone.org/old-reference-manuals/buildout/index.html</a></li>
+<li><a class="reference external" href="http://www.buildout.org/en/latest/docs/index.html">http://www.buildout.org/en/latest/docs/index.html</a></li>
+</ul>
+</dd>
+<dt>Solución de problemas</dt>
+<dd><a class="reference external" href="http://docs.plone.org/manage/troubleshooting/buildout.html">http://docs.plone.org/manage/troubleshooting/buildout.html</a></dd>
+<dt>Un buildout mínimo para Plone 4</dt>
+<dd><a class="reference external" href="https://github.com/collective/minimalplone4">https://github.com/collective/minimalplone4</a></dd>
+<dt>El archivo Buildout del instalador unificado tiene documentación valiosa como comentarios entre linea</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://github.com/plone/Installers-UnifiedInstaller/blob/master/buildout_templates/buildout.cfg">https://github.com/plone/Installers-UnifiedInstaller/blob/master/buildout_templates/buildout.cfg</a></li>
+<li><a class="reference external" href="https://github.com/plone/Installers-UnifiedInstaller/blob/master/base_skeleton/base.cfg">https://github.com/plone/Installers-UnifiedInstaller/blob/master/base_skeleton/base.cfg</a></li>
+<li><a class="reference external" href="https://github.com/plone/Installers-UnifiedInstaller/blob/master/base_skeleton/develop.cfg">https://github.com/plone/Installers-UnifiedInstaller/blob/master/base_skeleton/develop.cfg</a></li>
+</ul>
+</dd>
+<dt>mr.developer</dt>
+<dd><a class="reference external" href="https://pypi.python.org/pypi/mr.developer/">https://pypi.python.org/pypi/mr.developer/</a></dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="eggs1.html" class="btn btn-neutral float-right" title="13. Creando complementos para personalizar Plone"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dexterity.html" class="btn btn-neutral" title="11. Dexterity - Parte I: A través de la Web"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
+      Actualizado por última vez en 08 de March de 2015.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.2.5a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

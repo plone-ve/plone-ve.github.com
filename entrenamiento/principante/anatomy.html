@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. La Anatomía de Plone &mdash; Maestría en Plone, un entrenamiento para principiantes - 1.2.5a</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+        <link rel="author" title="Sobre este documento"
+              href="about.html"/>
+    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="index.html"/>
+        <link rel="next" title="5. El caso de estudio" href="case.html"/>
+        <link rel="prev" title="3. Instalando Plone para el entrenamiento" href="plone_training_config/instructions.html"/>
+<script type="text/javascript" src="_static/plone.js"></script>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> Maestría en Plone</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Sobre &#8220;Maestría en Plone&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#upcoming-trainings">Próximos entrenamientos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#previous-trainings">Entrenamientos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#trainers">Entrenadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#using-the-documentation-for-a-training">Usando la documentación para un entrenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#contributing">Contribuyendo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#license">Licencia</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#who-are-you">¿Quien eres tu?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-do">¿Qué haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-not-do">¿Qué no haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-to-expect">¿Qué esperar?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#documentation">Documentación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#further-reading">Lecturas recomendadas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Instalación y configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-plone">Instalando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hosting-plone">Alojando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#production-deployment">Despliegue en ambientes de producción</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plone_training_config/instructions.html">3. Instalando Plone para el entrenamiento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#installing-plone-without-vagrant">Instalando Plone sin Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-virtualbox">Instalar VirtualBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-and-configure-vagrant">Instalar y configurar Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#what-vagrant-does">¿Qué hace Vagrant?</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. La Anatomía de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zope2">Zope2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#content-management-framework">Content Management Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zope-toolkit-zope3">Zope Toolkit / Zope3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zope-component-architecture-zca">Zope Component Architecture (ZCA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pyramid">Pyramid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">5. El caso de estudio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="case.html#background">Detalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="case.html#requirements">Requerimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">6. Las características de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="features.html#starting-and-stopping-plone">Iniciando y Deteniendo Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#users">Usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#configure-a-mailserver">Configurar un servidor de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#walkthrough-of-the-ui">Tutorial de la interfaz de usuario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-types">Tipos de Contenidos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#folders">Carpetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#collections">Colecciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#content-rules">Reglas de Contenido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#history">Histórico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#manage-members-and-groups">Administrar usuarios y grupos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#workflows">Flujos de trabajos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#working-copy">Copia de trabajo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html#placeful-workflows">Flujos de trabajo Placeful</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuring_customizing.html">7. Configurando y personalizando Plone a través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#the-control-panel">El panel de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#portlets">Portlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#viewlets">Viewlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#zmi">ZMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">8. Extendiendo Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#extension-technologies">Tecnologías de extensión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extending.html#what-are-components-what-is-zcml">¿Cuáles son los componentes?, ¿Que es el ZCML?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="addons.html">9. Extiende Plone con paquetes Complementos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#how-to-find-add-ons">¿Como buscar complementos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#some-notable-add-ons">Algunos complementos notables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#installing-add-ons">Instalando complementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#ploneformgen">PloneFormGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#add-photogallery-with-collective-plonetruegallery">Agregar Galerías de fotos con collective.plonetruegallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#internationalization">Internacionalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addons.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">10. Temas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#diazo-example">ejemplo Diazo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#templating-example">ejemplo de Plantila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#choosing-the-right-tool">Seleccionando la herramienta adecuada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theming.html#want-to-really-learn-theming">¿Quieres aprender realmente tematización?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dexterity.html">11. Dexterity - Parte I: A través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#what-is-a-content-type">¿Qué es un tipo de contenido?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#the-makings-of-a-plone-content-type">Los elementos de un tipo de contenido Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#dexterity-and-archetypes-a-comparison">Dexterity y Archetypes - Una comparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#installation">Instalación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#modifying-existing-types">Modificando tipos existentes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#creating-content-types-ttw">Creando tipos de contenidos a través de la Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#moving-content-types-into-code">Moviendo el tipo de contenido dentro del código fuente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dexterity.html#exercises">Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buildout_1.html">12. Buildout - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#syntax">Sintaxis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#recipes">Recetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#references">Referencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#a-real-life-example">Un ejemplo de la vida real</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#hello-mr-developer">¡Hola mr.developer!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#extensible">Extensible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#be-mcguyver">Sea un McGuyver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eggs1.html">13. Creando complementos para personalizar Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#using-zopeskel-to-create-an-egg">Usando zopeskel para crear un paquete egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#inspecting-the-package">Inspeccione el paquete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#including-the-egg-in-plone">Incluyendo el paquete egg en Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eggs1.html#return-to-dexterity-moving-content-types-into-code">Volver Dexterity: para mover tipos de contenidos a código fuente</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_1.html">14. Views - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_1.html#a-simple-browser-view">Una simple browser view</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt.html">15. Zope Page Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#tal-and-tales">TAL y TALES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#metal-and-macros">METAL y macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#accessing-plone-from-the-template">Accediendo a Plone desde la plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#what-we-missed">Lo que echamos de menos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt.html#chameleon">Chameleon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zpt_2.html">16. Personalizar plantillas existentes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#newsitem-pt">El archivo newsitem.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#summary-view-pt">El archivo summary_view.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#finding-the-right-template">Buscando la correcta plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#skin-templates">Plantillas skins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_2.html">17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#view-classes">Vista de clases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#the-default-view">La vista por defecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_2.html#exercise">Ejercicio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views_3.html">18. Views - Parte III: Una lista de Charlas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#using-portal-catalog">Usando portal_catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#brains-and-objects">Cerebros y objetos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#querying-the-catalog">Consultando el catálogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#exercises">Ejercicios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#the-template-for-the-listing">La plantilla para la lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#setting-a-custom-view-as-default-view-on-an-object">Configuración de una vista personalizada como vista por defecto en un objeto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#adding-some-javascript-collective-js-datatables">Agregando un poco de Javascript (collective.js.datatables)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views_3.html#summary">Resumen</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Registro de cambios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#unreleased">1.2.5 (unreleased)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id1">1.2.4 (2014-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id2">1.2.3 (2014-07-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id3">1.2.2 (2014-06-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id4">1.2.1 (2014-05-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id5">1.2 (2014-05-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2013">1.1 (October 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2012">1.0 (October, 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2011">0.2 October 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2009">0.1 (October 2009)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Mapa de ruta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#id1">1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roadmap.html#todo">Todo</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Maestría en Plone</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>4. La Anatomía de Plone</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="the-anatomy-of-plone">
+<h1>4. La Anatomía de Plone<a class="headerlink" href="#the-anatomy-of-plone" title="Permalink to this headline">¶</a></h1>
+<p>Python, Zope, CMF, Plone, ¿como se integran entre si?</p>
+<div class="section" id="zope2">
+<h2>Zope2<a class="headerlink" href="#zope2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Zope es un Framework de aplicación Web el cual Plone corre encima de él.</p>
+</li>
+<li><p class="first">Ese sirve aplicaciones que comunica con usuarios vía HTTP.</p>
+</li>
+</ul>
+<p>Antes de Zope, generalmente era un servidor Apache el que debía llamar a un script y dar la petición como una entrada. La secuencia de comando sería entonces simplemente imprimir HTML en la salida estándar. Apache retornó al usuario. La apertura de las conexiones de base de datos, verificando las restricciones de permisos, la generación de HTML válido, la configuración de almacenamiento en caché, la interpretación de los datos del formulario y todo lo que tiene que hacer por su cuenta. Cuando la segunda petición llega, usted tiene que hacer todo de nuevo.</p>
+<p>Jim Fulton pensaba que esto era un poco tedioso. Así que escribió el código para manejar las peticiones. Él creía que el contenido del sitio es orientado a objetos y que la URL de alguna manera debe apuntar directamente a la jerarquía de objetos, por lo que escribió una base de datos orientada a objetos, llamada <a class="reference external" href="http://www.zodb.org/en/latest/">ZODB</a>.</p>
+<p>El ZODB es una base de datos <a class="reference external" href="http://en.wikipedia.org/wiki/ACID">ACID</a> totalmente compatible con integridad transaccional automático. Se asigna automáticamente el recorrido en la jerarquía de objetos a rutas URL, así que no hay necesidad de objetos &#8220;cableados&#8221; o nodos de bases de datos a las direcciones URL. Esto da Plone sus fáciles de generar direcciones URL amigables a las técnicas SEO.</p>
+<p>Transversal a través de la base de datos de objeto tiene la seguridad comprobada en todos los puntos a través de listas de control de acceso muy detallado.</p>
+<p>Una pieza que falta el cual es importante y a la ves complicada: <code class="docutils literal"><span class="pre">Acquisition</span></code>.</p>
+<p>La adquisición, es una especie de magia. Imagine un sistema de programación en el que no accede al sistema de archivos y donde usted no necesita importar código. Usted trabaja con objetos. Un objeto puede ser una carpeta que contiene más objetos, una página HTML, datos, u otro script. Para acceder a un objeto, lo que necesita saber dónde está el objeto. Los objetos se encuentran por las rutas que parecen direcciones URL, pero sin el nombre de dominio. Ahora la Adquisición permite escribir una ruta incompleta. Una ruta incompleta es una ruta relativa, ese no establece explícitamente cual es la ruta que inicia desde la raíz, ese se inicia en relación con donde esta el contenido del objeto &#8211; eso es el contexto. Si Zope no puede resolver la ruta de un objeto relativo a su código, ese trata la misma ruta en la carpeta que lo contiene. Y a continuación, la carpeta que contiene la carpeta.</p>
+<p>Esto puede sonar extraño, ¿qué gano yo con esto?</p>
+<p>Usted puede tener diferentes datos o códigos en función de su contexto. Imagínese que usted desea tener imágenes de cabecera diferentes para cada sección de la página, a veces, incluso diferentes para una sub-sección específica de su sitio. Así se define una ruta a la header_image y pone una imagen de cabecera en la raíz de su sitio. Si quieres una carpeta a una imagen de cabecera diferente, se pone la imagen de cabecera en esta carpeta. Por favor, tómese un minuto para dejar que esto se asimile mejor y piense, lo que esto le permite hacer.</p>
+<ul class="simple">
+<li><p class="first">formularios de contacto con diferentes direcciones de correo electrónico por sección.</p>
+</li>
+<li><p class="first">diferentes estilos CSS para diferentes partes de su sitio.</p>
+</li>
+<li><p class="first">Un sitio, varios clientes, todo se ve diferente para cada cliente.</p>
+</li>
+</ul>
+<p>Al igual que con toda la magia de programación, adquisición exige un precio. El código de Zope debe ser escrito cuidadosamente si es necesario para evitar heredar efectos secundarios a través de la adquisición. La comunidad Zope expresa esto con la máxima Python (Monty): Cuidado con el Spammish de la Adquisición.</p>
+<p>Básicamente esto es Zope.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://www.zope.org/the-world-of-zope">http://www.zope.org/the-world-of-zope</a> y <a class="reference external" href="http://docs.zope.org/zope2/zope2book/">http://docs.zope.org/zope2/zope2book/</a></p>
+</div>
+</div>
+<div class="section" id="content-management-framework">
+<h2>Content Management Framework<a class="headerlink" href="#content-management-framework" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p class="first"><a class="reference external" href="http://old.zope.org/Products/CMF/index.html/">CMF (Content Management Framework)</a> es un complemento para Zope para construir sistemas de gestión de contenido (como Plone).</p>
+</li>
+</ul>
+<p>Después de muchos sitios web creados con éxito basado en Zope, una serie de requisitos que se repiten surgieron, y algunos desarrolladores Zope comenzaron a escribir CMF, el Content Management Framework.</p>
+<p>La CMF ofrece muchos servicios que le ayudan a escribir un CMS basado en Zope. La mayoría de los objetos que ve en la ZMI son parte de la CMF de alguna manera.</p>
+<p>Los desarrolladores detrás CMF no ven CMF como un producto listo para usar CMS. Ellos crearon un sitio CMS que era utilizable fuera de la caja, pero dejó deliberadamente feo, porque usted tiene que personalizar todas formas.</p>
+<p>Todavía estamos en los tiempo de la prehistoria aquí. En ese entonces no existían los paquetes eggs (paquetes Python), Zope no consistía en mas de 100 componentes de software independientes, pero era una gran conjunto.</p>
+<p>Muchas partes de Plone se derivan de la CMF, pero es una herencia mixta. El CMF es un proyecto independiente de software, y se ha movido a menudo más lentamente que Plone. Plone está eliminando gradualmente la dependencia de la mayoría de las partes de la CMF.</p>
+</div>
+<div class="section" id="zope-toolkit-zope3">
+<h2>Zope Toolkit / Zope3<a class="headerlink" href="#zope-toolkit-zope3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p class="first">Zope 3 fue originalmente creada como una profunda re-escritura de Zope.</p>
+</li>
+<li><p class="first">Plone usa partes provistas por el <a class="reference external" href="http://docs.zope.org/zopetoolkit/">Zope Toolkit (ZTK)</a>.</p>
+</li>
+</ul>
+<p>Por desgracia, nadie empezó a usar Zope 3, nadie migró a Zope 3, porque nadie sabía cómo hacerlo.</p>
+<p>Pero había muchas cosas útiles en Zope 3 que las personas querían usar en Zope 2, por lo que la comunidad Zope adaptado algunas partes para que pudieran utilizarlos en Zope 2. A veces, una clase wrapper de algún tipo era necesario, estos por lo general son ofrecidos por paquetes de los cinco espacios de nombres.</p>
+<p>Para hacer la historia completa, ya que la gente se quedó en Zope 2, la comunidad Zope renombrado Zope 3 a Bluebream, por lo que la gente no piensa que Zope 3 era el futuro. No era nada más.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://plone.org/documentation/faq/zope-3-and-plone">http://plone.org/documentation/faq/zope-3-and-plone</a></p>
+</div>
+</div>
+<div class="section" id="zope-component-architecture-zca">
+<h2>Zope Component Architecture (ZCA)<a class="headerlink" href="#zope-component-architecture-zca" title="Permalink to this headline">¶</a></h2>
+<p>La <a class="reference external" href="http://muthukadan.net/docs/zca.html">Zope Component Architecture</a>, que fue desarrollado como parte de Zope 3, es un sistema que permite componente pluggability y despacho complejo basado en objetos que implementan una interfaz (una descripción de una funcionalidad). Pyramid, y el servidor de aplicaciones Web Python independiente, utiliza la ZCA &#8220;bajo la capucha&#8221; para ejecutar despacho de vistas y otras tareas de configuración de aplicación.</p>
+</div>
+<div class="section" id="pyramid">
+<h2>Pyramid<a class="headerlink" href="#pyramid" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p class="first"><a class="reference external" href="http://docs.pylonsproject.org/en/latest/docs/pyramid.html">Pyramid</a> es un framework de desarrollo de aplicaciones Web en Python que es a veces visto como el sucesor natural de Zope.</p>
+</li>
+<li><p class="first">Eso hace menos que Zope, es muy configurable y <a class="reference external" href="http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/zca.html">usa la Zope Component Architecture</a>.</p>
+</li>
+</ul>
+<p>Se puede utilizar con una base de datos relacional en lugar de ZODB si quieres, o usar las dos bases de datos o ninguno de ellos.</p>
+<p>Aparte del hecho de que Pyramid no se vio obligado a soportar todas las funcionalidades legado, que puede hacer las cosas más complicadas, el desarrollador original tenía una postura muy diferente sobre cómo el software debe ser desarrollado. Mientras tanto Zope y Pyramid tienen una buena de la pruebas de software, Pyramid tiene una buena documentación; algo que estaba muy descuidado en Zope, y en ocasiones en Plone también.</p>
+<p>Ya sea que si ¿la arquitectura de componentes es mejor en Pyramid o no?, no nos atrevemos a decir, pero nos gusta más. Pero tal vez es sólo porque fue documentada.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="case.html" class="btn btn-neutral float-right" title="5. El caso de estudio"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="plone_training_config/instructions.html" class="btn btn-neutral" title="3. Instalando Plone para el entrenamiento"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
+      Actualizado por última vez en 08 de March de 2015.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.2.5a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

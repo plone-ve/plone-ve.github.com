@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Instalando Plone para el entrenamiento &mdash; Maestría en Plone, un entrenamiento para principiantes - 1.2.5a</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+        <link rel="author" title="Sobre este documento"
+              href="../about.html"/>
+    <link rel="top" title="Maestría en Plone 1.2.5a documentation" href="../index.html"/>
+        <link rel="next" title="4. La Anatomía de Plone" href="../anatomy.html"/>
+        <link rel="prev" title="2. Instalación y configuración" href="../installation.html"/>
+<script type="text/javascript" src="../_static/plone.js"></script>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> Maestría en Plone</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">Sobre &#8220;Maestría en Plone&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#upcoming-trainings">Próximos entrenamientos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#previous-trainings">Entrenamientos previos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#trainers">Entrenadores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#using-the-documentation-for-a-training">Usando la documentación para un entrenamiento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#contributing">Contribuyendo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#license">Licencia</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#who-are-you">¿Quien eres tu?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-will-we-do">¿Qué haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-will-we-not-do">¿Qué no haremos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-to-expect">¿Qué esperar?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#documentation">Documentación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#further-reading">Lecturas recomendadas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">2. Instalación y configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#installing-plone">Instalando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#hosting-plone">Alojando Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#production-deployment">Despliegue en ambientes de producción</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Instalando Plone para el entrenamiento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-plone-without-vagrant">Instalando Plone sin Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-virtualbox">Instalar VirtualBox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-and-configure-vagrant">Instalar y configurar Vagrant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-vagrant-does">¿Qué hace Vagrant?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../anatomy.html">4. La Anatomía de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../anatomy.html#zope2">Zope2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../anatomy.html#content-management-framework">Content Management Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../anatomy.html#zope-toolkit-zope3">Zope Toolkit / Zope3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../anatomy.html#zope-component-architecture-zca">Zope Component Architecture (ZCA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../anatomy.html#pyramid">Pyramid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../case.html">5. El caso de estudio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../case.html#background">Detalle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../case.html#requirements">Requerimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">6. Las características de Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#starting-and-stopping-plone">Iniciando y Deteniendo Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#users">Usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#configure-a-mailserver">Configurar un servidor de correo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#walkthrough-of-the-ui">Tutorial de la interfaz de usuario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#content-types">Tipos de Contenidos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#folders">Carpetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#collections">Colecciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#content-rules">Reglas de Contenido</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#history">Histórico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#manage-members-and-groups">Administrar usuarios y grupos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#workflows">Flujos de trabajos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#working-copy">Copia de trabajo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features.html#placeful-workflows">Flujos de trabajo Placeful</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuring_customizing.html">7. Configurando y personalizando Plone a través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuring_customizing.html#the-control-panel">El panel de control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuring_customizing.html#portlets">Portlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuring_customizing.html#viewlets">Viewlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuring_customizing.html#zmi">ZMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuring_customizing.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extending.html">8. Extendiendo Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extending.html#extension-technologies">Tecnologías de extensión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extending.html#what-are-components-what-is-zcml">¿Cuáles son los componentes?, ¿Que es el ZCML?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../addons.html">9. Extiende Plone con paquetes Complementos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../addons.html#how-to-find-add-ons">¿Como buscar complementos?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../addons.html#some-notable-add-ons">Algunos complementos notables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../addons.html#installing-add-ons">Instalando complementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../addons.html#ploneformgen">PloneFormGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../addons.html#add-photogallery-with-collective-plonetruegallery">Agregar Galerías de fotos con collective.plonetruegallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../addons.html#internationalization">Internacionalización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../addons.html#summary">Resumen</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../theming.html">10. Temas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theming.html#diazo-example">ejemplo Diazo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theming.html#templating-example">ejemplo de Plantila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theming.html#choosing-the-right-tool">Seleccionando la herramienta adecuada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theming.html#want-to-really-learn-theming">¿Quieres aprender realmente tematización?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dexterity.html">11. Dexterity - Parte I: A través de la Web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#what-is-a-content-type">¿Qué es un tipo de contenido?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#the-makings-of-a-plone-content-type">Los elementos de un tipo de contenido Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#dexterity-and-archetypes-a-comparison">Dexterity y Archetypes - Una comparación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#installation">Instalación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#modifying-existing-types">Modificando tipos existentes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#creating-content-types-ttw">Creando tipos de contenidos a través de la Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#moving-content-types-into-code">Moviendo el tipo de contenido dentro del código fuente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dexterity.html#exercises">Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../buildout_1.html">12. Buildout - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../buildout_1.html#syntax">Sintaxis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../buildout_1.html#recipes">Recetas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../buildout_1.html#references">Referencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../buildout_1.html#a-real-life-example">Un ejemplo de la vida real</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../buildout_1.html#hello-mr-developer">¡Hola mr.developer!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../buildout_1.html#extensible">Extensible</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../buildout_1.html#be-mcguyver">Sea un McGuyver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../eggs1.html">13. Creando complementos para personalizar Plone</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../eggs1.html#using-zopeskel-to-create-an-egg">Usando zopeskel para crear un paquete egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eggs1.html#inspecting-the-package">Inspeccione el paquete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eggs1.html#including-the-egg-in-plone">Incluyendo el paquete egg en Plone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eggs1.html#return-to-dexterity-moving-content-types-into-code">Volver Dexterity: para mover tipos de contenidos a código fuente</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../views_1.html">14. Views - Parte I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../views_1.html#a-simple-browser-view">Una simple browser view</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zpt.html">15. Zope Page Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../zpt.html#tal-and-tales">TAL y TALES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zpt.html#metal-and-macros">METAL y macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zpt.html#accessing-plone-from-the-template">Accediendo a Plone desde la plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zpt.html#what-we-missed">Lo que echamos de menos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zpt.html#chameleon">Chameleon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zpt_2.html">16. Personalizar plantillas existentes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../zpt_2.html#newsitem-pt">El archivo newsitem.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zpt_2.html#summary-view-pt">El archivo summary_view.pt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zpt_2.html#finding-the-right-template">Buscando la correcta plantilla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zpt_2.html#skin-templates">Plantillas skins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../views_2.html">17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../views_2.html#view-classes">Vista de clases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_2.html#the-default-view">La vista por defecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_2.html#exercise">Ejercicio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../views_3.html">18. Views - Parte III: Una lista de Charlas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#using-portal-catalog">Usando portal_catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#brains-and-objects">Cerebros y objetos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#querying-the-catalog">Consultando el catálogo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#exercises">Ejercicios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#the-template-for-the-listing">La plantilla para la lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#setting-a-custom-view-as-default-view-on-an-object">Configuración de una vista personalizada como vista por defecto en un objeto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#adding-some-javascript-collective-js-datatables">Agregando un poco de Javascript (collective.js.datatables)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views_3.html#summary">Resumen</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CHANGES.html">Registro de cambios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#unreleased">1.2.5 (unreleased)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#id1">1.2.4 (2014-10-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#id2">1.2.3 (2014-07-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#id3">1.2.2 (2014-06-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#id4">1.2.1 (2014-05-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#id5">1.2 (2014-05-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#october-2013">1.1 (October 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#october-2012">1.0 (October, 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#october-2011">0.2 October 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CHANGES.html#october-2009">0.1 (October 2009)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../roadmap.html">Mapa de ruta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap.html#id1">1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../roadmap.html#todo">Todo</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Maestría en Plone</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>3. Instalando Plone para el entrenamiento</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="installing-plone-for-the-training">
+<h1>3. Instalando Plone para el entrenamiento<a class="headerlink" href="#installing-plone-for-the-training" title="Permalink to this headline">¶</a></h1>
+<p>Para no perder demasiado tiempo con la instalación y la depuración de las diferencias entre los sistemas que utilizamos una máquina virtual (Ubuntu 14.04) para ejecutar Plone durante el entrenamiento. Contamos con Vagrant y VirtualBox para dar el mismo medio de ambiente de desarrollo para todos.</p>
+<p><a class="reference external" href="http://www.vagrantup.com">Vagrant</a> es una herramienta para la creación de entornos de desarrollo completos. Lo usamos en conjunto con Oracle’s <a class="reference external" href="https://www.virtualbox.org">VirtualBox</a> para crear y administrar un entorno virtual.</p>
+<p>Tenga en cuenta que usted necesitará una conexión de Internet rápida durante el proceso, ya que tendrá que descargar una máquina completa virtual (Ubuntu) y varios paquetes y actualizaciones.</p>
+<div class="section" id="installing-plone-without-vagrant">
+<h2>Instalando Plone sin Vagrant<a class="headerlink" href="#installing-plone-without-vagrant" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Si usted <strong>no</strong> está acostumbrado a ejecutar Plone en su computadora portátil omitir esta parte y continuar con <a class="reference internal" href="#install-virtualbox"><em>Instalar VirtualBox</em></a>.</p>
+</div>
+<p>Si usted <strong>esta</strong> experimentado con ejecutar Plone en su propio ordenador portátil te animamos a hacerlo, ya que tendrá ciertos beneficios:</p>
+<ul class="simple">
+<li><p class="first">Usted puede usar el editor, que usted usa.</p>
+</li>
+<li><p class="first">Puede utilizar la receta Buildout llamada omelette tener todo el código de Plone a su alcance.</p>
+</li>
+<li><p class="first">Usted no tiene que cambiar entre diferentes del sistema operativo durante el entrenamiento.</p>
+</li>
+</ul>
+<p>Si se siente cómodo, por favor, trabaje en su propia máquina con su propio Python si quieres, pero <strong>por favor, por favor, por favor</strong>, asegúrese de que usted tiene un sistema que funcione, ya que no queremos que se pierda un tiempo valioso.</p>
+<p>Usted tendrá que hacer un pequeño cambio en el buildout que utilizamos durante el entrenamiento.</p>
+<p>Si usted utiliza su propio sistema operativo (Linux o Mac) la instalación de Plone para el entrenamiento debe ser de esta forma:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>mkdir training
+<span class="nv">$ </span><span class="nb">cd </span>training
+<span class="nv">$ </span>git clone https://github.com/collective/training_buildout.git buildout
+<span class="nv">$ </span><span class="nb">cd </span>buildout
+<span class="nv">$ </span>virtualenv-2.7 py27
+</pre></div>
+</div>
+<p>Ahora tiene que hacer un pequeño cambio en el buildout. Abra el archivo <code class="docutils literal"><span class="pre">buildout.cfg</span></code> en un editor y agregar un <code class="docutils literal"><span class="pre">#</span></code> al principio de la línea 25, donde dice <code class="docutils literal"><span class="pre">buildout_dir</span> <span class="pre">=</span> <span class="pre">/home/vagrant</span></code>. A continuación, retire el <code class="docutils literal"><span class="pre">#</span></code> en la siguiente línea. Ahora debe decir:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">buildout_dir</span> <span class="o">=</span> <span class="s">${buildout:directory}</span>
+</pre></div>
+</div>
+<p>Ahora puede ejecutar el buildout por primera vez:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>./py27/bin/python bootstrap.py
+<span class="nv">$ </span>./bin/buildout
+</pre></div>
+</div>
+<p>Esto tomará algún tiempo y producir una gran cantidad de mensaje en consola de comando debido a que descarga y configura Plone. Una vez hecho esto usted puede comenzar a instancia con el siguiente comando:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>./bin/instance <span class="nb">fg</span>
+</pre></div>
+</div>
+<p>Si la salida por la consola de comando es similar a:</p>
+<div class="highlight-python"><div class="highlight"><pre>2014-10-06 15:11:26 INFO ZServer HTTP server started at Mon Oct  6 15:11:26 2014
+    Hostname: 0.0.0.0
+    Port: 8080
+2014-10-06 15:11:29 INFO Products.PloneFormGen gpg_subprocess initialized, using /usr/local/bin/gpg
+2014-10-06 15:11:29 INFO ZODB.blob (14015) Blob directory `/Users/philip/workspace/training/buildout/var/blobstorage` is unused and has no layout marker set. Selected `bushy` layout.
+2014-10-06 15:11:29 INFO ZODB.blob (14015) Blob temporary directory &#39;/Users/philip/workspace/training/buildout/var/blobstorage/tmp&#39; does not exist. Created new directory.
+2014-10-06 15:11:37 INFO PloneFormGen Patching plone.app.portlets ColumnPortletManagerRenderer to not catch Retry exceptions
+2014-10-06 15:11:37 INFO Zope Ready to handle requests
+</pre></div>
+</div>
+<p>La salida por consola debe decir <code class="docutils literal"><span class="pre">INFO</span> <span class="pre">Zope</span> <span class="pre">Ready</span> <span class="pre">to</span> <span class="pre">handle</span> <span class="pre">requests</span></code> entonces usted esta al aire y ejecutando, entonces puede continuar con el próximo capítulo.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Si hay un mensaje de error usted debe bien intenta arreglarlo o utiliza la instalación Vagrant y continuar en este capítulo.</p>
+</div>
+</div>
+<div class="section" id="install-virtualbox">
+<span id="id1"></span><h2>Instalar VirtualBox<a class="headerlink" href="#install-virtualbox" title="Permalink to this headline">¶</a></h2>
+<p>Vagrant utiliza VirtualBox de Oracle para crear entornos virtuales. Aquí hay un enlace directo a la página de descarga: <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>. Utilizamos VirtualBox 4.3.x.</p>
+</div>
+<div class="section" id="install-and-configure-vagrant">
+<h2>Instalar y configurar Vagrant<a class="headerlink" href="#install-and-configure-vagrant" title="Permalink to this headline">¶</a></h2>
+<p>Obtenga la última versión de <a class="reference external" href="http://www.vagrantup.com/downloads">http://www.vagrantup.com/downloads</a> para su sistema operativo y proceda a instalarlo.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">En Windows hay un error en la versión reciente de Vagrant. Aquí están las instrucciones de cómo evitar la advertencia <code class="docutils literal"><span class="pre">Vagrant</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">detect</span> <span class="pre">VirtualBox!</span> <span class="pre">Make</span> <span class="pre">sure</span> <span class="pre">VirtualBox</span> <span class="pre">is</span> <span class="pre">properly</span> <span class="pre">installed</span></code>.</p>
+</div>
+<p>Ahora el sistema dispone de un comando <code class="docutils literal"><span class="pre">vagrant</span></code> que se puede ejecutar en el terminal.</p>
+<p>En primer lugar crear un directorio en el que desea hacer el entrenamiento.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>mkdir training
+<span class="nv">$ </span><span class="nb">cd </span>training
+</pre></div>
+</div>
+<p>Al instalar Vagrant instala automáticamente los actuales adicionales guests. Usted puede optar por omitir este paso si tiene algún problema con ella.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>vagrant plugin install vagrant-vbguest
+</pre></div>
+</div>
+<p>Ahora bien obtener el archivo zip adjunto (si usted lee esto como un correo electrónico) o descargarlo desde la siguiente dirección URL:</p>
+<p><a class="reference download internal" href="../_downloads/plone_training_config.zip"><code class="xref download docutils literal"><span class="pre">http://plone-training.readthedocs.org/en/latest/_downloads/plone_training_config.zip</span></code></a>.</p>
+<p>y copie el contenido del archivo zip en el directorio del entrenamiento creado previamente.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>wget http://plone-training.readthedocs.org/en/latest/_downloads/plone_training_config.zip
+<span class="nv">$ </span>unzip plone_training_config.zip
+</pre></div>
+</div>
+<p>El directorio del entrenamiento ahora debería contener el archivo &#8220;Vagrantfile&#8221; y el directorio se <code class="docutils literal"><span class="pre">manifests</span></code> el cual contiene a su ves muchos archivos.</p>
+<p>Ahora empieza la configuración de la máquina virtual que se configura en el archivo <code class="docutils literal"><span class="pre">Vagrantfile</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>vagrant up
+</pre></div>
+</div>
+<p>Esto toma un <strong>muuuuuy largo tiempo</strong> debido a que hace todos los pasos siguientes:</p>
+<ul class="simple">
+<li><p class="first">descarga una máquina virtual (Official Ubuntu Server 14.04 LTS, también llamado &#8220;Trusty Tahr&#8221;)</p>
+</li>
+<li><p class="first">establece la VM</p>
+</li>
+<li><p class="first">actualiza la VM</p>
+</li>
+<li><p class="first">instala varios paquetes necesarios para el desarrollo de Plone</p>
+</li>
+<li><p class="first">descargas y desempaquetar el instalador unificado para Plone</p>
+</li>
+<li><p class="first">corre el instalador unificado para Plone.</p>
+</li>
+<li><p class="first">copiar los paquetes eggs a un lugar que utilizamos para el entrenamiento</p>
+</li>
+<li><p class="first">clones de el directorio buildout <code class="docutils literal"><span class="pre">training</span></code> en el directorio <code class="docutils literal"><span class="pre">/vagrant/buildout</span></code></p>
+</li>
+<li><p class="first">construye Plone usando los paquetes eggs del buildout-cache</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A veces esto se detiene con el mensaje <em>Skipping because of failed dependencies</em>.</p>
+<div class="highlight-bash"><div class="highlight"><pre>Skipping because of failed dependencies
+</pre></div>
+</div>
+<p>Si esto sucede o usted tiene la sensación de que algo ha ido mal y la instalación no ha finalizado correctamente por alguna razón usted necesita ejecutar para intentar el comando siguiente para repetir el proceso. Esto sólo se repetirá los pasos que no han terminado correctamente.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>vagrant provision
+</pre></div>
+</div>
+<p class="last">Usted puede hacer esto varias veces para arreglar los problemas, por ejemplo, si su conexión a red es limitada y los pasos no se pudieron terminar debido a esto.</p>
+</div>
+<p>Una vez Vagrant termina el proceso de aprovisionamiento, se puede acceder a la máquina virtual en ejecución.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>vagrant ssh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Si usted tiene que usar Windows tendrás que iniciar sesión para con <a class="reference external" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">putty</a>. Conecte a <a class="reference external" href="mailto:vagrant&#37;&#52;&#48;127&#46;0&#46;01">vagrant<span>&#64;</span>127<span>&#46;</span>0<span>&#46;</span>01</a> en el puerto 2222. Con el usuario <strong>y</strong> contraseña son <cite>vagrant</cite>.</p>
+</div>
+<p>Ahora está iniciado con el usuario vagrant en <code class="docutils literal"><span class="pre">/home/vagrant</span></code>. Vamos a hacer todos los pasos del entrenamiento como este usuario.</p>
+<p>Nosotros pre-instalamos un Plone para usted en la directorio <code class="docutils literal"><span class="pre">/home/vagrant/Plone/zinstance</span></code>. Puede ejecutarlo ahora y acceder a esta instalación desde el navegador. Nosotros <strong>no</strong> vamos a utilizar este instancia Plone en el entrenamiento, por lo que podemos jugar un rato con esta tanto como usted desea.</p>
+<p>En su lugar usamos nuestra propia instancia Plone durante el entrenamiento. Es en <code class="docutils literal"><span class="pre">/vagrant/buildout/</span></code>. Inicie en modo foreground con el comando <code class="docutils literal"><span class="pre">./bin/instance</span> <span class="pre">fg</span></code>.</p>
+<div class="highlight-bash"><div class="highlight"><pre>vagrant@training:~<span class="nv">$ </span><span class="nb">cd</span> /vagrant/buildout
+vagrant@training:/vagrant/buildout<span class="nv">$ </span>./bin/instance <span class="nb">fg</span>
+2014-05-20 16:56:54 INFO ZServer HTTP server started at Tue May <span class="m">20</span> 16:56:54 2014
+        Hostname: 0.0.0.0
+        Port: 8080
+2014-05-20 16:56:56 INFO Products.PloneFormGen gpg_subprocess initialized, using /usr/local/bin/gpg
+2014-05-20 16:57:02 INFO PloneFormGen Patching plone.app.portlets ColumnPortletManagerRenderer to not catch Retry exceptions
+2014-05-20 16:57:02 INFO Zope Ready to handle requests
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>En raras ocasiones cuando se está utilizando OSX con un carácter UTF-8 a partir Plone puede fallar con el error siguiente:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ValueError: unknown locale: UTF-8
+</pre></div>
+</div>
+<p>En ese caso, usted tiene que poner la configuración de idioma y teclado localizados en el .bash_profile del usuario vagrant.</p>
+<div class="last highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8
+<span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+</pre></div>
+</div>
+</div>
+<p>Ahora la instancia Zope que estamos utilizando se está ejecutando. Puede detener la instancia en ejecución en cualquier momento utilizando <code class="docutils literal"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">c</span></code>.</p>
+<p>Si no lo hace, no se preocupe, su shell no está bloqueado. Escriba el comando <code class="docutils literal"><span class="pre">reset</span></code> (incluso si usted no puede ver el símbolo de sistema) y pulse RETURN, y debe ser visible otra vez.</p>
+<p>Si abre su navegador local en <a class="reference external" href="http://localhost:8080">http://localhost:8080</a> se ve que Plone está ejecutando en vagrant. Esto funciona porque Virtualbox reenvía al puerto 8080 del sistema invitado (el vagrant-Ubuntu) para el sistema host (el sistema operativo normal). Ahora cree un nuevo sitio Plone haciendo clic en &#8220;Crear un nuevo sitio Plone&#8221;. El nombre de usuario y la contraseña son &#8220;admin&#8221; (Nota: Nunca haga esto en un sitio real!).</p>
+<p>El Buildout para este Plone está en una carpeta compartida, esto significa lo ejecutamos en la vagrant-box desde el directorio <code class="docutils literal"><span class="pre">/vagrant/buildout</span></code> pero también podemos acceder a este desde fuera del propio sistema operativo y el uso de nuestro editor favorito. Usted encontrará el directorio de <code class="docutils literal"><span class="pre">buildout</span></code> en el directorio del <code class="docutils literal"><span class="pre">training</span></code> que creó en el principio junto al archivo <code class="docutils literal"><span class="pre">Vagrantfile</span></code> y <code class="docutils literal"><span class="pre">manifests</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">La base de datos y los paquetes Python <strong>no son es accesible</strong> en tu propio sistema, ya que los archivos grandes no se puede utilizar enlaces simbólicos en los directorios compartidos. La base de datos se encuentra en <code class="docutils literal"><span class="pre">/home/vagrant/var</span></code>, los paquetes Python están en <code class="docutils literal"><span class="pre">/home/vagrant/packages</span></code>.</p>
+</div>
+<p>Si usted tiene cualquier problema o pregunta, por favor envíenos un correo electrónico a <a class="reference external" href="mailto:team&#37;&#52;&#48;starzel&#46;de">team<span>&#64;</span>starzel<span>&#46;</span>de</a> o cree un ticket en <a class="reference external" href="https://github.com/plone/training/issues">https://github.com/plone/training/issues</a>.</p>
+</div>
+<div class="section" id="what-vagrant-does">
+<h2>¿Qué hace Vagrant?<a class="headerlink" href="#what-vagrant-does" title="Permalink to this headline">¶</a></h2>
+<p>La instalación se realiza automáticamente por las herramientas vagrant y puppet. Si quieres saber qué pasos se hacen realmente, por favor, consulte el capítulo <a class="reference internal" href="what_vagrant_does.html"><em>¿Qué hace Vagrant?</em></a>.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../anatomy.html" class="btn btn-neutral float-right" title="4. La Anatomía de Plone"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../installation.html" class="btn btn-neutral" title="2. Instalación y configuración"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
+      Actualizado por última vez en 08 de March de 2015.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.2.5a',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
