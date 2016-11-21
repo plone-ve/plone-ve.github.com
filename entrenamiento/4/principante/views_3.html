@@ -5,9 +5,10 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>18. Views - Parte III: Una lista de Charlas &mdash; Maestría en Plone, un entrenamiento para principiantes - 1.2.5a</title>
+  <title>18. Views - Parte III: Una lista de Charlas &mdash; documentación de Maestría en Plone 4 - 1.2.5a</title>
   
 
   
@@ -16,7 +17,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
@@ -32,14 +32,16 @@
   
     <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+
+  
         <link rel="author" title="Sobre este documento"
               href="about.html"/>
-    <link rel="top" title="documentación de Maestría en Plone - 1.2.5a" href="index.html"/>
-        <link rel="next" title="Registro de cambios" href="CHANGES.html"/>
+    <link rel="top" title="documentación de Maestría en Plone 4 - 1.2.5a" href="index.html"/>
+        <link rel="next" title="19. Comportamientos" href="behaviors1.html"/>
         <link rel="prev" title="17. Views - Parte II: Una vista por defecto para la “charla”" href="views_2.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -49,202 +51,110 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="index.html" class="fa fa-home"> Maestría en Plone</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Maestría en Plone 4
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.2.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-        
-            <ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">Sobre &#8220;Maestría en Plone&#8221;</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="about.html#upcoming-trainings">Próximos entrenamientos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#previous-trainings">Entrenamientos previos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#trainers">Entrenadores</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#using-the-documentation-for-a-training">Usando la documentación para un entrenamiento</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#contributing">Contribuyendo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#license">Licencia</a></li>
-</ul>
-</li>
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Sobre &#8220;Maestría en Plone&#8221;</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#who-are-you">¿Quien eres tu?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-do">¿Qué haremos?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#what-will-we-not-do">¿Qué no haremos?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#what-to-expect">¿Qué esperar?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#documentation">Documentación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#further-reading">Lecturas recomendadas</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Instalación y configuración</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-plone">Instalando Plone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#hosting-plone">Alojando Plone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#production-deployment">Despliegue en ambientes de producción</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="plone_training_config/instructions.html">3. Instalando Plone para el entrenamiento</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#installing-plone-without-vagrant">Instalando Plone sin Vagrant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-virtualbox">Instalar VirtualBox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#install-and-configure-vagrant">Instalar y configurar Vagrant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plone_training_config/instructions.html#what-vagrant-does">¿Qué hace Vagrant?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="anatomy.html">4. La Anatomía de Plone</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope2">Zope2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="anatomy.html#content-management-framework">Content Management Framework</a></li>
-<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-toolkit-zope3">Zope Toolkit / Zope3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="anatomy.html#zope-component-architecture-zca">Zope Component Architecture (ZCA)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="anatomy.html#pyramid">Pyramid</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="case.html">5. El caso de estudio</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="case.html#background">Detalle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="case.html#requirements">Requerimientos</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="features.html">6. Las características de Plone</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="features.html#starting-and-stopping-plone">Iniciando y Deteniendo Plone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#users">Usuarios</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#configure-a-mailserver">Configurar un servidor de correo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#walkthrough-of-the-ui">Tutorial de la interfaz de usuario</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#content-types">Tipos de Contenidos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#folders">Carpetas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#collections">Colecciones</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#content-rules">Reglas de Contenido</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#history">Histórico</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#manage-members-and-groups">Administrar usuarios y grupos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#workflows">Flujos de trabajos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#working-copy">Copia de trabajo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="features.html#placeful-workflows">Flujos de trabajo Placeful</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="configuring_customizing.html">7. Configurando y personalizando Plone a través de la Web</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#the-control-panel">El panel de control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#portlets">Portlets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#viewlets">Viewlets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#zmi">ZMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuring_customizing.html#summary">Resumen</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="extending.html">8. Extendiendo Plone</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="extending.html#extension-technologies">Tecnologías de extensión</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extending.html#what-are-components-what-is-zcml">¿Cuáles son los componentes?, ¿Que es el ZCML?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="addons.html">9. Extiende Plone con paquetes Complementos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="addons.html#how-to-find-add-ons">¿Como buscar complementos?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="addons.html#some-notable-add-ons">Algunos complementos notables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="addons.html#installing-add-ons">Instalando complementos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="addons.html#ploneformgen">PloneFormGen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="addons.html#add-photogallery-with-collective-plonetruegallery">Agregar Galerías de fotos con collective.plonetruegallery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="addons.html#internationalization">Internacionalización</a></li>
-<li class="toctree-l2"><a class="reference internal" href="addons.html#summary">Resumen</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="theming.html">10. Temas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="theming.html#diazo-example">ejemplo Diazo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theming.html#templating-example">ejemplo de Plantila</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theming.html#choosing-the-right-tool">Seleccionando la herramienta adecuada</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theming.html#want-to-really-learn-theming">¿Quieres aprender realmente tematización?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="dexterity.html">11. Dexterity - Parte I: A través de la Web</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#what-is-a-content-type">¿Qué es un tipo de contenido?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#the-makings-of-a-plone-content-type">Los elementos de un tipo de contenido Plone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#dexterity-and-archetypes-a-comparison">Dexterity y Archetypes - Una comparación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#installation">Instalación</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#modifying-existing-types">Modificando tipos existentes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#creating-content-types-ttw">Creando tipos de contenidos a través de la Web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#moving-content-types-into-code">Moviendo el tipo de contenido dentro del código fuente</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dexterity.html#exercises">Ejercicios</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="buildout_1.html">12. Buildout - Parte I</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#syntax">Sintaxis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#recipes">Recetas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#references">Referencias</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#a-real-life-example">Un ejemplo de la vida real</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#hello-mr-developer">¡Hola mr.developer!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#extensible">Extensible</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buildout_1.html#be-mcguyver">Sea un McGuyver</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="eggs1.html">13. Creando complementos para personalizar Plone</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eggs1.html#using-zopeskel-to-create-an-egg">Usando zopeskel para crear un paquete egg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eggs1.html#inspecting-the-package">Inspeccione el paquete</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eggs1.html#including-the-egg-in-plone">Incluyendo el paquete egg en Plone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eggs1.html#return-to-dexterity-moving-content-types-into-code">Volver Dexterity: para mover tipos de contenidos a código fuente</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="views_1.html">14. Views - Parte I</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="views_1.html#a-simple-browser-view">Una simple browser view</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="zpt.html">15. Zope Page Templates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zpt.html#tal-and-tales">TAL y TALES</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zpt.html#metal-and-macros">METAL y macros</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zpt.html#accessing-plone-from-the-template">Accediendo a Plone desde la plantilla</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zpt.html#what-we-missed">Lo que echamos de menos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zpt.html#chameleon">Chameleon</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="zpt_2.html">16. Personalizar plantillas existentes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#newsitem-pt">El archivo newsitem.pt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#summary-view-pt">El archivo summary_view.pt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#finding-the-right-template">Buscando la correcta plantilla</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zpt_2.html#skin-templates">Plantillas skins</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="views_2.html">17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="views_2.html#view-classes">Vista de clases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="views_2.html#the-default-view">La vista por defecto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="views_2.html#exercise">Ejercicio</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">18. Views - Parte III: Una lista de Charlas</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Instalación y configuración</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plone_training_config/instructions.html">3. Instalando Plone para el entrenamiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="anatomy.html">4. La Anatomía de Plone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="case.html">5. El caso de estudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">6. Las características de Plone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuring_customizing.html">7. Configurando y personalizando Plone a través de la Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">8. Extendiendo Plone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="addons.html">9. Extiende Plone con paquetes Complementos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theming.html">10. Temas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dexterity.html">11. Dexterity - Parte I: A través de la Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buildout_1.html">12. Buildout - Parte I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eggs1.html">13. Creando complementos para personalizar Plone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views_1.html">14. Views - Parte I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zpt.html">15. Zope Page Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zpt_2.html">16. Personalizar plantillas existentes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views_2.html">17. Views - Parte II: Una vista por defecto para la &#8220;charla&#8221;</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">18. Views - Parte III: Una lista de Charlas</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#using-portal-catalog">Usando portal_catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#brains-and-objects">Cerebros y objetos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#querying-the-catalog">Consultando el catálogo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exercises">Ejercicios</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-template-for-the-listing">La plantilla para la lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises">Ejercicios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-1">Ejercicio 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exercise-2">Ejercicio 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-template-for-the-listing">La plantilla para la lista</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exercise">Ejercicio</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-a-custom-view-as-default-view-on-an-object">Configuración de una vista personalizada como vista por defecto en un objeto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#adding-some-javascript-collective-js-datatables">Agregando un poco de Javascript (collective.js.datatables)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#summary">Resumen</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="behaviors1.html">19. Comportamientos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewlets_1.html">20. Escribiendo Viewlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">21. Programando en Plone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ide.html">22. IDEs y editores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dexterity_2.html">23. Tipos Dexterity - Parte II: Creciendo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_search.html">24. Búsqueda personalizada</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">25. Convertir las charlas en eventos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_generated_content.html">26. Usar contenido generado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">27. Recursos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thirdparty_behaviors.html">28. Usando comportamientos de complementos de terceros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dexterity_3.html">29. Tipos Dexterity - III: Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eggs2.html">30. Creando paquetes reusables con Eggs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="behaviors2.html">31. Más comportamientos complejos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewlets_2.html">32. Un viewlet para el comportamiento voteable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reusable.html">33. Haciendo nuestro paquete reusable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="embed.html">34. Usando starzel.votable_behavior en ploneconf.site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment_sites.html">35. Buildout - Parte II: Cómo prepararse para el despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future_of_plone.html">36. El futuro de Plone</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optional.html">37. Opcional</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Registro de cambios</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#unreleased">1.2.5 (unreleased)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id1">1.2.4 (2014-10-03)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id2">1.2.3 (2014-07-11)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id3">1.2.2 (2014-06-01)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id4">1.2.1 (2014-05-30)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#id5">1.2 (2014-05-23)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2013">1.1 (October 2013)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2012">1.0 (October, 2012)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2011">0.2 October 2011</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CHANGES.html#october-2009">0.1 (October 2009)</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Mapa de ruta</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="roadmap.html#id1">1.3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="roadmap.html#todo">Todo</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">Cambios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Mapa de ruta</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -252,32 +162,41 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Maestría en Plone</a>
+        <a href="index.html">Maestría en Plone 4</a>
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
     <li>18. Views - Parte III: Una lista de Charlas</li>
       <li class="wy-breadcrumbs-aside">
         
+          
+        
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="views-iii-a-talk-list">
 <h1>18. Views - Parte III: Una lista de Charlas<a class="headerlink" href="#views-iii-a-talk-list" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">¡Obtén el código!</p>
-<p>Obtén el código para este capítulo (<a class="reference internal" href="sneak.html"><em>Más información</em></a>) usando este comando en el directorio buildout:</p>
-<div class="last highlight-bash"><div class="highlight"><pre>cp -R src/ploneconf.site_sneak/chapters/18_views_3/ src/ploneconf.site
+<p>Obtén el código para este capítulo (<a class="reference internal" href="sneak.html"><span class="doc">Más información</span></a>) usando este comando en el directorio buildout:</p>
+<div class="last highlight-bash"><div class="highlight"><pre><span></span>cp -R src/ploneconf.site_sneak/chapters/18_views_3/ src/ploneconf.site
 </pre></div>
 </div>
 </div>
@@ -296,7 +215,7 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;browser:page</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;browser:page</span>
    <span class="na">name=</span><span class="s">&quot;talklistview&quot;</span>
    <span class="na">for=</span><span class="s">&quot;*&quot;</span>
    <span class="na">layer=</span><span class="s">&quot;zope.interface.Interface&quot;</span>
@@ -344,7 +263,7 @@
 35
 36
 37
-38</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Products.Five.browser</span> <span class="kn">import</span> <span class="n">BrowserView</span>
+38</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Products.Five.browser</span> <span class="kn">import</span> <span class="n">BrowserView</span>
 <span class="kn">from</span> <span class="nn">plone</span> <span class="kn">import</span> <span class="n">api</span>
 <span class="kn">from</span> <span class="nn">plone.dexterity.browser.view</span> <span class="kn">import</span> <span class="n">DefaultView</span>
 
@@ -365,21 +284,21 @@
 
     <span class="k">def</span> <span class="nf">talks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">portal</span><span class="o">.</span><span class="n">get_tool</span><span class="p">(</span><span class="s">&#39;portal_catalog&#39;</span><span class="p">)</span>
-        <span class="n">current_path</span> <span class="o">=</span> <span class="s">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">getPhysicalPath</span><span class="p">())</span>
+        <span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">portal</span><span class="o">.</span><span class="n">get_tool</span><span class="p">(</span><span class="s1">&#39;portal_catalog&#39;</span><span class="p">)</span>
+        <span class="n">current_path</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">getPhysicalPath</span><span class="p">())</span>
 
-        <span class="n">brains</span> <span class="o">=</span> <span class="n">portal_catalog</span><span class="p">(</span><span class="n">portal_type</span><span class="o">=</span><span class="s">&quot;talk&quot;</span><span class="p">,</span>
+        <span class="n">brains</span> <span class="o">=</span> <span class="n">portal_catalog</span><span class="p">(</span><span class="n">portal_type</span><span class="o">=</span><span class="s2">&quot;talk&quot;</span><span class="p">,</span>
                                 <span class="n">path</span><span class="o">=</span><span class="n">current_path</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">brain</span> <span class="ow">in</span> <span class="n">brains</span><span class="p">:</span>
             <span class="n">talk</span> <span class="o">=</span> <span class="n">brain</span><span class="o">.</span><span class="n">getObject</span><span class="p">()</span>
             <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-                <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">Title</span><span class="p">,</span>
-                <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">Description</span><span class="p">,</span>
-                <span class="s">&#39;url&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">getURL</span><span class="p">(),</span>
-                <span class="s">&#39;audience&#39;</span><span class="p">:</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">talk</span><span class="o">.</span><span class="n">audience</span><span class="p">),</span>
-                <span class="s">&#39;type_of_talk&#39;</span><span class="p">:</span> <span class="n">talk</span><span class="o">.</span><span class="n">type_of_talk</span><span class="p">,</span>
-                <span class="s">&#39;speaker&#39;</span><span class="p">:</span> <span class="n">talk</span><span class="o">.</span><span class="n">speaker</span><span class="p">,</span>
-                <span class="s">&#39;uuid&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">UID</span><span class="p">,</span>
+                <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">Title</span><span class="p">,</span>
+                <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">Description</span><span class="p">,</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">getURL</span><span class="p">(),</span>
+                <span class="s1">&#39;audience&#39;</span><span class="p">:</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">talk</span><span class="o">.</span><span class="n">audience</span><span class="p">),</span>
+                <span class="s1">&#39;type_of_talk&#39;</span><span class="p">:</span> <span class="n">talk</span><span class="o">.</span><span class="n">type_of_talk</span><span class="p">,</span>
+                <span class="s1">&#39;speaker&#39;</span><span class="p">:</span> <span class="n">talk</span><span class="o">.</span><span class="n">speaker</span><span class="p">,</span>
+                <span class="s1">&#39;uuid&#39;</span><span class="p">:</span> <span class="n">brain</span><span class="o">.</span><span class="n">UID</span><span class="p">,</span>
                 <span class="p">})</span>
         <span class="k">return</span> <span class="n">results</span>
 </pre></div>
@@ -413,8 +332,8 @@
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
 <p>El código para agregar este índice se vería como el siguiente:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">plone.indexer.decorator</span> <span class="kn">import</span> <span class="n">indexer</span>
-<span class="kn">from</span> <span class="nn">ploneconf.site.talk</span> <span class="kn">import</span> <span class="n">ITalk</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">plone.indexer.decorator</span> <span class="k">import</span> <span class="n">indexer</span>
+<span class="kn">from</span> <span class="nn">ploneconf.site.talk</span> <span class="k">import</span> <span class="n">ITalk</span>
 
 <span class="nd">@indexer</span><span class="p">(</span><span class="n">ITalk</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">talk_audience</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
@@ -422,15 +341,15 @@
 </pre></div>
 </div>
 <p>Tendríamos que registrar esta función factory como un adaptador llamado en el archivo <code class="docutils literal"><span class="pre">configure.zcml</span></code>. Suponiendo que haya puesto el código fuente anterior en un archivo llamado indexers.py</p>
-<div class="highlight-xml"><div class="highlight"><pre><span class="nt">&lt;adapter</span> <span class="na">name=</span><span class="s">&quot;audience&quot;</span> <span class="na">factory=</span><span class="s">&quot;.indexers.talk_audience&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;adapter</span> <span class="na">name=</span><span class="s">&quot;audience&quot;</span> <span class="na">factory=</span><span class="s">&quot;.indexers.talk_audience&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
 <p class="last">Vamos a agregar algunos índices más adelante.</p>
 </div>
-<p>¿Por qué utilizar el catálogo en absoluto?, comprueba los permisos, y sólo devuelve las charlas que el usuario actual puede ver. Puede ser que sean privados u ocultos a usted, ya que son parte de una conferencia de super secreta para los desarrolladores del núcleo de Plone (¡no hay tal cosa!).</p>
+<p>¿Por qué utilizar el catálogo en absoluto?, comprueba los permisos, y sólo devuelve las charlas que el usuario actual puede ver. Puede ser que sean privados u ocultos a usted, ya que son parte de una súper conferencia secreta para los desarrolladores del núcleo de Plone (¡no hay tal cosa!).</p>
 <p>La mayoría de los objetos en Plone son como diccionarios, por lo que podían hacer <code class="docutils literal"><span class="pre">context.values()</span></code> para obtener todos sus contenidos.</p>
 <p>Por razones históricas, algunos atributos de los cerebros y los objetos se escriben de manera diferente:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">brain</span><span class="o">.</span><span class="n">getObject</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">brain</span><span class="o">.</span><span class="n">getObject</span><span class="p">()</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">title</span>
 <span class="go">u&#39;Talk-submission is open!&#39;</span>
@@ -448,7 +367,7 @@
 <p class="last">Respuesta: La Adquisición obtendrá el atributo de servidor principal más cercano. <code class="docutils literal"><span class="pre">brain.__parent__</span></code>  es <code class="docutils literal"><span class="pre">&lt;CatalogTool</span> <span class="pre">at</span> <span class="pre">/Plone/portal_catalog&gt;</span></code>. El atributo <code class="docutils literal"><span class="pre">title</span></code> del <code class="docutils literal"><span class="pre">portal_catalog</span></code> es &#8216;Indexado en todo el contenido en el sitio&#8217;.</p>
 </div>
 <p>La Adquisición puede ser nocivo. Los cerebros no tienen el atributo &#8216;getLayout&#8217; <code class="docutils literal"><span class="pre">brain.getLayout()</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">brain</span><span class="o">.</span><span class="n">getLayout</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">brain</span><span class="o">.</span><span class="n">getLayout</span><span class="p">()</span>
 <span class="go">&#39;folder_listing&#39;</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">getLayout</span><span class="p">()</span>
@@ -459,33 +378,33 @@
 </pre></div>
 </div>
 <p>Lo mismo es cierto para los métodos:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">absolute_url</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span><span class="o">.</span><span class="n">absolute_url</span><span class="p">()</span>
 <span class="go">&#39;http://localhost:8080/Plone/news/talk-submission-is-open&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">brain</span><span class="o">.</span><span class="n">getURL</span><span class="p">()</span> <span class="o">==</span> <span class="n">obj</span><span class="o">.</span><span class="n">absolute_url</span><span class="p">()</span>
 <span class="go">True</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">brain</span><span class="o">.</span><span class="n">getPath</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">getPhysicalPath</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">brain</span><span class="o">.</span><span class="n">getPath</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">getPhysicalPath</span><span class="p">())</span>
 <span class="go">True</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="querying-the-catalog">
 <h2>Consultando el catálogo<a class="headerlink" href="#querying-the-catalog" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Hay muchos <a class="reference external" href="http://docs.plone.org/develop/plone/searching_and_indexing/indexing.html">índices de catálogo</a> para consultar. He aquí algunos ejemplos:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">getToolByName</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span> <span class="s">&#39;portal_catalog&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span><span class="p">(</span><span class="n">Subject</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;cats&#39;</span><span class="p">,</span> <span class="s">&#39;dogs&#39;</span><span class="p">))</span>
+<p>Hay muchos <a class="reference external" href="http://docs.plone.org/4/en/develop/plone/searching_and_indexing/indexing.html">índices de catálogo</a> para consultar. He aquí algunos ejemplos:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">getToolByName</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span> <span class="s1">&#39;portal_catalog&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span><span class="p">(</span><span class="n">Subject</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;cats&#39;</span><span class="p">,</span> <span class="s1">&#39;dogs&#39;</span><span class="p">))</span>
 <span class="go">[]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span><span class="p">(</span><span class="n">review_state</span><span class="o">=</span><span class="s">&#39;pending&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span><span class="p">(</span><span class="n">review_state</span><span class="o">=</span><span class="s1">&#39;pending&#39;</span><span class="p">)</span>
 <span class="go">[]</span>
 </pre></div>
 </div>
 <p>Llamando al catálogo sin parámetros devuelven todo el sitio:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">portal_catalog</span><span class="p">()</span>
 <span class="go">[&lt;Products.ZCatalog.Catalog.mybrains object at 0x1085a11f0&gt;, &lt;Products.ZCatalog.Catalog.mybrains object at 0x1085a12c0&gt;, &lt;Products.ZCatalog.Catalog.mybrains object at 0x1085a1328&gt;, &lt;Products.ZCatalog.Catalog.mybrains object at 0x1085a13 ...</span>
 </pre></div>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">Ver también</p>
-<p class="last"><a class="reference external" href="http://docs.plone.org/develop/plone/searching_and_indexing/query.html">http://docs.plone.org/develop/plone/searching_and_indexing/query.html</a></p>
+<p class="last"><a class="reference external" href="http://docs.plone.org/4/en/develop/plone/searching_and_indexing/query.html">http://docs.plone.org/4/en/develop/plone/searching_and_indexing/query.html</a></p>
 </div>
 </div>
 <div class="section" id="exercises">
@@ -503,13 +422,13 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">def</span> <span class="nf">get_news</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_news</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-    <span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">portal</span><span class="o">.</span><span class="n">get_tool</span><span class="p">(</span><span class="s">&#39;portal_catalog&#39;</span><span class="p">)</span>
+    <span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">portal</span><span class="o">.</span><span class="n">get_tool</span><span class="p">(</span><span class="s1">&#39;portal_catalog&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">portal_catalog</span><span class="p">(</span>
-        <span class="n">portal_type</span><span class="o">=</span><span class="s">&#39;News Item&#39;</span><span class="p">,</span>
-        <span class="n">review_state</span><span class="o">=</span><span class="s">&#39;published&#39;</span><span class="p">,</span>
-        <span class="n">sort_on</span><span class="o">=</span><span class="s">&#39;effective&#39;</span><span class="p">,</span>
+        <span class="n">portal_type</span><span class="o">=</span><span class="s1">&#39;News Item&#39;</span><span class="p">,</span>
+        <span class="n">review_state</span><span class="o">=</span><span class="s1">&#39;published&#39;</span><span class="p">,</span>
+        <span class="n">sort_on</span><span class="o">=</span><span class="s1">&#39;effective&#39;</span><span class="p">,</span>
     <span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
@@ -533,18 +452,18 @@
 11
 12
 13
-14</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">def</span> <span class="nf">keynotes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">keynotes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-    <span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">portal</span><span class="o">.</span><span class="n">get_tool</span><span class="p">(</span><span class="s">&#39;portal_catalog&#39;</span><span class="p">)</span>
+    <span class="n">portal_catalog</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">portal</span><span class="o">.</span><span class="n">get_tool</span><span class="p">(</span><span class="s1">&#39;portal_catalog&#39;</span><span class="p">)</span>
     <span class="n">brains</span> <span class="o">=</span> <span class="n">portal_catalog</span><span class="p">(</span>
-        <span class="n">portal_type</span><span class="o">=</span><span class="s">&#39;Talk&#39;</span><span class="p">,</span>
-        <span class="n">review_state</span><span class="o">=</span><span class="s">&#39;published&#39;</span><span class="p">)</span>
+        <span class="n">portal_type</span><span class="o">=</span><span class="s1">&#39;Talk&#39;</span><span class="p">,</span>
+        <span class="n">review_state</span><span class="o">=</span><span class="s1">&#39;published&#39;</span><span class="p">)</span>
     <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">brain</span> <span class="ow">in</span> <span class="n">brains</span><span class="p">:</span>
-        <span class="c"># There is no catalog-index for type_of_talk so we must check</span>
-        <span class="c"># the objects themselves.</span>
+        <span class="c1"># There is no catalog-index for type_of_talk so we must check</span>
+        <span class="c1"># the objects themselves.</span>
         <span class="n">talk</span> <span class="o">=</span> <span class="n">brain</span><span class="o">.</span><span class="n">getObject</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">talk</span><span class="o">.</span><span class="n">type_of_talk</span> <span class="o">==</span> <span class="s">&#39;Keynote&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">talk</span><span class="o">.</span><span class="n">type_of_talk</span> <span class="o">==</span> <span class="s1">&#39;Keynote&#39;</span><span class="p">:</span>
             <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">talk</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">results</span>
 </pre></div>
@@ -609,34 +528,34 @@
 25
 26
 27
-28</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;listing&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+28</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;listing&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Title
-            <span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Speaker
-            <span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Audience
-            <span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/thead&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
                The 7 sins of plone-development
-            <span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
                 Philip Bauer
-            <span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
                 Advanced
-            <span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table></div>
 <p>Después usted lo transforma dentro de una lista:</p>
@@ -677,44 +596,44 @@
 35
 36
 37
-38</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;listing&quot;</span> <span class="na">id=</span><span class="s">&quot;talks&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+38</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;listing&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talks&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Title
-            <span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Speaker
-            <span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Audience
-            <span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/thead&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr</span> <span class="na">tal:repeat=</span><span class="s">&quot;talk view/talks&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span>
-                   <span class="na">tal:attributes=</span><span class="s">&quot;href talk/url;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">tal:repeat</span><span class="o">=</span><span class="s">&quot;talk view/talks&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+                   <span class="na">tal:attributes</span><span class="o">=</span><span class="s">&quot;href talk/url;</span>
 <span class="s">                                   title talk/description&quot;</span>
-                   <span class="na">tal:content=</span><span class="s">&quot;talk/title&quot;</span><span class="nt">&gt;</span>
+                   <span class="na">tal:content</span><span class="o">=</span><span class="s">&quot;talk/title&quot;</span><span class="p">&gt;</span>
                    The 7 sins of plone-development
-                <span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">tal:content=</span><span class="s">&quot;talk/speaker&quot;</span><span class="nt">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">tal:content</span><span class="o">=</span><span class="s">&quot;talk/speaker&quot;</span><span class="p">&gt;</span>
                 Philip Bauer
-            <span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">tal:content=</span><span class="s">&quot;talk/audience&quot;</span><span class="nt">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">tal:content</span><span class="o">=</span><span class="s">&quot;talk/audience&quot;</span><span class="p">&gt;</span>
                 Advanced
-            <span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr</span> <span class="na">tal:condition=</span><span class="s">&quot;not:view/talks&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">3</span><span class="nt">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">tal:condition</span><span class="o">=</span><span class="s">&quot;not:view/talks&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">3</span><span class="p">&gt;</span>
                 No talks so far :-(
-            <span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table></div>
 <p>Hay algunas cosas que necesitan explicación:</p>
@@ -771,44 +690,44 @@
 35
 36
 37
-38</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;listing&quot;</span> <span class="na">id=</span><span class="s">&quot;talks&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+38</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;listing&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talks&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Title
-            <span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Speaker
-            <span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;th&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>
                 Audience
-            <span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/thead&gt;</span>
-    <span class="nt">&lt;tbody</span> <span class="na">tal:define=</span><span class="s">&quot;talks python:view.talks()&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;tr</span> <span class="na">tal:repeat=</span><span class="s">&quot;talk talks&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;td&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span>
-                   <span class="na">tal:attributes=</span><span class="s">&quot;href python:talk[&#39;url&#39;];</span>
+            <span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tbody</span> <span class="na">tal:define</span><span class="o">=</span><span class="s">&quot;talks python:view.talks()&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">tal:repeat</span><span class="o">=</span><span class="s">&quot;talk talks&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span>
+                   <span class="na">tal:attributes</span><span class="o">=</span><span class="s">&quot;href python:talk[&#39;url&#39;];</span>
 <span class="s">                                   title python:talk[&#39;description&#39;]&quot;</span>
-                   <span class="na">tal:content=</span><span class="s">&quot;python:talk[&#39;title&#39;]&quot;</span><span class="nt">&gt;</span>
+                   <span class="na">tal:content</span><span class="o">=</span><span class="s">&quot;python:talk[&#39;title&#39;]&quot;</span><span class="p">&gt;</span>
                    The 7 sins of plone-development
-                <span class="nt">&lt;/a&gt;</span>
-            <span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">tal:content=</span><span class="s">&quot;python:talk[&#39;speaker&#39;]&quot;</span><span class="nt">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">tal:content</span><span class="o">=</span><span class="s">&quot;python:talk[&#39;speaker&#39;]&quot;</span><span class="p">&gt;</span>
                 Philip Bauer
-            <span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">tal:content=</span><span class="s">&quot;python:talk[&#39;audience&#39;]&quot;</span><span class="nt">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">tal:content</span><span class="o">=</span><span class="s">&quot;python:talk[&#39;audience&#39;]&quot;</span><span class="p">&gt;</span>
                 Advanced
-            <span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr</span> <span class="na">tal:condition=</span><span class="s">&quot;python:not talks&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">3</span><span class="nt">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span> <span class="na">tal:condition</span><span class="o">=</span><span class="s">&quot;python:not talks&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">3</span><span class="p">&gt;</span>
                 No talks so far :-(
-            <span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table></div>
 <p class="last">Para seguir el principio &#8220;don&#8217;t repeat yourself&#8221; nosotros definimos <code class="docutils literal"><span class="pre">talks</span></code> vez de llamar al método dos veces.</p>
@@ -826,7 +745,7 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="nt">&lt;object</span> <span class="na">name=</span><span class="s">&quot;Folder&quot;</span><span class="nt">&gt;</span>
  <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;view_methods&quot;</span> <span class="na">purge=</span><span class="s">&quot;False&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;element</span> <span class="na">value=</span><span class="s">&quot;talklistview&quot;</span><span class="nt">/&gt;</span>
@@ -842,7 +761,7 @@
 <h2>Agregando un poco de Javascript (collective.js.datatables)<a class="headerlink" href="#adding-some-javascript-collective-js-datatables" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Aquí se utiliza una de las muchas agradables característica construida en Plone. La class=&#8221;listing&#8221; da la tabla un buen estilo y hace que la tabla se puede ordenar con un poco de Javascript.</p>
 <p>Pero podríamos mejorar esa tabla aún más mediante el uso de una buena biblioteca Javascript llamada &#8220;datatables&#8221;. Incluso podría llegar a ser parte del core de Plone en algún momento.</p>
-<p>Al igual que para muchas bibliotecas Javascript ya hacen esto y hay un paquete que sin embargo la integración con Plone para nosotros es: <code class="docutils literal"><span class="pre">collective.js.datatables</span></code>. Al igual que todos los paquetes Python usted lo puede encontrar en PYPI: <a class="reference external" href="http://pypi.python.org/pypi/collective.js.datatables">http://pypi.python.org/pypi/collective.js.datatables</a></p>
+<p>Al igual que para muchas librerías Javascript, ya hay un paquete que hace la integración de Plone por nosotros: <code class="docutils literal"><span class="pre">collective.js.datatables</span></code>. Al igual que todos los paquetes Python usted lo puede encontrar en PYPI: <a class="reference external" href="https://pypi.python.org/pypi/collective.js.datatables">https://pypi.python.org/pypi/collective.js.datatables</a></p>
 <p>Ya hemos añadido el complemento a nuestra buildout, sólo tienes que activarlo en nuestra plantilla.</p>
 <div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -904,7 +823,7 @@
 58
 59
 60
-61</pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span> <span class="na">xml:lang=</span><span class="s">&quot;en&quot;</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span>
+61</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span> <span class="na">xml:lang=</span><span class="s">&quot;en&quot;</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span>
       <span class="na">metal:use-macro=</span><span class="s">&quot;context/main_template/macros/master&quot;</span>
       <span class="na">i18n:domain=</span><span class="s">&quot;ploneconf.site&quot;</span><span class="nt">&gt;</span>
 <span class="nt">&lt;body&gt;</span>
@@ -983,15 +902,16 @@
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="CHANGES.html" class="btn btn-neutral float-right" title="Registro de cambios"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="behaviors1.html" class="btn btn-neutral float-right" title="19. Comportamientos" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="views_2.html" class="btn btn-neutral" title="17. Views - Parte II: Una vista por defecto para la “charla”"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="views_2.html" class="btn btn-neutral" title="17. Views - Parte II: Una vista por defecto para la “charla”" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1000,13 +920,14 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright The text and illustrations in this website are licensed by the Plone Foundation under a Creative Commons Attribution 4.0 International license.
-      Actualizado por última vez en 09 de Marzo de 2015.
+        &copy; Copyright El texto y las ilustraciones en este sitio Web esta licenciadas por la Plone Foundation bajo la licencia Creative Commons Attribution 4.0 International.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
 </footer>
+
         </div>
       </div>
 
